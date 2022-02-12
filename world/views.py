@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Post
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html', {})
+# Function django views ListView will list the posts from the blog
+# DetailView will give the details for the post
+
+class IndexView(ListView):
+    model = Post
+    template_name = 'index.html'
