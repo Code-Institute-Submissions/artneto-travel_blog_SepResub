@@ -2,7 +2,8 @@
 
 <ul>
 {% for post in object_list%}
-<li>{{ post.title }} - {{ post.autor }}<br/>
+<li><a href="{% url 'details-article' post.pk%}">{{ post.title }} </a>- {{ post.autor.first_name }}
+    {{ post.autor.last_name }} - {{ post.autor.email }}<br/>
 {{ post.body }}</li>
 {% endfor%}
 </ul>
