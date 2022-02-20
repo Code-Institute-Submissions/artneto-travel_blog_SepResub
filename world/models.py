@@ -17,5 +17,5 @@ class Post(models.Model):
 
 #This function will redirect my url after submit a post#
     def get_absolute_url(self):
-        return reverse("details-article", args=(str(self.id)))
+        return reverse('index')
     

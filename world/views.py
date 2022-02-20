@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
+from .forms import PostForm, EditForm
+from django import forms
 
 # Create your views here.
 # Function django views ListView will list the posts from the blog
@@ -18,5 +20,12 @@ class ArticleView(DetailView):
 
 class PostView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'post.html'
-    fields = '__all__'
+    
+
+class UpdateViewPost(UpdateView):
+    model = Post
+    form_class = EditForm
+    template_name = 'post_update.html'
+    #fields = ['title', 'title_tag', 'body']
