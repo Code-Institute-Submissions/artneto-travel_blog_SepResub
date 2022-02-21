@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import PostForm, EditForm
 from django import forms
+from django.urls import reverse_lazy
 
 # Create your views here.
 # Function django views ListView will list the posts from the blog
@@ -11,6 +12,7 @@ from django import forms
 class IndexView(ListView):
     model = Post
     template_name = 'index.html'
+    ordering = ['-id']
 
 
 class ArticleView(DetailView):
@@ -28,4 +30,9 @@ class UpdateViewPost(UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'post_update.html'
-    #fields = ['title', 'title_tag', 'body']
+
+
+class DeleteViewPost(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('index')
