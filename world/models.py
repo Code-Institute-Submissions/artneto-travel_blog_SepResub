@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 
-#here I will define the body content for my blog#
+#here I will define the body content for my blog
 
 
 
