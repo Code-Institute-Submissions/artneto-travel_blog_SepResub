@@ -25,15 +25,27 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Travel tips</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'post' %}">Post your message</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'register' %}">Register Now</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Sign in</a>
-            </li>
+            
+            
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'post' %}">Post your message</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'category' %}">Create New Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Register Now</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Sign in</a>
+              </li>
+            {% endif %}
+            
             
           </ul>
           
