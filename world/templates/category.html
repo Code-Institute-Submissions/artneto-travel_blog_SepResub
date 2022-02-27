@@ -1,19 +1,28 @@
 {% extends 'base.html' %}
-{% block title%} Create a new Category{% endblock%}
 
 {% block content %}
 
-{% if user.is_authenticated %}
-        <h1> Add Category</h1>
-        <br/><br/>
-        <div class="mb-3">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-secondary">Add Category</button>
-       </div>
+{% if category_posts %}
+        <h1>{{ caty }}</h1>
+
+        <ul>
+            {% for post in category_posts %}
+            <li><a href="{% url 'details-article' post.pk %}">
+                {{ post.title }} </a>
+                -{{ post.author.first_name }} {{ post.author.last_name }}-{{ post.publish_date }}
+
+                {% if user.is_authenticated %}
+                <small><a href="{% url 'update_post' post.pk %}">(Edit) </small></a>
+
+                <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a>
+                {% endif %}
+                </small><br/>
+                {{ post.body|slice:":150"|linebreaks  }}</li>
+            {% endfor %}
+        </ul>
 {% else %}
-       Please register now or Login
-       
+ <h2> Page doesnt exist </h2>
 {% endif %}
+
+
 {% endblock %}

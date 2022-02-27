@@ -9,6 +9,11 @@ from django.urls import reverse_lazy
 # Function django views ListView will list the posts from the blog
 # DetailView will give the details for the post
 
+def CreateCategoryView(request, caty):
+    category_posts =  Post.objects.filter(category=caty)
+    return render(request,'category.html', {'caty':caty.title(), 'category_posts':category_posts})
+
+
 class IndexView(ListView):
     model = Post
     template_name = 'index.html'
