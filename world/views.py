@@ -38,7 +38,7 @@ class UpdateViewPost(UpdateView):
 
 class CategoryView(CreateView):
     model = Category
-    template_name = 'category.html'
+    template_name = 'create_category.html'
     fields = '__all__'
 
 class DeleteViewPost(DeleteView):

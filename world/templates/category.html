@@ -12,14 +12,17 @@
                 -{{ post.author.first_name }} {{ post.author.last_name }}-{{ post.publish_date }}
 
                 {% if user.is_authenticated %}
-                <small><a href="{% url 'update_post' post.pk %}">(Edit) </small></a>
+                    <small><a href="{% url 'update_post' post.pk %}">(Edit) </small></a>
 
-                <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a>
+                    <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a>
                 {% endif %}
+
                 </small><br/>
-                {{ post.body|slice:":150"|linebreaks  }}</li>
-            {% endfor %}
+                {{ post.body|slice:":150"|linebreaks  }}
+            </li>
         </ul>
+{% endfor %}
+
 {% else %}
  <h2> Page doesnt exist </h2>
 {% endif %}
