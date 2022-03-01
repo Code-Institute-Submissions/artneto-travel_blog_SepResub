@@ -10,8 +10,8 @@ from django.urls import reverse_lazy
 # DetailView will give the details for the post
 
 def CreateCategoryView(request, caty):
-    category_posts =  Post.objects.filter(category=caty)
-    return render(request,'category.html', {'caty':caty.title(), 'category_posts':category_posts})
+    category_posts =  Post.objects.filter(category=caty.replace('-',' '))
+    return render(request,'category.html', {'caty':caty.title().replace('-',' '), 'category_posts':category_posts})
 
 
 class IndexView(ListView):
@@ -20,9 +20,21 @@ class IndexView(ListView):
     ordering = ['-publish_date']
 
 
+    def get_context_data(self, *args, **kwargs):
+        caty_menu = Category.objects.all()
+        context = super(IndexView, self).get_context_data(*args, **kwargs)
+        context["caty_menu"] = caty_menu
+        return context
+
 class ArticleView(DetailView):
     model = Post
     template_name = 'details_article.html'
+
+    def get_context_data(self, *args, **kwargs):
+        caty_menu = Category.objects.all()
+        context = super(ArticleView, self).get_context_data(*args, **kwargs)
+        context["caty_menu"] = caty_menu
+        return context
 
 
 class PostView(CreateView):
@@ -30,6 +42,11 @@ class PostView(CreateView):
     form_class = PostForm
     template_name = 'post.html'
     
+    def get_context_data(self, *args, **kwargs):
+        caty_menu = Category.objects.all()
+        context = super(PostView, self).get_context_data(*args, **kwargs)
+        context["caty_menu"] = caty_menu
+        return context
 
 class UpdateViewPost(UpdateView):
     model = Post
@@ -40,6 +57,12 @@ class CategoryView(CreateView):
     model = Category
     template_name = 'create_category.html'
     fields = '__all__'
+
+    def get_context_data(self, *args, **kwargs):
+        caty_menu = Category.objects.all()
+        context = super(CategoryView, self).get_context_data(*args, **kwargs)
+        context["caty_menu"] = caty_menu
+        return context
 
 class DeleteViewPost(DeleteView):
     model = Post
