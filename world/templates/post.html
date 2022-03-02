@@ -12,6 +12,11 @@
                 {{ form.as_p }}
                 <button class="btn btn-secondary">Post</button>
        </div>
+<!---Function script to display restriction to Post Author-->
+       <script>
+              var name = "{{ user.id }}";
+              document.getElementById("user").value = name;
+       </script>
 {% else %}
        Please register now or Login
        
