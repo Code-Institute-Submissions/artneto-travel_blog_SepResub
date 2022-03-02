@@ -4,6 +4,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+<!--Function to give access to the correct user -->
 {% if user.id == post.author.id %}
 
     <h1> Update Post</h1>

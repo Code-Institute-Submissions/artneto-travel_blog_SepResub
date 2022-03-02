@@ -17,9 +17,14 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     title_tag = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, related_name='post_blog')
     category = models.CharField(max_length=255, default='uncategorized')
     body = models.TextField()
     publish_date =  models.DateField(auto_now_add=True)
+
+    #This function will display the amount of likes under the posts
+    def likes_total(self):
+        return self.likes.count()
 
     def __str__(self):
         return self.title + ' - ' + str(self.author)

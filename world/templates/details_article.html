@@ -24,4 +24,14 @@
 <a href="{% url 'index' %}"class="btn btn-secondary">Back</a>
 
 
+<!--Create Like button-->
+<br/><br/>
+<hr>
+<br/>
+<form action="{% url 'post_like' post.pk %}"
+method="POST">
+        {% csrf_token %}
+        <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-primary btn-sm">Like</button>
+        -{{ likes_total }} likes
+
 {% endblock %}

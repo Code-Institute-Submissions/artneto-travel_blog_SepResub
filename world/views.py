@@ -1,13 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post, Category
 from .forms import PostForm, EditForm
 from django import forms
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 # Function django views ListView will list the posts from the blog
 # DetailView will give the details for the post
+
+def LikeView(request, pk):
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('details-article', args=[str(pk)]))
 
 def CreateCategoryView(request, caty):
     category_posts =  Post.objects.filter(category=caty.replace('-',' '))
@@ -35,6 +41,10 @@ class ArticleView(DetailView):
     def get_context_data(self, *args, **kwargs):
         caty_menu = Category.objects.all()
         context = super(ArticleView, self).get_context_data(*args, **kwargs)
+
+        content = get_object_or_404(Post, id=self.kwargs['pk'])
+        likes_total = content.likes_total()
+        context["likes_total"] = likes_total
         context["caty_menu"] = caty_menu
         return context
 
