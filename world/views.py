@@ -18,6 +18,7 @@ class IndexView(ListView):
     model = Post
     template_name = 'index.html'
     ordering = ['-publish_date']
+    caty = Category.objects.all()
 
 
     def get_context_data(self, *args, **kwargs):
@@ -25,6 +26,7 @@ class IndexView(ListView):
         context = super(IndexView, self).get_context_data(*args, **kwargs)
         context["caty_menu"] = caty_menu
         return context
+
 
 class ArticleView(DetailView):
     model = Post

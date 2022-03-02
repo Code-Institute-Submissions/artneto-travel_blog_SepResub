@@ -4,6 +4,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+{% if user.id == post.author.id %}
         <h1> Delete Post</h1>
         <br/><br/>
         <h3>Delete: {{ post.title }} </h3>
@@ -14,6 +15,11 @@
                 <strong>Are you sure?</strong><br/>
                 <button class="btn btn-secondary">Delete Post</button>
         </div>
+    {% else %}
+
+    {% endif %}
+
+    No access
 {% else %}
 Please register now or Login
 
