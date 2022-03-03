@@ -12,7 +12,14 @@ from django.http import HttpResponseRedirect
 
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    post.likes.add(request.user)
+    liked= False
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        liked = False
+    else:
+        post.likes.add(request.user)
+        liked = True
+
     return HttpResponseRedirect(reverse('details-article', args=[str(pk)]))
 
 def CreateCategoryView(request, caty):
@@ -44,8 +51,14 @@ class ArticleView(DetailView):
 
         content = get_object_or_404(Post, id=self.kwargs['pk'])
         likes_total = content.likes_total()
+
+        liked = False
+        if content.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
         context["likes_total"] = likes_total
         context["caty_menu"] = caty_menu
+        context["liked"] = liked
         return context
 
 
