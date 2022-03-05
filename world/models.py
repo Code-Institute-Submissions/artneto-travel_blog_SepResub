@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
+from ckeditor.fields import RichTextField
+
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -19,7 +21,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name='post_blog')
     category = models.CharField(max_length=255, default='uncategorized')
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     publish_date =  models.DateField(auto_now_add=True)
 
     #This function will display the amount of likes under the posts
