@@ -21,7 +21,8 @@
             {% endif %}
         {% endif %}
         </small><br/>
-        {{ post.body|slice:":150"|linebreaks  }}</li>
+        {{ post.article_snippet }}
+        
         <br/>
 {% endfor%}
 </ul>

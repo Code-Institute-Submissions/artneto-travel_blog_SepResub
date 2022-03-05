@@ -23,6 +23,8 @@ class Post(models.Model):
     category = models.CharField(max_length=255, default='uncategorized')
     body = RichTextField(blank=True, null=True)
     publish_date =  models.DateField(auto_now_add=True)
+    article_snippet = models.CharField(max_length=255, default='')
+
 
     #This function will display the amount of likes under the posts
     def likes_total(self):
