@@ -18,9 +18,13 @@
 </small><br/>
 <hr>
 <br/>
-{{ post.body|safe }}
 
+{% if post.header_img %}
+        <img src="{{ post.header_img.url }}">
+{% endif %}
+<hr>
 <br/><br/>
+{{ post.body|safe }}
 <a href="{% url 'index' %}"class="btn btn-secondary">Back</a>
 
 
@@ -34,9 +38,9 @@ method="POST">
 
     {% if user.is_authenticated %}
         {% if liked %}
-                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-primary btn-sm">Like</button>
+                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-danger btn-sm">Dislike</button>
         {% else %}
-                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-danger btn-sm">Unlike</button>
+                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-primary btn-sm">Like</button>
 
         {% endif %}
     {%else %}
