@@ -9,13 +9,14 @@ from world.models import Profile
 
 
 
-class ProfilePageView(DetailView):
+class ShowProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/profile_user.html'
 
     def get_context_data(self, *args, **kwargs):
         users = Profile.objects.all()
-        context = super(ProfilePageView, self).get_context_data(*args, **kwargs)
+        context = super(ShowProfilePageView, self).get_context_data(*args, **kwargs)
+        
         user_page = get_object_or_404(Profile, id=self.kwargs['pk'])
         context["user_page"] = user_page
         return context

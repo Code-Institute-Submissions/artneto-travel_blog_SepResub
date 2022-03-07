@@ -56,6 +56,7 @@ method="POST">
 
 
 <div class="card" style="width: 18rem;">
+
 {% if post.author.profile.profile_picture %}
         <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
 {% else %}
@@ -66,25 +67,29 @@ method="POST">
                         {{ post.author.first_name }} {{ post.author.last_name}}
                 </h5>
 <p class="small text-muted">
-        <a href="{% url 'show_profile_page' post.author.profile.id %}">  Profile  </a>
+
+        {% if post.author.profile %}
+            <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile</a> |
+        {% endif %}
+        
         {%if post.author.profile.facebook_url %}
                 <a href="{{post.author.profile.facebook_url}}"> Facebook</a> |
-                {% endif %}
+        {% endif %}
 
         {%if post.author.profile.instagram_url %}
                 <a href="{{post.author.profile.instagram_url}}"> Instagram</a> | 
-                {% endif %}
+        {% endif %}
 
         {%if post.author.profile.twitter_url %}
                 <a href="{{post.author.profile.twitter_url}}">Twitter</a> |
-                {% endif %}
+        {% endif %}
                     
         {%if post.author.profile.website_url %}
                 <a href="{{post.author.profile.website_url}}">Website</a> |
-                {% endif %}
+        {% endif %}
 </p>      
                 <p class="card-text">{{post.author.profile.bio}}</p>
-                </div>
-              </div>
+        </div>
+</div>
 
 {% endblock %}
