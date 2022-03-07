@@ -28,19 +28,19 @@
             
             <!---Category Menu Code-->
             {% if caty_menu %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categories
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-
-                {% for item in caty_menu %}
-                <a class="dropdown-item" href="{% url 'category' item|slugify %}">
-                {{ item }}</a>
-                {% endfor %}
-
-              </ul>
-            </li>
+            {% if user.profile %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profile
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                    <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a></li>
+                    <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a></li>
+                </ul>
+              </li>
+            {% endif %}
             {% endif %}
             {% if user.is_authenticated %}
               <li class="nav-item">
@@ -49,9 +49,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'create_category' %}">Create New Category</a>
               </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
             </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout' %}">Logout</a>
