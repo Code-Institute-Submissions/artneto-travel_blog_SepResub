@@ -28,7 +28,7 @@
             
             <!---Category Menu Code-->
             {% if caty_menu %}
-            {% if user.profile %}
+            {% if user.profile.user %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Profile
@@ -38,6 +38,7 @@
                     <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
                     <li><a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a></li>
                     <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a></li>
+                    <li><a class="dropdown-item" href="#">Create Bio Page</a></li>
                 </ul>
               </li>
             {% endif %}
