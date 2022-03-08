@@ -1,11 +1,23 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from django.views.generic import DetailView
+from django.views.generic import DetailView, CreateView
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm
+from .forms import SignUpForm, EditProfileForm, ProfilePageForm
 from world.models import Profile
+
+
+
+class CreateProfilePage(CreateView):
+    model = Profile
+    form_class = ProfilePageForm
+    template_name = "registration/create_user_page.html"
+
+    #Function to make the user id available for the profile to the right user once the form is saved. 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 #Function to edit Profile page
 

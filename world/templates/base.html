@@ -22,9 +22,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Travel tips</a>
-            </li>
+           
             
             <!---Category Menu Code-->
             {% if caty_menu %}
@@ -38,7 +36,7 @@
                     <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
                     <li><a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile Page</a></li>
                     <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a></li>
-                    <li><a class="dropdown-item" href="#">Create Bio Page</a></li>
+                    <li><a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Bio Page</a></li>
                 </ul>
               </li>
             {% endif %}
