@@ -111,7 +111,7 @@ method="POST">
                 </strong>
                 <br/>
                 {{ comment.body }}
-                <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+                <a href ="{% url 'add_your_comments' post.pk %}"></a>
        {% endfor %}
        <br/><br/>
        <hr>
@@ -121,8 +121,6 @@ method="POST">
 
 <br/>
 
-
-<br/><br/>
 <hr>
 
 {% endblock %}
