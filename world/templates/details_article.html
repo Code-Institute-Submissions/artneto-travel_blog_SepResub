@@ -55,6 +55,9 @@ method="POST">
 <br><br/>
 
 
+
+
+
 <div class="card" style="width: 18rem;">
 
 {% if post.author.profile.profile_picture %}
@@ -91,5 +94,35 @@ method="POST">
                 <p class="card-text">{{post.author.profile.bio}}</p>
         </div>
 </div>
+<hr>
+
+<!--Function form to display comment section-->
+<h2> Comments</h2>
+<br/>
+{% if not post.comments.all %}
+        No Comment Yet <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+{% else %}
+<a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+<br/><br/>
+                {% for comment in post.comments.all %}
+                <strong>
+                        {{ comment.name }} -
+                        {{ comment.date_added }}
+                </strong>
+                <br/>
+                {{ comment.body }}
+                <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+       {% endfor %}
+       <br/><br/>
+       <hr>
+       <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+
+{% endif %}
+
+<br/>
+
+
+<br/><br/>
+<hr>
 
 {% endblock %}

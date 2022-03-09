@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title%} Comment Section {% endblock%}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+        <h1> Comment section </h1>
+        <br/><br/>
+        <div class="mb-3">
+              <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Comment</button>
+       </div>
+
+{% else %}
+       Please register now or Login
+       
+{% endif %}
+{% endblock %}
