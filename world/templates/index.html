@@ -1,10 +1,47 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block content %}
 
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Share your Thoughts!</h1>
+            <p class="lead text-muted">With Hello World Blog! you can share your moments worldwide...</p>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn-primary" href="{% url 'create_category' %}">Create New Category</a>
+                <a class="btn-secondary" href="{% url 'post' %}">Post your message</a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="{% static 'img/01img.jpg'%}" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</main>
 
-<h1>Post Blog</h1>
+
 
 <ul>
     {% for post in object_list %}
