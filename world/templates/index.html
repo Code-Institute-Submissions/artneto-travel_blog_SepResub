@@ -4,10 +4,10 @@
 
 {% block content %}
 
-    <section class="py-5 text-center container">
+<section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Share your Thoughts!</h1>
+            <h1 class="fw-light">Share your Adventure Moments!</h1>
             <p class="lead text-muted">With Hello World Blog! you can share your moments worldwide...</p>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <a href="{% url 'create_category' %}" class="btn-primary" >Create New Category</a>
@@ -15,35 +15,34 @@
             </div>
           </div>
         </div>
-    </section>
+</section>
 
- <section class= "w3-container">
-  {% for post in object_list %}
+
+   {% for post in object_list %}
     <div class="card-deck">
-          <div class="card">
-              <img src="{% static 'img/01img.jpg'%}" class="card-img" alt="...">
+        <div class="card">
+                <img src="{% static 'img/01img.jpg'%}" class="card-img" alt="...">
               <div class="card-body">
-                <a href="{% url 'details-article' post.pk %}" class="card-title">
-                  {{ post.title }} </a>
-                  -<a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
-                  -{{ post.author.first_name }} {{ post.author.last_name }}-
-                <p class="card-text">{{ post.article_snippet }}</p>
-                <p class="card-text"><small class="text-muted">{{ post.publish_date }}</small></p>
+                  <a href="{% url 'details-article' post.pk %}" class="card-title">
+                     {{ post.title }}
+                  </a>
+                  <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
+                  -{{ post.author.first_name }} {{ post.author.last_name }}
+                  <p class="card-text">{{ post.article_snippet }}</p>
+                  <p class="card-text"><small class="text-muted">{{ post.publish_date }}</small></p>
                 
-{% if user.is_authenticated %}
-                <!--Function to give access to the correct user -->
-      {% if user.id == post.author.id %}
-                  <small><a href="{% url 'update_post' post.pk %}">(Edit) </small></a>
+                  {% if user.is_authenticated %}
+                    <!--Function to give access to the correct user -->
+                    {% if user.id == post.author.id %}
+                        <small><a href="{% url 'update_post' post.pk %}">(Edit)</a></small>
 
-                  <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a></small>
-      {% endif %}
-{% endif %}
-              </div>
+                        <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a></small>
+                    {% endif %}
+                  {% endif %}
+                </div>
+            </div>
           </div>
-      </div>
-</div>
+</section>
+
 {% endfor %}
-
-
-
 {% endblock %}

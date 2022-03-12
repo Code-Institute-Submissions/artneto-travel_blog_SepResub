@@ -31,3 +31,43 @@ body{
     
 }
 
+
+
+.card-deck{
+    margin:0 auto;
+    max-width: 1000px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+.card{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-img{
+    width: 100%;
+    display: block;
+}
+
+.card-body{
+    line-height: 1.5;
+    font-size:0.9em;
+    padding:15px;
+    background: #f3ebeb;
+
+}
+
+.card-text{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.hover{
+    text-decoration: underline;
+}
