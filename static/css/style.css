@@ -40,6 +40,7 @@ body{
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
     gap:20px;
     font-family: sans-serif;
+    font-size: 16px;
 }
 
 .card{
@@ -52,9 +53,6 @@ body{
 }
 
 .card-body{
-    line-height: 1.5;
-    font-size:0.9em;
-    padding:15px;
     background: #f3ebeb;
 
 }
@@ -67,10 +65,30 @@ body{
     font-size: 0.8em;
 }
 
+.card-info > p:first-of-type{
+    margin-top: 0;
+}
+
+.card-info > p:last-of-type{
+    margin-bottom: 0;
+}
+
 .edit_ops{
     text-decoration: none;
 }
 
 .edit_ops.hover{
     text-decoration: underline;
+}
+
+.card-text{
+    line-height: 1.5;
+    font-size: 13px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.card-title {
+    margin-top: 1.5em;
+    text-decoration: none;
 }
