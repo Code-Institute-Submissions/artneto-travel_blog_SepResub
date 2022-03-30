@@ -6,91 +6,43 @@
 
 {% block content %}
 
-    <!--main content -->
+    <!--Cover -->
+	<div class="py-5 text-center container">
+		<div class="row py-lg-5">
+			 <div class="col-lg-6 col-md-8 mx-auto">
+				  <h1 class="fw-light">Share your Adventure Moments!</h1>
+				  <p class="lead text-muted">With Hello World Blog! you can share your moments worldwide...</p>
+				 <div class="d-grid gap-2 col-6 mx-auto">
+					<a href="{% url 'create_category' %}" class="btn-primary" >Create New Category</a>
+					<a href="{% url 'post' %}" class="btn-secondary">Post your message</a>
+				</div>
+			 </div>
+		</div>
+	</div>
+     <!--End main content -->
 
-    <div class="container main">
-        <!--column1 -->
-       <div class="col">
+    
+        <!--column -->
+       <div class="col-sm">
+        {% for post in object_list %}
               <div class="post">
-                  <img class="post-img" src="./img/post3.jpeg" alt=""/>
+                  <img class="post-img" src="{% static 'img/travel02.jpg'%}" alt=""/>
   
                   <div class="post-info">
-                      <h2>Blog Post</h2>
+                      <h2><a href="{% url 'details-article' post.pk %}">{{ post.title }}</a></h2>
                       <div class="user-info">
-                          <img src="./img/avatar.png" alt="">
-                          <span>User Name</span>
-                          <span>Date 1.2021</span>
-                          <span>Category</span>
+                          <img src="{% static 'img/profilepicture.jpg'%}" alt="">
+                          <span>{{ post.author.first_name }}  {{ post.author.last_name}}</span>
+                          <span><a class="py-2 px-3 mb-2"><i class="mr-2 fa fa-calendar" aria-hidden="true"></i> {{ post.publish_date }}</a></span>
+                          <span><a href="{% url 'details-article' post.pk %}" > {{ post.title }}</a></span>
                       </div>
   
-                      <p>{{ post.body|safe }}</p>
-                  </div>
-              </div>
-       </div>
-       <!--column2-->
-       <div class="col">
-          <div class="post">
-              <img class="post-img" src="./img/post3.jpeg" alt=""/>
-
-              <div class="post-info">
-                  <h2>Blog Post</h2>
-                  <div class="user-info">
-                      <img src="./img/avatar.png" alt="">
-                      <span>User Name</span>
-                      <span>Date 1.2021</span>
-                      <span>Category</span>
-                  </div>
-
-                  <p>lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
-                  lorem lorem loremlorem lorem loremlorem lorem lorem
-
-                  lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
-                  lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
-                  lorem lorem loremlorem lorem loremlorem lorem lorem
-                  lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
-                  lorem lorem loremlorem lorem loremlorem lorem lorem
-              </p>
-              </div>
-          </div>
-       </div>
-
-    </div>
-    <!--End main content -->
-  
-	<section id="featured" class="carousel slide" data-ride="carousel">
-		  <ol class="carousel-indicators">
-		    <li data-target="#featured" data-slide-to="0" class="active"></li>
-		    <li data-target="#featured" data-slide-to="1"></li>
-		    <li data-target="#featured" data-slide-to="2"></li>
-  		</ol>
-		<div class="carousel-inner">
-	        <div class="carousel-item active">
-			    <img src="media/Ravensberg_germany.jpg">
-		    </div>	    
-			<div class="carousel-item">
-			    <img src="media/AruVally.png">
-		    </div>
-			<div class="carousel-item">
-			    <img src="media/Me_Kashmir.jpg">
-		    </div>
-		</div>
-	</section>
-
-	<section class="row">
-		<div class="col-lg-4 profile-info">
-			<img class="float-left" src="media/Profile_Me.jpg" alt="Me in Photo">
-			<h2>Arindam Roychowdhury</h2>
-			<p>Pune , India</p>
-		</div>
-		<div class="col-lg-5">
-			<p>Hi, I am Arindam. I love coding , blogging and web apps designing.</p>
-		</div>
-	</section>
-	
-	<section class="gallery d-flex flex-wrap">
-		{% for post in fav_posts %}
-			<a href="{% url 'post_details' post.pk post.slug %}"><img src={{ post.first_image }}>{{ post.title }}</a>
-		{% endfor %}
-	</section>
-
+                      <p>lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
+                      lorem lorem loremlorem lorem loremlorem lorem lorem
+                  </p>
+				</div>
+        {% endfor %}
+	</div>
+		
 {% endblock %}
+	
