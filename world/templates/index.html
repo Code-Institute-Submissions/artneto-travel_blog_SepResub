@@ -6,43 +6,13 @@
 
 {% block content %}
 
-    <!--Cover -->
-	<div class="py-5 text-center container">
-		<div class="row py-lg-5">
-			 <div class="col-lg-6 col-md-8 mx-auto">
-				  <h1 class="fw-light">Share your Adventure Moments!</h1>
-				  <p class="lead text-muted">With Hello World Blog! you can share your moments worldwide...</p>
-				 <div class="d-grid gap-2 col-6 mx-auto">
-					<a href="{% url 'create_category' %}" class="btn-primary" >Create New Category</a>
-					<a href="{% url 'post' %}" class="btn-secondary">Post your message</a>
-				</div>
-			 </div>
-		</div>
-	</div>
-     <!--End main content -->
+    <!--Home  Section-->
+<div class="masthead" src="{% static 'img/travel02.jpg'%}"></div>
 
-    
-        <!--column -->
-       <div class="col-sm">
-        {% for post in object_list %}
-              <div class="post">
-                  <img class="post-img" src="{% static 'img/travel02.jpg'%}" alt=""/>
-  
-                  <div class="post-info">
-                      <h2><a href="{% url 'details-article' post.pk %}">{{ post.title }}</a></h2>
-                      <div class="user-info">
-                          <img src="{% static 'img/profilepicture.jpg'%}" alt="">
-                          <span>{{ post.author.first_name }}  {{ post.author.last_name}}</span>
-                          <span><a class="py-2 px-3 mb-2"><i class="mr-2 fa fa-calendar" aria-hidden="true"></i> {{ post.publish_date }}</a></span>
-                          <span><a href="{% url 'details-article' post.pk %}" > {{ post.title }}</a></span>
-                      </div>
-  
-                      <p>lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem
-                      lorem lorem loremlorem lorem loremlorem lorem lorem
-                  </p>
-				</div>
-        {% endfor %}
-	</div>
+
+
+
+
 		
 {% endblock %}
 	
