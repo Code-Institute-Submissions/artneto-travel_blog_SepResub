@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'django_blog_travel.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://dleaxvmkmktpxc:c234e60325cff625c40c0efef855fa9d551b6b76d2d9d41eb5f76bbb8142c4f4@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/der7q75tn93q5g')
+    'default': dj_database_url.parse('postgres://wsqbovpkpfgupc:84c0a0bbdd720d8ca81ea2801f86f599bab1b8deff97c47f361de34cb42205c3@ec2-34-246-227-219.eu-west-1.compute.amazonaws.com:5432/dfeqhhh7gn4g7m')
 }
 
 
