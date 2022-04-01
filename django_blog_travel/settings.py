@@ -8,8 +8,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 
 For the full list of settings and their values, see
 
-https://docs.djangoproject.com/en/3.2/ref/settings/
-"""
+https://docs.djangoproject.com/en/3.2/ref/settings/"""
+
 import os
 import dj_database_url
 from pathlib import Path
@@ -28,15 +28,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY','')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = True
 
-if development:
-    ALLOWED_HOSTS = ['blogtravel-django.herokuapp.com', 'localhost']
-else:
-    ALLOWED_HOSTS = [os.environ.get('blogtravel-django')]
+
+ALLOWED_HOSTS = ['blogtravel-django.herokuapp.com', 'localhost']
+
 
 
 # Application definition
@@ -62,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
@@ -90,15 +88,8 @@ WSGI_APPLICATION = 'django_blog_travel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if development:
-    DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-     }
-    }
-else:
-    DATABASES = {
+
+DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
