@@ -4,22 +4,17 @@
 {% block content %}
 
 <div class="container">
-        <div class="row">
-            <div class="col-md-8 mt-3 offset-md-2">
-                <h3> Login in</h3>
-
-            </div>
-      </div>
- <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-
-
-        <form class="login" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-secondary">Login</button>
-            <br>
-            <p>Please create an aacount to make a comment or like a post</p>
+        <div class="wrapper">
+            <form class="login" method="POST">
+                <h3 class="form-signin-heading"> Please Sign In</h3>
+                    <hr class="colorgraph"><br>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <button class="btn btn-secondary">Login</button>
+              </div>
+        </div>
+            
     </div>
 
 </div>
