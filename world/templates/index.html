@@ -17,107 +17,60 @@
 </div>
 
 
-<!--Card Post Layout-->
+<section id="blog">
+  <div class="blog-heading">
+    <span>My recents Posts</span>
+    <h3>Blog Post</h3>
+  </div>
 
-<div class="album py-5 bg-light">
-  <div class="container">
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+  <!--blog container-->
+  
+  <div class="row g-5">
+    <div class="col-md-8"> 
+      <article class="blog-post">
+  {% for post in object_list %}
+      
+          <h2><a href="{% url 'details-article' post.pk %}" class="blog-post-title">{{ post.title }} </a></h2>
+          
+  {% endfor %}
+        <div class="col-md-1">
+          <img class="img-fluid rounded-circle" src="../im" alt="Author" >
+        </div>
+        <p class="blog-post-meta">January 1, 2021 by <a href="#">Author</a></p>
 
-          <div class="card-body">
-            <p class="card-text">text here</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <a class="py-2 px-3 mb-2" href="#"><i class="mr-2 fa fa-calendar" aria-hidden="true"></i> 15 march </a>
-            </div>
+        <p>Text from the blog here</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
           </div>
         </div>
+      </article>
+    </div>
+  <div class="col-md-4">
+    <div class="position-sticky" style="top: 2rem;">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="fst-italic">About</h4>
+        <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
-          <div class="card-body">
-            <p class="card-text">text here</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <a class="py-2 px-3 mb-2" href="#"><i class="mr-2 fa fa-calendar" aria-hidden="true"></i> 15 march </a>
-            </div>
-          </div>
-        </div>
+      <div class="p-4">
+        <h4 class="fst-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">March 2021</a></li>
+          <li><a href="#">February 2021</a></li>
+        </ol>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225"  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-          <div class="card-body">
-            <p class="card-text">text here</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <a class="py-2 px-3 mb-2" href="#"><i class="mr-2 fa fa-calendar" aria-hidden="true"></i> 15 march </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <aside class="blog-post py-4">
-         <div class="container">
-              <div class="row">
-                <div class="social-links row text-center">
-                  <div class="col-sm-4 py-5 primary-color">
-                    <a class="social_link w-100">
-                      <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-4 py-5 secondary-color">
-                    <a class="social_link w-100">
-                      <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-4 py-5 third-color">
-                    <a class="social_link w-100">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-                <h4 class="aside-heading mt-4 mb-3 pl-2">Popular Authors</h4>
-                <article class="row author mb-3">
-                    <div class="col-sm-4 py-4">
-                      <img class="img-fluid rounded-circle" alt="" src="./img/02.jpg">
-                    </div>
-                    <div class="author col-sm-8">
-                        <h5 class="m-0">John Doe</h5>
-                          <p class="m-0">orem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
-                          <p class="m-0">The passage is attributed to an unknown typesetter in the 15th century who is thought to have</p>
-                          <div class="social-links">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-    
-                          </div>
-                    </div>
-                  </article>
-                  <h4 class="aside-heading mt-4 mb-3 pl-2">Popular Categories</h4>
-                  <div class="badges w-100">
-                    <a href="#"> tecnology </a>
-                    <a href="#"> Programming </a>
-                  </div>
-              </div>
-         </div>
-        </aside>
+    </div>
+  </div>
 
 
+</div>
+
+
+
+</section>
 
 {% endblock %}
 
@@ -130,7 +83,6 @@
   </div>
 </footer>
 
-  <!--Card Post Layout-->
 
 
 
