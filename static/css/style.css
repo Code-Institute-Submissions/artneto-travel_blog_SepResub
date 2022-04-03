@@ -1,9 +1,62 @@
+body{
+    font-family: 'Montaga', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 .banner {
-    background-color: #f33c3c;
     max-height: 15rem;
     padding-top: 15rem;
     background: url('../img/cover-img.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.container-fluid {
+    background-color:#1F2833;
+    font-weight: 700;
+    padding: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+    color:#66FCF1;
+}
+
+.card-body .post-link{
+    text-decoration: none;
+}
+
+
+.card-body{
+    background-color:#0B0C10;
+    color:#C5C6C7;
+    
+}
+
+.card-title {
+    font-size:1.4rem;
+    text-decoration: none;
+}
+
+/*Footer*/
+
+footer{
+    background-color:#1F2833;
+    color:#C5C6C7;
+}
+
+.footer input{
+    background-color:#0B0C10 !important;
+}
+
+.useful_links {
+    color:#66FCF1;
+    
+}
+
+.footer p {
+    font-size:0.9rem;
 }
