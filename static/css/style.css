@@ -4,6 +4,24 @@ body{
 }
 
 
+/*--Nav Bar--*/
+.navbar {
+    background-color: #0B0C10;
+    
+}
+
+.navbar-logo {
+    font-size:1.5rem;
+    text-decoration: none;
+    color:#bf7070;
+}
+
+.navbar-logo:hover{
+    color: #fff;
+}
+
+
+
 .banner {
     max-height: 15rem;
     padding-top: 15rem;
