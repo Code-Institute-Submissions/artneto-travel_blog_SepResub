@@ -17,16 +17,17 @@
                 <div class="card-body">
                   <div class="image-container">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="card-img">
                     {% else %}
                     <img class="card-img-top" src=" {{ post.image.url }}">
                     {% endif %}
-                    <a href="{% url 'details-article' post.pk  %}" class="post-link">
+                     <a href="{% url 'details-article' post.pk  %}" class="post-link">
                       <h2 class="card-title">{{ post.title }}</h2>
                     </a>
                     <div class="image-flash">
                       <p class="author">Author: {{ post.author }}</p>
-                      <p class="card-text text-muted h6">{{ post.body|slice:":200"|safe }}</p>
+                      <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
+
                     </div>
                   </div>
                   <hr />
@@ -60,4 +61,6 @@
     </div>
   </div>
 </div>
+
+
 {% endblock %}

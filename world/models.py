@@ -34,6 +34,7 @@ class Post(models.Model):
     header_img = models.ImageField(null=True, blank=True, upload_to="images/")
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name='post_blog')
+    image = models.ImageField(null=False, blank=False, upload_to="images/", default="placeholder")
     category = models.CharField(max_length=255, default='uncategorized')
     body = RichTextField(blank=True, null=True)
     publish_date =  models.DateField(auto_now_add=True)

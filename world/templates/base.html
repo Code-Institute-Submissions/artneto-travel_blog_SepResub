@@ -28,7 +28,8 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+   <main>
+      <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-logo" href="{% url 'index' %}">Hello World Blog!</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,13 +44,13 @@
                 <a class="nav-link" href="{% url 'create_category' %}">Create New Category</a>
               </li>
               {% if user.is_authenticated %}
-                   <li class="nav-item dropdown">
-                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ user.first_name }} {{ user.last_name }}</a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                             <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
-                             
-                           {% if user.profile.id %}
+                            <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
+                            
+                          {% if user.profile.id %}
                                 
                                 <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Profile Page</a></li>
                               {% else %}
@@ -62,19 +63,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
                           </li>
-               {% endif %}
+              {% endif %}
             </ul>
           </div>
         </div>
       </nav>
+    </main>
     
-   
-   
    {% block content %}
+ {% endblock %}
+    
+    <!---Footer-->
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container">
+        <span class="text-muted">Designed by Arthur Neto &copy;2022. All rights reserved</span>
+      </div>
+      <div class="social-links">
+        <a href="https://facebook.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 
-   {% endblock %}
-        <!---Footer-->
-        <!--end footer-->
+      </div>
+    </footer>
+          <!--end footer-->
  </body>
 
  
