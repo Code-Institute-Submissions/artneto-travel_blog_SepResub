@@ -2,7 +2,6 @@ from django import forms
 from .models import Post, Category, Comment
 
 choices = Category.objects.all().values_list('name','name')
-#choices = []
 choices_list = []
 
 for item in choices:
@@ -16,7 +15,7 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=choices_list, attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=choices, attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control', 'value':'', 'id':'user', 'type':'hidden'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'article_snippet': forms.Textarea(attrs={'class': 'form-control'}),

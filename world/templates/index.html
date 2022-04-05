@@ -19,7 +19,7 @@
                     {% if "placeholder" in post.featured_image.url %}
                     <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="card-img">
                     {% else %}
-                    <img class="card-img-top" src=" {{ post.image.url }}">
+                    <img class="card-img-top" src="{{ post.image.url }}">
                     {% endif %}
                      <a href="{% url 'details-article' post.pk  %}" class="post-link">
                       <h2 class="card-title">{{ post.title }}</h2>
