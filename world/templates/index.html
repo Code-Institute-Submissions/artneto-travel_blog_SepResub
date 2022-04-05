@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="main-base">
+    
     <div class="banner">
         <div class="container-fluid">
             <div class="row">
@@ -10,9 +11,9 @@
                 <!-- Blog Entries Column -->
                 <div class="col-12 mt-3 left">
                     <div class="row">
-                        {% for post in post_list %}
+                        {% for post in object_list %}
                         <div class="col-md-4">
-                            <div class="card mb-4 h-200">
+                            <div class="card mb-4">
                                 <div class="card-body">
                                     <div class="image-container">
                                         {% if "placeholder" in post.featured_image.url %}
@@ -22,7 +23,7 @@
                                         <img class="card-img-top" src=" {{ post.header_img.url  }}">
                                         {% endif %}
                                     </div>
-                                    <a href="{% url 'details-article' post.pk  %}" class="post-link">
+                                    <a href="{% url 'details_article' post.pk  %}" class="post-link">
                                         <h2 class="card-title">{{ post.title }}</h2>
                                     </a>
                                     <div class="image-flash">
@@ -30,36 +31,33 @@
                                       <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
                 
                                     </div>
-                                    <hr />
+                                    <hr/>
                                     <p class="card-text text-muted h6">{{ post.publish_date}}</p>
                                     <p class="fa fa-thumbs-o-up" aria-hidden="true">{{post.post_like }}</i>
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:3 %}
-                    </div>
-                    <div class="row">
-                        {% endif %}
                         {% endfor %}
         
                     </div>
                 </div>
             </div>
+            
             {% if is_paginated %}
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    {% if page_obj.has_previous %}
-                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                    {% endif %}
-                    {% if page_obj.has_next %}
-                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-        
-                    {% endif %}
-                </ul>
+                <nav aria-label="Page navigation">
+                <div class="pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}" class="bottom-link">
+                    &laquo; Newer Posts </a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="bottom-link"> Older
+                    Posts &raquo; </a>
+
+             {% endif %}
+             
+            </div>
             </nav>
-            {% endif %}
-    </div>
-</div>
-
-
+    {% endif %}
+    
 {% endblock %}

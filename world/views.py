@@ -27,11 +27,13 @@ def CreateCategoryView(request, caty):
     return render(request,'category.html', {'caty':caty.title().replace('-',' '), 'category_posts':category_posts})
 
 
+
 class IndexView(ListView):
     model = Post
     template_name = 'index.html'
     ordering = ['-publish_date']
     caty = Category.objects.all()
+    paginate_by = 3
 
 
     def get_context_data(self, *args, **kwargs):

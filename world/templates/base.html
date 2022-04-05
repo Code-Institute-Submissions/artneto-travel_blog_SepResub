@@ -8,8 +8,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Hello, World!| Blog travel blog where you can share your tips and moments" />
+    <meta name="description" content="Hello, World!| Blog travel blog where you can share your tips and moments" />
     <meta name="keyword" content="travel, blog, food, countries, holidays, homecation" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -72,26 +71,12 @@
         </div>
       </nav>
     </main>
-    
-   {% block content %}
- {% endblock %}
-    
-    <!---Footer-->
-    <footer class="footer mt-auto py-3 bg-dark">
-      <div class="container">
-        <span class="text-muted">Designed by Arthur Neto &copy;2022. All rights reserved</span>
-      </div>
-      <div class="social-links">
-        <a href="https://facebook.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="https://instagram.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  </body>
 
-      </div>
-    </footer>
-          <!--end footer-->
- </body>
-
+  {% block content %}
  
- <!-- Popper -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ {% endblock %}
+ {% include "footer.html" %}
+   <!-- Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>
