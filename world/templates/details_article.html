@@ -3,6 +3,95 @@
 {% block title%} {{ post.title_tag }}{% endblock%}
 {% block content %}
 
+
+
+<div class="container pb50">
+
+        <div class="row">
+           <div class="col-md-9 mb40">
+                <article>
+                        <!--main picture-->
+                        {% if "placeholder" in post.header_img %}
+                        <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
+                         src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png" alt="defalt profile image"></a>
+                         {% else %}
+                        <img src="{{ post.header_img.url }}" alt="" class="img-fluid mb30">
+                        {% endif %}
+                        <!--main Post-->
+                        <div class= "post-content">
+                                <h3>{{ post.title }}</h3>
+                                <ul class="post-meta list-inline">
+                                        <!--user name/category-date posted-->
+                                        <li class="list-inline-item">{{ post.author.first_name }}</li>
+                                        <li class="list-inline-item"></li>
+                                        <li class="list-inline-item"><i class="fa fa-calendar-o">{{ post.publish_date }}</i></li>
+                                </ul>
+                                <p class="lead">text article</p>
+                                <hr class="mb40">
+
+                                <h4 class="mb40 text-uppercase font500">About Author</h4>
+                                <div class="media mb40">
+                                <i class="d-flex mr-3 fa fa-user-circle fa-5x text-primary"></i>
+                                        <div class="media-body">
+                                                <h5 class="mt-0 font700">Author </h5>
+                                        </div>
+                                </div>
+                        <hr class="mb40">
+                                <h3 class="mb40 text-uppercase font500">Comments</h3>
+                                <div class="media mb40">
+                                <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                                <div class="media-body"><h5 class="mt-0 font400 clearfix"> <h5> {{ post.author.first_name }} </h5> 
+                                comments from users here
+                                </div>
+                                </div>
+                        <hr class="mb40">
+                        <h4 class="mb40 text-uppercase font500"> Post a Comment</h4>
+                        <form role="form">
+                                <div class="form-group">
+                                <label>Name</label> 
+                                <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+                                <div class="form-group"> 
+                                <label>Comment</label>
+                                <textarea class="form-control" rows="5" placeholder="Comment">
+                                </textarea>
+                                </div>
+                             <div class="clearfix float-right"> 
+                            <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                           </div>
+                        </form>
+                        </div>
+                </article>
+          </div>     
+        </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>{{ post.title }}</h1>
 <small>By: 
         {{ post.author.first_name }} 
