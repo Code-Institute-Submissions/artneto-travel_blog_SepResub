@@ -20,7 +20,7 @@ body{
     color: #fff;
 }
 
-
+/*Post container*/
 .main-post p{
     color:#fff;
     padding: 7px;
@@ -67,7 +67,10 @@ body{
     position: relative;
 }
 
-.container-fluid {
+.banner-body {
+    background-color: #1F2833;
+}
+.container-md {
     background-color:#1F2833;
     font-weight: 700;
     padding: 16px;
@@ -95,22 +98,102 @@ h1,h2,h3,h4,h5{
     text-decoration: none;
 }
 
+
+.image-flash{
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.fa::after{
+    transition: all .1s cubic bezier(.64,-0.58,.31,1.5);
+}
+
 /*Footer*/
 
-footer{
-    background-color:#1F2833;
-    color:#C5C6C7;
+.social-links {
+
+    text-align: center;
+
+
 }
 
-.footer input{
-    background-color:#0B0C10 !important;
+
+.pagination {
+
+    display: flex;
+
+    padding-left: 0;
+
+    list-style: none;
+
+    color: white;
+
+    text-decoration: none;
+
 }
 
-.useful_links {
+
+.pagination a {
+
+    text-decoration: none;
+
+    color: white;
+
+}
+
+
+.footer {
+
+    text-align: center;
+    min-width: 720px;
+
+}
+
+
+.fa {
+
+    padding: 1rem;
+
+    color: #6c757d !important;
+
+}
+
+
+.aside-heading{
+    border-left:3px solid #66FCF1;
+    padding-left: 10px;
+}
+
+.author>p {
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+.author .social-links a{
+    margin-left: 0.8rem;
+}
+
+.badges>a {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    margin:0.2rem;
+    padding: 0.5rem;
+    background-color:#535768;
     color:#66FCF1;
-    
+
 }
 
-.footer p {
-    font-size:0.9rem;
+.badges {
+    margin-top:  1rem;
+    padding-bottom: 1rem;
 }
+
