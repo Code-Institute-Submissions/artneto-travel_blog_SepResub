@@ -20,7 +20,7 @@ def LikeView(request, pk):
         post.likes.add(request.user)
         liked = True
 
-    return HttpResponseRedirect(reverse('details-article', args=[str(pk)]))
+    return HttpResponseRedirect(reverse('details_article', args=[str(pk)]))
 
 def CreateCategoryView(request, caty):
     category_posts =  Post.objects.filter(category=caty.replace('-',' '))

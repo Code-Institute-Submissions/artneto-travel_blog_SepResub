@@ -11,7 +11,7 @@
                         <div class="col-md-9 mb40">
                                 <article>
                                         <!--main picture-->
-                                        {% if "placeholder" in post.header_img.url %}
+                                        {% if "placeholder" in post.header_img %}
                                         <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
                                         src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png" alt="defalt profile image"></a>
                                         {% else %}
@@ -59,8 +59,12 @@
                         </div>
 
                 </div>
-        </div>  
+        </div> 
+        
 </div>
+
+<!--Column-->
+<!--/col-->
 
 
 
