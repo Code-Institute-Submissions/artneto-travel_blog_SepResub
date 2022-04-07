@@ -4,63 +4,115 @@
 {% block content %}
 
 <div class="container-post">
-        
-
        <div class="container pb50">
                 <div class="row">
                         <div class="col-md-9 mb40">
                                 <article>
-                                        <!--main picture-->
-                                        {% if "placeholder" in post.header_img.url %}
-                                        <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
-                                        src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png" alt="defalt profile image"></a>
-                                        {% else %}
-                                        <img src="{{ post.header_img.url }}" alt="" class="img-fluid mb30">
-                                        {% endif %}
-                                        <!--main Post-->
-                                        <div class= "post-content">
-                                                <h3 class= "title-post">{{ post.title }}</h3>
-                                                <ul class="post-tag list-inline">
-                                                        <!--user name/category-date posted-->
-                                                        <li class="list-inline-item">
-                                                          <i class="fa fa-user"></i><a href="#">{{ post.author.first_name }}  {{ post.author.last_name}}</a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                          <i class="fa fa-calendar"></i> <a href="#">{{ post.publish_date }}</a>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                         <i class="fa fa-tags"></i> <a href="#">{{ post.category }}</a>
-                                                        </li>
-                                                </ul>
-                                                <div class= "article-lead">
-                                                        <p class="lead">{{ post.body|safe }}</p>
-                                                </div>
-                                                {% if user.is_authenticated %}
-                                                {% if user.id == post.author.id %}
-                                                <ul class="post-tag list-inline">
-                                                 <li class="list-inline-item"><i class="fa fa-pencil"></i><a href="{% url 'update_post' post.pk %}">Edit</a></li>
-                                                 <li class="list-inline-item"><i class="fa fa-trash-o"></i><a href="{% url 'post_delete' post.pk %}">Delete</a></li>
-                                                </ul>
-                                                        {% endif %}
-                                                {% endif %}
-                                                
-                                          <hr class="mb40">
-                                          <br/><br/>
-                                          
-                                          <a href="{% url 'index' %}"class="btn btn-secondary">Back</a>
-
-                                                
-
-                                        
-                                                
+                               <!--main picture-->
+                                  {% if "placeholder" in post.header_img.url %}
+                                   <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
+                                    src="https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.png" alt="defalt profile image"></a>
+                                   {% else %}
+                                    <img src="{{ post.header_img.url }}" alt="" class="img-fluid mb30">
+                                   {% endif %}
+                                <!--main Post-->
+                                    <div class= "post-content">
+                                        <h3 class= "title-post">{{ post.title }}</h3>
+                                        <ul class="post-tag list-inline">
+                                       <!--user name/category-date posted-->
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-user"></i><a href="#">{{ post.author.first_name }}  {{ post.author.last_name}}</a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-calendar"></i> <a href="#">{{ post.publish_date }}</a>
+                                             </li>
+                                             <li class="list-inline-item">
+                                                <i class="fa fa-tags"></i> <a href="#">{{ post.category }}</a>
+                                              </li>
+                                        </ul>
+                                        <div class= "article-lead">
+                                                <p class="lead">{{ post.body|safe }}</p>
                                         </div>
-                                </article>
-                        
-                        </div>
+                                        {% if user.is_authenticated %}
+                                        {% if user.id == post.author.id %}
+                                        <ul class="post-tag list-inline">
+                                             <li class="list-inline-item"><i class="fa fa-pencil"></i><a href="{% url 'update_post' post.pk %}">Edit</a></li>
+                                              <li class="list-inline-item"><i class="fa fa-trash-o"></i><a href="{% url 'post_delete' post.pk %}">Delete</a></li>
+                                        </ul>
+                                                {% endif %}
+                                        {% endif %}
+                                                
+                                        <hr class="mb40">
+                                        <br/><br/>
 
+                                        <div class="row like-icon">
+                                            <div class="col">
+                                                   <div class="total-likes">
+                                                        <form action="{% url 'post_like' post.pk %}" method="POST">
+                                                                {% csrf_token %}
+                                                                {% if user.is_authenticated %}
+                                                                    {% if liked %}
+                                                                    <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-danger btn-sm"><i class="fa fa-thumbs-o-up">
+                                                                      </i>{{ likes_total }}</button>
+                                                                    {% else %}
+                                                                        <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-primary btn-sm"><i class="fa fa-thumbs-o-up">
+                                                                      </i>{{ likes_total }}</button>
+
+                                                                    {% endif %}
+                                                                     {%else %}
+                                                                        <small><a href="{% url 'login' %}">Login to Like</a></small>
+
+                                                                      {% endif %}  
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="card" style="width: 18rem;">
+
+                                                {% if post.author.profile.profile_picture %}
+                                                <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
+                                                {% else %}
+                                                <img src="{% static 'profilepicture.jpg' %}" alt="profile pic">
+                                                {% endif %}
+                                                        <div class="card-body">
+                                                                <h5 class="card-title">
+                                                                        {{ post.author.first_name }} {{ post.author.last_name}}
+                                                                </h5>
+                                                <p class="small text-muted">
+                                                
+                                                        {% if post.author.profile %}
+                                                            <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile</a> |
+                                                        {% endif %}
+                                                        
+                                                        {%if post.author.profile.facebook_url %}
+                                                                <a href="{{post.author.profile.facebook_url}}"> Facebook</a> |
+                                                        {% endif %}
+                                                
+                                                        {%if post.author.profile.instagram_url %}
+                                                                <a href="{{post.author.profile.instagram_url}}"> Instagram</a> | 
+                                                        {% endif %}
+                                                
+                                                        {%if post.author.profile.twitter_url %}
+                                                                <a href="{{post.author.profile.twitter_url}}">Twitter</a> |
+                                                        {% endif %}
+                                                                    
+                                                        {%if post.author.profile.website_url %}
+                                                                <a href="{{post.author.profile.website_url}}">Website</a> |
+                                                        {% endif %}
+                                                </p>      
+                                                                <p class="card-text">{{post.author.profile.bio}}</p>
+                                                        </div>
+                                                </div>
+                                        <hr class="mb40">
+                                          
+                                        <a href="{% url 'index' %}"class="btn btn-secondary">Back</a>
+
+                                    </div>
+                                </article>
+                        </div>
                 </div>
-        </div> 
-        
+        </div>      
 </div>
 
 <!--Column-->
@@ -90,97 +142,8 @@
 
 
 
-<h1>{{ post.title }}</h1>
-<small>By: 
-        {{ post.author.first_name }} 
-        {{ post.author.last_name}} -
-        {{ post.publish_date }}
-
-        {% if user.is_authenticated %}
-        {% if user.id == post.author.id %}
-        <a href="{% url 'update_post' post.pk %}"> (Edit)
-        </a>
-        <a href="{% url 'post_delete' post.pk %}">(Delete)</a>
-                {% endif %}
-        {% endif %}
-</small><br/>
-<hr>
-<br/>
-
-{% if post.header_img %}
-        <img src="{{ post.header_img.url }}">
-{% endif %}
-
-<br/><br/>
-{{ post.body|safe }}
-<a href="{% url 'index' %}"class="btn btn-secondary">Back</a>
 
 
-<!--Create Like button-->
-<br/><br/>
-<hr>
-<br/>
-<form action="{% url 'post_like' post.pk %}"
-method="POST">
-        {% csrf_token %}
-
-    {% if user.is_authenticated %}
-        {% if liked %}
-                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-danger btn-sm">Dislike</button>
-        {% else %}
-                <button type="submit", name="post_id", value="{{post.id}}", class="btn btn-primary btn-sm">Like</button>
-
-        {% endif %}
-    {%else %}
-        <small><a href="{% url 'login' %}">Login to Like</a></small>
-
-    {% endif %}
-
-    <p class="fa fa-thumbs-o-up" aria-hidden="true">{{post.likes_total }}</i></p>
-</form>
-
-<br><br/>
-
-
-
-
-
-<div class="card" style="width: 18rem;">
-
-{% if post.author.profile.profile_picture %}
-        <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
-{% else %}
-        <img src="{% static '/blogtravel/images/default-profile.jpg' %}" alt="profile pic">
-{% endif %}
-        <div class="card-body">
-                <h5 class="card-title">
-                        {{ post.author.first_name }} {{ post.author.last_name}}
-                </h5>
-<p class="small text-muted">
-
-        {% if post.author.profile %}
-            <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile</a> |
-        {% endif %}
-        
-        {%if post.author.profile.facebook_url %}
-                <a href="{{post.author.profile.facebook_url}}"> Facebook</a> |
-        {% endif %}
-
-        {%if post.author.profile.instagram_url %}
-                <a href="{{post.author.profile.instagram_url}}"> Instagram</a> | 
-        {% endif %}
-
-        {%if post.author.profile.twitter_url %}
-                <a href="{{post.author.profile.twitter_url}}">Twitter</a> |
-        {% endif %}
-                    
-        {%if post.author.profile.website_url %}
-                <a href="{{post.author.profile.website_url}}">Website</a> |
-        {% endif %}
-</p>      
-                <p class="card-text">{{post.author.profile.bio}}</p>
-        </div>
-</div>
 <hr>
 
 <!--Function form to display comment section-->
