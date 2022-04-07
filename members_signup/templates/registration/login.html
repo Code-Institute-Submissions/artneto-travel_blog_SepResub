@@ -3,22 +3,25 @@
 {% load static %}
 
 {% block content %}
+<body>
+  <section class="side">
+     <img src="#" alt="">
+  </section>
 
-<div class="container">
-        <div class="wrapper">
-            <form class="login" method="POST">
-                <h3 class="form-signin-heading"> Please Sign In</h3>
-                    <hr class="colorgraph"><br>
-                    {% csrf_token %}
-                    {{ form.as_p }}
-              <div class="col-xs-6 col-sm-6 col-md-6">
-                <button class="btn btn-secondary">Login</button>
-              </div>
-            </form>
-        </div>
-            
+  <section class="main">
+    <div class="login-container">
+      <p class="title"> Login </p>
+      <div class="separator"></div>
+      <p class="welcome-message">Please, provide login credencial to proceed and have
+        access to your user area.</p>
+
+        <form class="login" method="POST">
+           <div class="form-control">
+            {% csrf_token %}
+            {{ form.as_p }}
+           </div>
+        </form>
     </div>
-
-</div>
+  </section>
 
 {% endblock %}

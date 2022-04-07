@@ -254,3 +254,6 @@ p:first-letter {
     padding-bottom: 1rem;
 }
 
+.login-register-banner {
+    background-color: #535768;
+}
