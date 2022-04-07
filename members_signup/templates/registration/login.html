@@ -3,26 +3,41 @@
 {% load static %}
 
 {% block content %}
+<!--notification for wrong input-->
+<div class="login-msg-banner">
+  <div class="login-user">
+      {% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          There was an error with your access... Please try again!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endif %}
 
-
-
-  <div class="login-page">
-    <div class="form-container">
-        <h1 class="login-txt"> Login Form </h1>
-        <form action="#">
-          <div class="control">
-            <label for="name"> Name</label>
-            <input type="text" name="name" id="name">
+        <!--Start Login box-->
+        <div class="login-page">
+          <div class="form-container">
+              <h1 class="login-txt"> Login Form </h1>
+              <form method="POST">
+                {% csrf_token %}
+                <div class="control">
+                  <label for="name"> Name</label>
+                  <input type="text" name="name" id="name">
+                </div>
+                <div class="control">
+                  <label for="name"> Password</label>
+                  <input type="text" name="password" id="password">
+                </div>
+                <div class="control">
+                  <input type="submit" value="login">
+                </div>
+              </form>
+              <div class="link">
+                Not a User? <a href="{% url 'register' %}" >Register Now</a>
+              </div>
           </div>
-          <div class="control">
-            <label for="name"> Password</label>
-            <input type="text" name="password" id="password">
-          </div>
-          <div class="control">
-            <input type="submit" value="login">
-          </div>
-        </form>
-    </div>
+        </div>
+  
   </div>
-
+</div>
+<!--End Login box-->
 {% endblock %}

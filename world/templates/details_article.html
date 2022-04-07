@@ -21,8 +21,7 @@
                                    <ul class="post-tag list-inline">
                                         <!--user name/category-date posted-->
                                        <li class="list-inline-item">
-                                           <i class="fa fa-user"></i><a href="{% url 'show_profile_page' post.author.profile.id %}">
-                                                {{ post.author.first_name }}  {{ post.author.last_name}}</a>
+                                         {{ post.author.first_name }}  {{ post.author.last_name}}</a>
                                        </li>
                                        <li class="list-inline-item">
                                            <i class="fa fa-calendar"></i> <a href="#">{{ post.publish_date }}</a>

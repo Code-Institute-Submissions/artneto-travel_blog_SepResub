@@ -4,13 +4,23 @@
 {% block content %}
 
 
-<h1> Register NOW</h1>
-<br/><br/>
-<div class="mb-3">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Register</button>
-    </div>
 
+
+
+<div class="login-page">
+    <div class="form-container">
+        <h1 class="login-txt"> Register Now </h1>
+        <form method="POST" action="{% url 'register' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          
+          <div class="control">
+            <input type="submit" value="register">
+          </div>
+        </form>
+        <div class="link">
+          Already have an account? <a href="{% url 'login' %}" >Login Now</a>
+        </div>
+    </div>
+  </div>
 {% endblock %}
