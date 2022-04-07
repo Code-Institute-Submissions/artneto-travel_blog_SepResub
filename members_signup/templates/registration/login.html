@@ -12,32 +12,31 @@
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       {% endif %}
-
-        <!--Start Login box-->
-        <div class="login-page">
-          <div class="form-container">
-              <h1 class="login-txt"> Login Form </h1>
-              <form method="POST">
-                {% csrf_token %}
-                <div class="control">
-                  <label for="name"> Name</label>
-                  <input type="text" name="name" id="name">
-                </div>
-                <div class="control">
-                  <label for="name"> Password</label>
-                  <input type="text" name="password" id="password">
-                </div>
-                <div class="control">
-                  <input type="submit" value="login">
-                </div>
-              </form>
-              <div class="link">
-                Not a User? <a href="{% url 'register' %}" >Register Now</a>
-              </div>
-          </div>
-        </div>
-  
+        
   </div>
 </div>
+<div class="login-page">
+  <div class="form-container">
+      <h1 class="login-txt"> Login Form </h1>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="control">
+          <label for="name"> Username</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="control">
+          <label for="name"> Password</label>
+          <input type="text" name="password" id="password">
+        </div>
+        <div class="control">
+          <input type="submit" value="login">
+        </div>
+      </form>
+      <div class="link">
+        Not a User? <a href="{% url 'register' %}" >Register Now</a>
+      </div>
+  </div>
+</div>
+
 <!--End Login box-->
 {% endblock %}

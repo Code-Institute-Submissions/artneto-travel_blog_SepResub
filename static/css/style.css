@@ -338,3 +338,10 @@ label {
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
+
+.login-msg-banner {
+    position:absolute;
+    z-index: 999;
+    margin: 149px;
+}
+
