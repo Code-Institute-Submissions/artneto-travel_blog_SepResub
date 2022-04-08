@@ -124,14 +124,12 @@
   
   <h2 class="mb-3">Categories</h2>
   <div class="list-group mb-3">
-      <a href=""class="list-group-item list-group-item-action text-black bg-light">
-          <i class="fas fa-utensils">{{ post.category_posts }}</i>
-          Category 1
+      
+      {% for item in caty_menu %}
+      <a href="{% url 'category' item %}"class="list-group-item list-group-item-action text-black bg-light">
+          <li class="fas fa-apple-alt">{{ item }}</li>
       </a>
-      <a href=""class="list-group-item list-group-item-action text-black bg-light">
-          <i class="fas fa-apple-alt"></i>
-          Category 2
-      </a>
+      {% endfor %}
   </div>
   <!---Tag Cloud-->
   <div class="card mb-3">
