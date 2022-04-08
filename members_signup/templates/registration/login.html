@@ -21,12 +21,12 @@
       <form method="POST">
         {% csrf_token %}
         <div class="control">
-          <label for="name"> Username</label>
-          <input type="text" name="name" id="name">
+          <label for="text"> Username</label>
+          <input type="text" class="form-control" id="text" aria-describedby="text" name="username">
         </div>
         <div class="control">
-          <label for="name"> Password</label>
-          <input type="text" name="password" id="password">
+          <label for="InputPassword1"> Password</label>
+          <input type="password" class="form-control" id="InputPassword1" name="password">
         </div>
         <div class="control">
           <input type="submit" value="login">
