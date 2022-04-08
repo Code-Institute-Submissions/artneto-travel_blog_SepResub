@@ -31,10 +31,6 @@ body{
 }
 
 
-.card-body img{
-   width: 100%;
-}
-
 
 .author {
     font-size: 14px;
@@ -88,7 +84,7 @@ h1,h2,h3,h4,h5{/*fix*/
 
 
 .card-body{
-    background-color:#0B0C10;
+    background-color:#6170ac;
     color:#C5C6C7;
     
 
@@ -100,79 +96,27 @@ h1,h2,h3,h4,h5{/*fix*/
     text-decoration: none;
 }
 
-.image-flash .post-footer  {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
+
 
 /*Article Page*/
 
-.container-post {
-    padding-top: 36px;
-    background-color: #97a8bd;
+.card-body-user{
+    width: 24rem;
+    padding: 1rem;
+}
     
+
+.avatar-content img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
 }
 
-.title-post {
-    padding-top: 20px;
-    color:#bf7070;
-    font-weight: 800;
-    text-align: center;
+.avatar-content {
+    padding-top: 30px;
+    object-fit: cover;
 }
 
-.post-tag  {
-    padding-top: 15px;
-    margin-bottom: 20px
-}
-
-.post-tag li:not(:last-child) {
-    margin-right: 10px;
-}
-
-.post-tag li a {
-    color: rgb(41, 9, 9);
-    font-size: 13px;
-    text-decoration: none;
-}
-
-.post-tag li a:hover {
-    color: #dee4ec;
-    font-weight: 500;
-}
-
-.post-tag li i {
-    margin-right: 5px;
-}
-
-.post-tag li:after {
-    margin-top: -5px;
-    content: "/";
-    margin-left: 10px;
-}
-
-.post-tag li:last-child:after {
-    display: none;
-}
-
-.article-lead {
-  font-family: "Open Sans";
-  color: #ecedf1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: justify;
-  
-}
-
-p:first-of-type {
-	
-	
-}
-p:first-letter {
-   
-}
 /*Footer*/
 
 .social-links {
