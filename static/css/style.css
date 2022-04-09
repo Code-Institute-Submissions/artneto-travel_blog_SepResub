@@ -480,8 +480,25 @@ label {
     text-align: center;
     
 }
-.btn-secondary {
-    color: #535768;
+.btn-create-post {
+    background-color: crimson!important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: opacity .3s ease;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border:none;
+    margin: 1em 0;
+    font-weight: 600!important;
+}
+
+.btn-create-post:hover {
+    transition: all .4s ease-in-out!important;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19)!important;
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75)!important;
 }
 .form-btn button {
     padding: 0.3rem 2rem;
@@ -821,4 +838,42 @@ label {
     font-size: 20px;
     color: #545454;
     font-weight: 500;
+}
+
+
+/*Setting Page*/
+
+.edit-section{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/ireland.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.helptext {
+    color:#efefef;
+    font-weight: 700;
+}
+
+.btn-edit{
+    background-color: crimson!important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: opacity .3s ease;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border:none;
+    margin: 1em 0;
+    font-weight: 600!important;
+}
+
+.btn-edit:hover{
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }

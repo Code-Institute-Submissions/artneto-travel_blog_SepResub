@@ -4,18 +4,19 @@
 {% block content %}
 
 
-<br><br/>
-<div class="forms">
-    <div class="form-box">
-        <h1 class="page-title"> Edit Account</h1>
-        <div class="mb-3">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="form-btn">
-                    <button class="btn btn-secondary">Update</button>
-                </div>
-            </form>
+<div class ="edit-section">
+    <div class="forms">
+        <div class="form-box">
+            <h1 class="page-title"> Edit Account</h1>
+            <div class="mb-3">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="form-btn">
+                        <button class="btn btn-edit">Update</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
