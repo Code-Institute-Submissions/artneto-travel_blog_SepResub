@@ -5,18 +5,17 @@
 {% block content %}
 <!--notification for wrong input-->
 
-  
-      {% if form.errors %}
-      <div class="not-allowed">
-        <div class="not-loggedin">
-               <p>Please register now or Login</p>
-        </div>
- 
-      </div>
-      {% endif %}
-        
+{% if form.errors %}
+<div class="error-msg">
+  <div class="not-log">
+    <div class="error-not-log">
+      <p class="msg">The username or password are incorrect. Please try again.</p>
+    </div>
   </div>
+
 </div>
+{% endif %}
+
 <div class="login-page">
   <div class="form-container">
       <h1 class="login-txt"> Login Form </h1>

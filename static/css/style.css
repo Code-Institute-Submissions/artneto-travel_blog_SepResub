@@ -310,10 +310,13 @@ label {
     font-size: 1.2em;
     opacity: .7;
     transition: opacity .3s ease;
+    font-weight: 600;
 }
 
 .control input[type="submit"]:hover{
-    opacity: 1;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
 
 .link {
@@ -353,6 +356,36 @@ label {
     text-align: center;
 }
 
+.backgr-ct {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/login-bck.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.btn-category {
+    background-color: crimson;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    opacity: .7;
+    transition: opacity .3s ease;
+    outline: none;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border:none;
+    margin: 1em 0;
+    font-weight: 600;
+}
+
+.btn-category:hover {
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
 .form-box-1 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1.5rem;
@@ -671,3 +704,71 @@ label {
         font-size: 1rem;
     }
 }
+
+/* Error message - Login*/
+.error-msg {
+    text-align: center;
+    background-color: #bf7070;
+    padding-left: 26rem;
+    padding-right: 26rem;
+}
+
+.error-not-log {
+    background-color: #bf7070;
+    padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.msg {
+    color: white;
+}
+
+
+.comment-bgd{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/mountain.jpg');
+    background-size: cover;
+    background-position: center center;
+   
+  
+}
+
+.form-btn .secondary{
+    background-color: crimson;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: opacity .3s ease;
+    font-weight: 600;
+    margin: 8px;
+}
+
+.form-btn .secondary:hover{
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+
+}
+
+.form-box {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    box-shadow: 7px 7px 60px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 327px;
+    padding: 50px 30px;
+}
+
+.comment-title{
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+    color: #fff;
+}
+
