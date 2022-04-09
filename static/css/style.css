@@ -146,6 +146,30 @@ body {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    
+}
+
+.btn-submit {
+    text-align: center;
+    margin-bottom: 1rem;
+    border: solid 1px #000000;
+    padding: 0.5rem 2rem;
+    
+}
+.like-btn1 {
+    border-radius: 50%;
+    background-color:blue;
+    border:none;
+}
+
+.like-btn1:hover {
+    background-color: #6170ac;
+}
+
+.like-btn2 {
+    border-radius: 50%;
+    background-color: red;
+    border:none;
 }
 
 /*Footer*/

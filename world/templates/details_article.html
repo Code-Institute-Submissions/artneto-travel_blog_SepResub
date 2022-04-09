@@ -29,62 +29,27 @@
                     <ul class="post-tag list-inline">
                         <li class="list-inline-item"><i class="fa fa-pencil"></i><a href="{% url 'update_post' post.pk %}" class="scmedia">Edit</a></li>
                         <li class="list-inline-item"><i class="fa fa-trash-o"></i><a href="{% url 'post_delete' post.pk %}" class="scmedia">Delete</a></li>
-                        <div class="like-media">
-                            <form action="{% url 'post_like' post.pk %}" method="POST">
-                            {% csrf_token %}
-                            {% if user.is_authenticated %}
-                            {% if liked %}
-                            <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm like-btn"><i class="fa fa-thumbs-o-up"></i>
-                            {{ total_likes }}</button>
-                            {% else %}
-                            <button type="submit" name="post_id" value="{{ post.id }}" class="btn  btn-secondary btn-sm like-btn"><i class="far fa-heart"></i>
-                            {{ total_likes }}</button>
-                            {% endif %}
-                            {% else %}
-                            <small><i class="far fa-heart"></i> <a href="{% url 'login' %}"
-                            class="login-btn">Login</a> to like</small>
-                            {% endif %}
-                           </form>
-                        </div>
                     {% endif %}
+                    <div class="list-inline-item">
+                        <form action="{% url 'post_like' post.pk %}" method="POST">
+                        {% csrf_token %}
+                        {% if user.is_authenticated %}
+                        {% if liked %}
+                        <button type="submit" name="post_id" value="{{ post.id }}" class="like-btn1"><i class="fa fa-thumbs-o-up"></i></button>
+                        {{ total_likes }}</button>
+                        {% else %}
+                        <button type="submit" name="post_id" value="{{ post.id }}" class="like-btn2"><i class="fa fa-thumbs-down"></i>
+                        {{ total_likes }}</button>
+                        {% endif %}
+                        {% endif %}
+                       </form>
+                    </div>
                 {% endif %}
             </article>
             <br/><br/>
             <hr class="mb40">
             <br/><br/>
-          <!------>
-          <article class="mb-3">
-              <header class="mb-2">
-                  <a href="#"class="badge badge-pill badge-cate">Category</a>
-                  <h1 class="main-title">
-                      <a href="">Comments</a>
-                  </h1>
-                  <div>
-                      <a href=""class="sub-title">Author Name</a>
-                      <div class="small">Posted on:
-                          <time datetime="2021-01-02T02:15">
-                              Jan 02,2021 at 14:15PM
-                          </time></div>
-                          <div class="small">
-                              <span class="badge badge-cate">
-                                  <i class="fa fa-thumbs-o-up"aria-hidden="true"></i>
-                                  18<span class="sr-only">likes</span>
-                              </span>
-                              <span class="badge badge-cate">
-                                  <i class="fas fa-comments" aria-hidden="true"></i> 8
-                                  <span class="sr-only">Comments</span>
-                              </span>
-                          </div>
-                          <div class="small">
-                              <a href="#"class="badge badge-pill badge-tags">#tag</a>
-
-                          </div>
-                  </div>
-              </header>
-          </article>
-         
-         
-          
+          <!------> 
         </div>
         <!-----End of the main body-->
         <!--Asides Section-->
