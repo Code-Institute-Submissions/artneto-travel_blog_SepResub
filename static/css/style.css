@@ -5,6 +5,7 @@ body {
 }
 
 
+
 /*--Nav Bar--*/
 
 .navbar-logo {
@@ -17,18 +18,8 @@ body {
 }
 
 /*Post container*/
-.main-post p{
-    color:#fff;
-    padding: 7px;
-    display: flex;
-    font-size:13px;
-    flex-direction: column;
-    letter-spacing: 3px;
-}
 
-.card-body img {
-    width: 100%;
-}
+
 
 .author {
     font-size: 14px;
@@ -125,6 +116,36 @@ body {
 .avatar-content {
     padding-top: 30px;
     object-fit: cover;
+    
+}
+.card-text {
+    text-align: justify;
+}
+
+.lead, p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.sub-title {
+    font-style: italic;
+}
+.small {
+    font-weight: 700;
+}
+
+
+.scmedia {
+    text-decoration: none;
+    font-weight: 700;
+    color:#563329;
+}
+
+.list-category li {
+    list-style-type: none;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /*Footer*/
@@ -132,6 +153,7 @@ body {
 .logo-bttm {
     display: flex;
     justify-content: center;
+    
 }
 
 .social-media-links {
@@ -164,12 +186,6 @@ body {
 }
 
 
-.footer {
-
-    text-align: center;
-    min-width: 720px;
-
-}
 
 
 .fa {
