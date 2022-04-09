@@ -13,8 +13,13 @@ body {
     text-decoration: none;
     color: #563329;
     font: Montserrat;
-    
+    font-weight: 700;
+}
 
+.navbar-logo:hover{
+    
+	color: #E7E1DE;
+	
 }
 
 /*Post container*/
@@ -68,6 +73,7 @@ body {
     
 
 }
+
 
 .card-title {
     font-size:1.4rem;
@@ -174,8 +180,13 @@ body {
 
 .pagination a {
     text-decoration: none;
-    margin-bottom: 3rem !important;
-    color: white;
+    margin-bottom: 3rem !important;   
+    color: #947262!important;
+    font-weight: 400!important;
+}
+
+.page-link {
+    margin:3px !important;
 }
 
 /*Footer*/
