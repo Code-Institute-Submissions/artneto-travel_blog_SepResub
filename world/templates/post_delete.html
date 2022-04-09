@@ -6,32 +6,32 @@
 {% if user.is_authenticated %}
 <!--Function to give access to the correct user -->
 {% if user.id == post.author.id %}
-        <h1> Delete Post</h1>
-        <br/><br/>
-        <h3>Delete: {{ post.title }} </h3>
-
+<div class="forms-2">
+    <div class="form-box">
+        <h1 class="page-title"> Delete Post</h1>
+ 
+        <h3 class="delete-post text-center">Delete: {{ post.title }} </h3>
+ 
         <div class="mb-3">
             <form method="POST">
                 {% csrf_token %}
-                <strong>Are you sure?</strong><br/>
-                <button class="btn btn-secondary">Delete Post</button>
-        </div>
-    {% else %}
-
-    {% endif %}
-    <div class="not-allowed">
-        <div class="not-loggedin">
-               <p>No access</p>
-        </div>
- 
- </div>
-{% else %}
-<div class="not-allowed">
-    <div class="not-loggedin">
-           <p>Please register now or Login</p>
+                <div class="text-center"><strong>Are you sure?</strong></div><br />
+                div class="form-btn">
+                <button class="btn btn-secondary">Delete</button>
+            </div>
     </div>
+</div>
+</div>
+{% else %}
+
+<div class="not-allowed">
+<div class="not-loggedin">
+    <p>Please register now or Login</p>
+</div>
 
 </div>
 
 {% endif %}
+{% endif %}
 {% endblock %}
+

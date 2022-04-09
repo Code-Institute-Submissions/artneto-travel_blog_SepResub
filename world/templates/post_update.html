@@ -6,17 +6,20 @@
 {% if user.is_authenticated %}
 <!--Function to give access to the correct user -->
 {% if user.id == post.author.id %}
-
-    <h1> Update Post</h1>
-    <br/><br/>
-
-    <div class="mb-3">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.media }}
-            {{ form.as_p }}
-            <button class="btn btn-secondary">Update</button>
+<div class="forms">
+    <div class="form-box">
+        <h1 class="page-title">Update Post</h1>
+        <div class="mb-3">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form.as_p }}
+                <div class="form-btn">
+                    <button class="btn btn-secondary">Update</button>
+                </div>
+        </div>
     </div>
+</div>
     {% else %}
     <div class="not-allowed">
         <div class="not-loggedin">

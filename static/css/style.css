@@ -171,6 +171,13 @@ body {
     padding-bottom: 10px;
     background-color: #E7E1DE;
 }
+
+.pagination a {
+    text-decoration: none;
+    margin-bottom: 3rem !important;
+    color: white;
+}
+
 /*Footer*/
 
 .logo-bttm {
@@ -618,4 +625,49 @@ label {
 
 .not-loggedin p {
     text-align: center;
+}
+
+/* Delete Post */
+ 
+.forms-2 {
+    padding: 4rem 25rem;
+}
+ 
+.delete-post {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+ 
+.text-center {
+    text-align: center;
+    font-size: 1.3rem;
+ 
+}
+ 
+@media(max-width:1024px) {
+    .forms-2 {
+        padding: 4rem 15rem;
+    }
+}
+ 
+@media(max-width:800px) {
+    .forms-2 {
+        padding: 4rem 10rem;
+    }
+}
+ 
+@media(max-width:500px) {
+    .forms-2 {
+        padding: 2rem;
+    }
+}
+ 
+@media(max-width:400px) {
+    .forms-2 {
+        padding: 2rem 1rem;
+    }
+ 
+    .text-center {
+        font-size: 1rem;
+    }
 }
