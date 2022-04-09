@@ -80,23 +80,6 @@ body {
     text-align: center;
 }
 
-.btn-primary {
-    background-image: linear-gradient(#563329, #2f080e);
-    text-transform: uppercase;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-.btn-primary:hover {
-    opacity: 1;
-}
-
-     
     
 
 /*Article Page*/
@@ -158,20 +141,36 @@ body {
 }
 .like-btn1 {
     border-radius: 50%;
-    background-color:blue;
+    background-color:rgba(38,166,154 ,0.3);
+	border-color: rgba(0,150,136 ,1);
     border:none;
 }
 
 .like-btn1:hover {
-    background-color: #6170ac;
+    background-color: rgba(25, 104, 96, 0.3);
 }
 
 .like-btn2 {
     border-radius: 50%;
-    background-color: red;
+    background-color: rgba(255,138,128 ,0.3);
+	border-color: rgba(255,82,82 ,1);
     border:none;
 }
 
+.like-btn2:hover {
+    background-color: rgba(185, 17, 17, 0.521);
+}
+
+/*Comment Section*/
+
+.comment-header {
+    color:#563329;
+    
+}
+.comment-bttm-box {
+    padding-bottom: 10px;
+    background-color: #E7E1DE;
+}
 /*Footer*/
 
 .logo-bttm {
