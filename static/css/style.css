@@ -219,11 +219,13 @@ body {
 
 
 .fa {
-
     padding: 1rem;
-
     color: #6c757d !important;
+}
 
+.fa:hover {
+transform: translateY(-4px);
+transition:0.3s;
 }
 
 
@@ -783,3 +785,40 @@ label {
     color: #fff;
 }
 
+/*User Profile*/
+
+.profile-section {
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/mountain.jpg');
+    background-size: cover;
+    background-position: center center;
+    
+}
+.user-card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+.name, .last-name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.text span {
+    font-size: 20px;
+    color: #545454;
+    font-weight: 500;
+}

@@ -2,40 +2,41 @@
 {% load static %}
 {% block content %}
 
-<h1>User Profile</h1>
 
-<div class="card" style="width: 18rem;">
 
-    {% if user_page.profile_picture %}
-            <img src="{{user_page.profile_picture.url}}" alt="profile pic">
-    {% else %}
-            <img src="{% static '/blogtravel/images/default-profile.jpg' %}" alt="profile pic">
-    {% endif %}
-            <div class="card-body">
-                    <h5 class="card-title">
-                            {{ user_page.user.first_name }} {{ user_page.user.last_name}}
-                    </h5>
-    <p class="small text-muted">
+<div class="profile-section">
+
+<div class="container mt-4 mb-4 d-flex justify-content-center">
+    <div class="user-card p-4">
+        {% if user_page.profile_picture %}
+        <div class=" image d-flex flex-column justify-content-center align-items-center"><img src="{{user_page.profile_picture.url}}"  alt="profile pic"/>
+        {% else %} 
+        <div class=" image d-flex flex-column justify-content-center align-items-center"><img src="{{user_page.profile_picture.url}}" alt="profile pic"/>
+        {% endif %}        
+                <span class="name mt-3">{{ user_page.user.first_name }}</span> <span class="idd">{{ user_page.user.last_name}}</span>
             
-            {%if user_page.facebook_url %}
-                    <a href="{{user_page.facebook_url}}"> Facebook</a> |
-            {% endif %}
-    
-            {%if user_page.instagram_url %}
-                    <a href="{{user_page.instagram_url}}"> Instagram</a> | 
-            {% endif %}
-    
-            {%if user_page.twitter_url %}
-                    <a href="{{user_page.twitter_url}}">Twitter</a> |
-            {% endif %}
-                        
-            {%if user_page.website_url %}
-                    <a href="{{user_page.website_url}}">Website</a> |
-            {% endif %}
-    </p>      
-                    <p class="card-text">{{user_page.bio}}</p>
+            <div class="text mt-3"> <span>{{user_page.bio}}</span> </div>
+            <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
+                {%if user_page.facebook_url %}
+                <a href="{{user_page.facebook_url}}" target="_blank"><i class="fa fa-facebook-f"></i></a> |
+                {% endif %}
+
+                {%if user_page.instagram_url %}
+                <a href="{{user_page.instagram_url}}" target="_blank"><i class="fa fa-instagram"></i></a> | 
+                {% endif %}
+
+                {%if user_page.twitter_url %}
+                <a href="{{user_page.twitter_url}}" target="_blank"><i class="fa fa-twitter"></i></a> |
+                {% endif %}
+
+                {%if user_page.website_url %}
+                <a href="{{user_page.website_url}}" target="_blank"><i class="fa fa-rss"></i></a> |
+                {% endif %}
             </div>
+        </div>
     </div>
+</div>
+</div>
     
     {% endblock %}
     
