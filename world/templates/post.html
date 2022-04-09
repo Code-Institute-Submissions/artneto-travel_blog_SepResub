@@ -4,33 +4,49 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="forms">
-       <div class="form-box">
-              <h1 class="page-title"> Blogging with me</h1>
-              <div class="mb-3">
-                     <form method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form.media }}
-                            {{ form.as_p }}
-                            <div class="form-btn">
-                                   <button class="btn btn-secondary">Post</button>
-                            </div>
-                     </form>
+
+
+<div class="bact-img">
+       <div class="forms">
+              <div class="container-post-box">
+                     <h1 class="page-title">Create your Post</h1>
+                     <div class="mb-3">
+                            <form method="POST" enctype="multipart/form-data">
+                                   {% csrf_token %}
+                                   {{ form.media }}
+                                   {{ form.as_p }}
+                                   <div class="form-btn">
+                                          <button class="btn btn-secondary">Post</button>
+                                   </div>
+                            </form>
+                     </div>
               </div>
        </div>
-</div>
-<!---Function script to display restriction to Post Author-->
-       <script>
-              var name = "{{ user.id }}";
-              document.getElementById("user").value = name;
-       </script>
-{% else %}
-<div class="not-allowed">
-       <div class="not-loggedin">
-              <p>Please register now or Login</p>
+       <!---Function script to display restriction to Post Author-->
+              <script>
+                     var name = "{{ user.id }}";
+                     document.getElementById("user").value = name;
+              </script>
+       {% else %}
+       <div class="not-allowed">
+              <div class="not-loggedin">
+                     <p><a href="{% url 'login' %}">Login Here</a></p>
+              </div>
+       
        </div>
+<div>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
        
 {% endif %}
 {% endblock %}
