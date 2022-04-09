@@ -32,11 +32,11 @@
 
                                             {% if "placeholder" in post.header_img.url %}
 
-                                             <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                             <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="post-picture">
 
                                             {% else %}
 
-                                             <img class="card-img-top" src=" {{ post.header_img.url  }}">
+                                             <img class="card-img-top" src=" {{ post.header_img.url  }}" alt="post-picture">
 
                                             {% endif %}
 
@@ -51,6 +51,7 @@
                                         <div class="image-flash">
 
                                             <p class="author">Author: {{ post.author }}</p>
+                                            <p class="text-center text-muted h7">Posted on: {{ post.publish_date}}</p>
 
                                             <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
 
@@ -58,25 +59,23 @@
                                         </div>
 
                                         <hr />
-
-                                        <p class="card-text text-muted h6">{{ post.publish_date}}</p>
-
-                                        <p><i class="fa fa-thumbs-o-up" aria-hidden="true">{{post.post_like }}</i></p>
-                                            
-
+                                        <div class="d-flex justify-content-center">
+                                        <a href="{% url 'details_article' post.pk  %}" class="btn btn-primary">View Article</a>
+                                        </div>
                                     </div>
-                                    
+
                                 </div>
 
                             </div>
 
                             {% endfor %}
+
+
                         </div>
 
                     </div>
 
                 </div>
-
 
 
                 {% if is_paginated %}
@@ -104,15 +103,16 @@
                     </div>
 
                 </nav>
-                {% endif %}
-            </div>
-            
-        </div>
 
+                {% endif %}
+                
+            </div>
+
+        </div>
+        
     </div>
-    
+
 </div>
-{% include "footer.html" %}
+
 
 {% endblock %}
-

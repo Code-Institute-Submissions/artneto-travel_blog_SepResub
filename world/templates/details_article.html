@@ -12,9 +12,9 @@
             <article class="mb-3">
                 {% if "placeholder" in post.header_img.url %}
                             <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
-                             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="defalt profile image"></a>
+                             src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="default profile image"></a>
                             {% else %}
-                             <img src="{{ post.header_img.url }}" alt="" class="img-fluid mb30">
+                             <img src="{{ post.header_img.url }}" alt="picture" class="img-fluid mb30">
                             {% endif %}
                 <header class="mb-2">
                     <a href="#"class="badge badge-pill badge-cate">Category</a>
@@ -131,14 +131,7 @@
       </a>
       {% endfor %}
   </div>
-  <!---Tag Cloud-->
-  <div class="card mb-3">
-      <div class="card-body">
-          <h5 class="card-title">Tag Cloud</h5>
-          <a href=""class="badge badge-tags">#tag</a>
-          <a href=""class="badge badge-tags">#othertag</a>
-      </div>
-  </div>
+  <!---About the Blog-->
   
   <div class="card mb-3">
       <div class="card-body">
@@ -151,23 +144,33 @@
 </aside>
 </div>
 
-<h2> Comments</h2>
-<br/>
-{% if not post.comments.all %}
-No Comment Yet <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
-{% else %}
-<a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
-<br/><br/>
-        {% for comment in post.comments.all %}
-        <strong>{{comment.name }} -{{ comment.date_added }}</strong>
+  
+    <div class="container mt-5">
+        <h2>Comments</h2>
         <br/>
-        {{ comment.body }}
-        <a href ="{% url 'add_your_comments' post.pk %}"></a>
-        {% endfor %}
-<br/><br/>
-<hr>
-
-{% endif %}
+    {% if not post.comments.all %}
+    No Comment Yet <a href ="{% url 'add_your_comments' post.pk %}"> Add comment</a>
+    {% else %}
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
+                <div class="d-flex flex-column comment-section">
+                    <div class="bg-white p-2">
+                        {% for comment in post.comments.all %}
+                        <div class="d-flex flex-row user-info"><img class="rounded-circle" src="{% static 'japan.jpg' %}" width="40">
+                            <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">{{comment.name }}</span><span class="date text-black-50">Shared publicly - {{ comment.date_added }}</span></div>
+                        </div>
+                        <div class="mt-2">
+                            <p class="comment-text">{{ comment.body }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <br>
+                    <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="button"><a href ="{% url 'add_your_comments' post.pk %}">Comment</a></button></div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 
     </div>
 </div>

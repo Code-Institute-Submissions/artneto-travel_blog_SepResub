@@ -4,16 +4,27 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-        <h1> New Blog Category</h1>
-        <br/><br/>
-        <div class="mb-3">
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-secondary">Post</button>
+<div class="forms-cat">
+       <div class="form-box-1">
+              <h2 class="page-title"> New Blog Category</h2>
+              <div class="mb-3">
+                     <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-btn">
+                                   <button class="btn btn-secondary">Post</button>
+                            </div>
+                     </form>
+              </div>
        </div>
+</div>
 {% else %}
-       Please register now or Login
+<div class="not-allowed">
+       <div class="not-loggedin">
+              <p>Please register now or Login</p>
+       </div>
+
+</div>
        
 {% endif %}
 

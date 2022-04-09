@@ -18,11 +18,21 @@
             <button class="btn btn-secondary">Update</button>
     </div>
     {% else %}
-       No user access 
+    <div class="not-allowed">
+        <div class="not-loggedin">
+               <p>No user Access</p>
+        </div>
+ 
+ </div> 
     {% endif %}
 
 {% else %}
-    Please register now or Login
+<div class="not-allowed">
+    <div class="not-loggedin">
+           <p>Please register now or Login</p>
+    </div>
+
+</div>
     
 {% endif %}
 

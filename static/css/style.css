@@ -1,23 +1,19 @@
-body{
+body {
     font-family: 'Montaga', serif;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 
 /*--Nav Bar--*/
-.navbar {
-    background-color: #0B0C10;
-    
-}
 
 .navbar-logo {
-    font-size:1.5rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    color:#bf7070;
-}
+    color: #563329;
+    font: Montserrat;
+    
 
-.navbar-logo:hover{
-    color: #fff;
 }
 
 /*Post container*/
@@ -30,12 +26,15 @@ body{
     letter-spacing: 3px;
 }
 
-
+.card-body img {
+    width: 100%;
+}
 
 .author {
     font-size: 14px;
     margin-bottom: 2px;
     color: #bf7070;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -57,25 +56,14 @@ body{
 .banner {
     max-height: 15rem;
     padding-top: 15rem;
-    background: url('../img/cover-img.jpg');
+    background: url('../img/cover1.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
 .banner-body {
-    background-color: #1F2833;
-}
-.container-md {
-    background-color:#1F2833;
-    font-weight: 700;
-    padding: 16px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1,h2,h3,h4,h5{/*fix*/
-    font-weight: 700;
-    color:#66FCF1;
+    background-color: #CCCBCB;
 }
 
 .card-body .post-link{
@@ -84,19 +72,41 @@ h1,h2,h3,h4,h5{/*fix*/
 
 
 .card-body{
-    background-color:#6170ac;
+    background-color:#AD9FA4;
     color:#C5C6C7;
     
 
 }
 
-
 .card-title {
     font-size:1.4rem;
     text-decoration: none;
+    font-style: Montaga;
 }
 
+.card-text, p {
+    color:#563329;
+    text-align: center;
+}
 
+.btn-primary {
+    background-image: linear-gradient(#563329, #2f080e);
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    opacity: 1;
+}
+
+     
+    
 
 /*Article Page*/
 
@@ -119,11 +129,14 @@ h1,h2,h3,h4,h5{/*fix*/
 
 /*Footer*/
 
-.social-links {
+.logo-bttm {
+    display: flex;
+    justify-content: center;
+}
 
-    text-align: center;
-
-
+.social-media-links {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -288,4 +301,282 @@ label {
     z-index: 999;
     margin: 149px;
 }
+/*Add Category*/
+.forms-cat {
+    padding: 7.2rem 25rem;
+    text-align: center;
+}
 
+.form-box-1 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.5rem;
+}
+
+@media(max-width:2560px) {
+    .forms-cat {
+        padding: 7.2rem 65rem;
+        text-align: center;
+    }
+}
+
+
+@media(max-width:1440px) {
+    .forms-cat {
+        padding: 7.2rem 29.5rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:1300px) {
+    .forms-cat {
+        padding: 7.2rem 25rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:1024px) {
+    .forms-cat {
+        padding: 7.2rem 20rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:800px) {
+    .forms-cat {
+        padding: 7.2rem 10rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:500px) {
+    .forms-cat {
+        padding: 7.2rem 2rem;
+        text-align: center;
+    }
+}
+
+@media(max-width:320px) {
+    .forms-cat {
+        padding: 5.2rem 1rem;
+        text-align: center;
+    }
+}
+
+/*Add a Post*/
+.page-title {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+label {
+    color: #000;
+    padding-bottom: 0.3rem;
+    
+}
+
+.forms {
+    padding: 1rem 16rem;
+}
+
+.form-box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1.5rem;
+}
+
+#cke_id_body {
+    max-width: 700px;
+}
+
+.form-btn {
+    text-align: center;
+}
+
+.form-btn button {
+    padding: 0.3rem 2rem;
+}
+
+@media(max-width:2560px) {
+    .forms {
+        padding: 1rem 52rem;
+    }
+
+    #cke_id_body {
+        max-width: 1595px;
+    }
+}
+
+@media(max-width:1440px) {
+    .forms {
+        padding: 1rem 16rem;
+    }
+
+    #cke_id_body {
+        max-width: 1595px;
+    }
+}
+
+@media(max-width:1300px) {
+    .forms {
+        padding: 1rem 15rem;
+    }
+
+    #cke_id_body {
+        max-width: 730px;
+    }
+}
+
+@media(max-width:1024px) {
+    .forms {
+        padding: 1rem 10rem;
+    }
+
+    #cke_id_body {
+        max-width: 655px;
+    }
+}
+
+@media(max-width:800px) {
+    .forms {
+        padding: 1rem 3rem;
+    }
+
+    #cke_id_body {
+        max-width: 625px;
+    }
+}
+
+@media(max-width:500px) {
+    .forms {
+        padding: 2rem;
+    }
+
+    #cke_id_body {
+        max-width: 305px;
+    }
+}
+
+@media(max-width:400px) {
+    .forms {
+        padding: 1rem;
+    }
+
+    #cke_id_body {
+        max-width: 295px;
+    }
+
+    footer {
+        width: 500px;
+        color: #6170ac;
+    }
+
+}
+
+@media(max-width:320px) {
+    .forms {
+        padding: 1rem;
+    }
+
+    #cke_id_body {
+        max-width: 235px;
+    }
+
+    footer {
+        width: 500px;
+        color: #6170ac;
+    }
+
+}
+
+/*Register*/
+.register-txt {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.register-page {
+    padding: 2rem 20rem;
+}
+
+.register {
+    padding: 50px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.register label {
+    color: rgb(0, 0, 0);
+}
+
+@media(max-width:1024px) {
+    .register-page {
+        padding: 2rem 13rem;
+    }
+}
+
+@media(max-width:800px) {
+    .register-page {
+        padding: 2rem 7rem;
+    }
+}
+
+@media(max-width:500px) {
+    .register-page {
+        padding: 1rem;
+    }
+}
+
+/*Change password*/
+
+.forms-1 {
+    padding: 1rem 25rem;
+}
+
+.form-box-2 {
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media(max-width:1024px) {
+    .forms-1 {
+        padding: 1rem 20rem;
+    }
+}
+
+@media(max-width:800px) {
+    .forms-1 {
+        padding: 1rem 10rem;
+    }
+}
+
+@media(max-width:500px) {
+    .forms-1 {
+        padding: 1rem 5rem;
+    }
+}
+
+@media(max-width:400px) {
+    .forms-1 {
+        padding: 1rem 2rem;
+    }
+}
+
+@media(max-width:320px) {
+    .forms-1 {
+        padding: 1rem;
+    }
+}
+
+/*Not allowed*/
+
+.not-allowed {
+    padding: 11rem 25rem;
+    color: #bf7070;
+}
+
+.not-loggedin {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+}
+
+.not-loggedin p {
+    text-align: center;
+}

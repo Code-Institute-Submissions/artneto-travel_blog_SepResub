@@ -1,34 +1,61 @@
 {% extends 'base.html' %}
-
+{% block title %} {{ caty }}{% endblock%}
 {% block content %}
 
-
-
-
 {% if category_posts %}
-        <h1>{{ caty }}</h1>
-
-        <ul>
+<div class="category-page bg-generic">
+    <div class="category-title">
+        <h2 class="page-title">{{ caty }}</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
             {% for post in category_posts %}
-            <li><a href="{% url 'details_article' post.pk %}">
-                {{ post.title }} </a>
-                -{{ post.author.first_name }} {{ post.author.last_name }}-{{ post.publish_date }}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in post.header_img.url %}
 
-                {% if user.is_authenticated %}
-                    <small><a href="{% url 'update_post' post.pk %}">(Edit) </small></a>
+                            <img class="card-img-top"
+                                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
 
-                    <small><a href="{% url 'post_delete' post.pk %}">(Delete)</a>
-                {% endif %}
+                            {% else %}
 
-                </small><br/>
-                {{ post.body|slice:":150"|linebreaks  }}
-            </li>
-        </ul>
-{% endfor %}
+                            <img class="card-img-top" src=" {{ post.header_img.url  }}">
 
+                            {% endif %}
+                            <div class="image-flash">
+                                <br>
+                                <h5 class="card-title"><a
+                                        href="{% url 'details_article' post.pk %}">{{ post.title }}</a></h5>
+                                <p class="author">Author: {{ post.author }}</p>
+                                <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
+                                <hr />
+                                <p class="card-text text-muted h6">{{ post.publish_date}}</p>
+                                <p><i class="fa fa-thumbs-o-up" aria-hidden="true">{{post.post_like }}</i></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% else %}
- <h2> Page doesnt exist </h2>
+<div class="not-allowed">
+    <div class="not-loggedin">
+           <p>This category has no posts.</p>
+           <p><a href="{% url 'add-post' %}">Add one</a></p>
+    </div>
+
+</div>
 {% endif %}
+{%endblock%}
 
 
-{% endblock %}

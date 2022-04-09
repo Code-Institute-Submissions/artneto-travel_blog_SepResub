@@ -3,24 +3,21 @@
 
 {% block content %}
 
+<div class="register-page">
+  <div class="register">
+    <h1 class="register-txt"> Register Now </h1>
+    <form method="POST" action="">
+      {% csrf_token %}
+      {{ form.as_p }}
 
-
-
-
-<div class="login-page">
-    <div class="form-container">
-        <h1 class="login-txt"> Register Now </h1>
-        <form method="POST" action="{% url 'register' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          
-          <div class="control">
-            <input type="submit" value="register">
-          </div>
-        </form>
-        <div class="link">
-          Already have an account? <a href="{% url 'login' %}" >Login Now</a>
-        </div>
+      <div class="form-btn">
+        <br>
+        <button class="btn btn-danger">Submit</button>
+      </div>
+    </form>
+    <div class="link">
+      Already have an account? <a href="{% url 'login' %}">Login Now</a>
     </div>
   </div>
+</div>
 {% endblock %}

@@ -19,10 +19,19 @@
     {% else %}
 
     {% endif %}
-
-    No access
+    <div class="not-allowed">
+        <div class="not-loggedin">
+               <p>No access</p>
+        </div>
+ 
+ </div>
 {% else %}
-Please register now or Login
+<div class="not-allowed">
+    <div class="not-loggedin">
+           <p>Please register now or Login</p>
+    </div>
+
+</div>
 
 {% endif %}
 {% endblock %}

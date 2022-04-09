@@ -4,13 +4,15 @@
 
 {% block content %}
 <!--notification for wrong input-->
-<div class="login-msg-banner">
-  <div class="login-user">
+
+  
       {% if form.errors %}
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          There was an error with your access... Please try again!
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="not-allowed">
+        <div class="not-loggedin">
+               <p>Please register now or Login</p>
         </div>
+ 
+      </div>
       {% endif %}
         
   </div>

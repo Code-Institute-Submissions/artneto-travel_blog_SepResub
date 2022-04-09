@@ -5,23 +5,39 @@
 
 {% if user.is_authenticated %}
         {% if user.id == profile.user.id %}
-            <h1> Edit Profile</h1>
-            <br/><br/>
-            <div class="mb-3">
-                <form method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="btn btn-secondary">Update Profile</button>
+        <div class="forms">
+            <div class="form-box">
+                <h1 class="page-title"> Edit Profile</h1>
+                <br /><br />
+                <div class="mb-3">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="form-btn">
+                            <button class="btn btn-secondary">Update Profile</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
     {% else %}
-    You are not the correct user, please login with your account.
+    <div class="not-allowed">
+        <div class="not-loggedin">
+            <p>You are not the correct user, please login with your account.</p>
+        </div>
+   </div>
+   
     
        
     {% endif %}
 
 {% else %}
-Please register now or Login
+<div class="not-allowed">
+    <div class="not-loggedin">
+        <p>Please register now or Login</p>
+    </div>
+
+</div>
 
     {% endif %}
 {% endblock %}
