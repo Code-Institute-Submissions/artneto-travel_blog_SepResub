@@ -5,7 +5,7 @@
 
 {% if user.is_authenticated %}
         {% if user.id == profile.user.id %}
-        <div class="forms">
+        <div class="edit-section">
             <div class="form-box">
                 <h1 class="page-title"> Edit Profile</h1>
                 <br /><br />
@@ -14,7 +14,7 @@
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div class="form-btn">
-                            <button class="btn btn-secondary">Update Profile</button>
+                            <button class="btn btn-edit">Update Profile</button>
                         </div>
                     </form>
                 </div>

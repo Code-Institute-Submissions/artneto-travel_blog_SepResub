@@ -312,7 +312,6 @@ label {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2em;
-    opacity: .7;
     transition: opacity .3s ease;
     font-weight: 600;
 }
@@ -374,7 +373,6 @@ label {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2em;
-    opacity: .7;
     transition: opacity .3s ease;
     outline: none;
     width: 100%;
@@ -876,4 +874,95 @@ label {
     transition: all .4s ease-in-out;
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+/*Edit Page Profile*/
+
+.edit-section {
+    padding: 35rem 16rem;
+}
+
+.form-box{
+ padding: 21px 30px!important;
+}
+
+#id_profile_picture {
+    color:#efefef;
+    font-weight: 400;
+}
+
+@media(max-width:2560px) {
+    .form-box {
+        padding: 1rem 52rem;
+    }
+
+    #cke_id_body {
+        max-width: 1595px;
+    }
+}
+
+@media(max-width:1440px) {
+    .form-box {
+        padding: 1rem 16rem;
+    }
+
+    #cke_id_body {
+        max-width: 1595px;
+    }
+}
+
+@media(max-width:1300px) {
+    .form-box {
+        padding: 1rem 15rem;
+    }
+
+    #cke_id_body {
+        max-width: 730px;
+    }
+}
+
+@media(max-width:1024px) {
+    .form-box {
+        padding: 1rem 10rem;
+    }
+
+    #cke_id_body {
+        max-width: 655px;
+    }
+}
+
+@media(max-width:800px) {
+    .form-box {
+        padding: 1rem 3rem;
+    }
+
+    #cke_id_body {
+        max-width: 625px;
+    }
+}
+
+@media(max-width:500px) {
+    .form-box {
+        padding: 2rem;
+    }
+
+    #cke_id_body {
+        max-width: 305px;
+    }
+}
+
+@media(max-width:400px) {
+    .form-box {
+        padding: 1rem;
+    }
+
+    #cke_id_body {
+        max-width: 295px;
+    }
+
+    footer {
+        width: 500px;
+        color: #6170ac;
+    }
+
 }
