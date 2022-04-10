@@ -11,7 +11,19 @@
     <div class="image-banner">
 
     </div>
-
+  </div>
+   <div class="caty-menu">
+    <h5 class="card-category">Categories</h5>
+    <div class="list-group mb-3">
+        <div class="list-category">
+          {% for item in caty_menu %}
+          <a href="{% url 'category' item %}"class="list-group-item list-group-item-action text-black bg-light">
+              <li class="list-content">{{ item }}</li>
+          </a>
+          {% endfor %}
+      </div>
+    </div>
+   </div>
     <div class="container-fluid">
 
       <div class="row">
@@ -52,7 +64,7 @@
 
                       <p class="author">Author: {{ post.author }}</p>
 
-                      <p class="card-text text-muted h6">{{ post.body|slice:":200"|safe }}</p>
+                      <p class="card-text  h6">{{ post.body|slice:":200"|safe }}</p>
 
                     </div>
 
@@ -65,6 +77,7 @@
                 </div>
 
               </div>
+              
 
             </div>
 
@@ -112,7 +125,8 @@
 
     </div>
 
-  </div>
+ 
+  
 
 </div>
 

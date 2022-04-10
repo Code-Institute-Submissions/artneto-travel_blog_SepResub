@@ -89,12 +89,12 @@
       
     </div>
   
-  <h2 class="mb-3 p-2 text-center">Categories</h2>
+  <h5 class="card-category">Categories</h5>
   <div class="list-group mb-3">
       <div class="list-category">
       {% for item in caty_menu %}
       <a href="{% url 'category' item %}"class="list-group-item list-group-item-action text-black bg-light">
-          <li class="fas fa-apple-alt">{{ item }}</li>
+          <li class="list-content">{{ item }}</li>
       </a>
       {% endfor %}
     </div>
