@@ -449,51 +449,44 @@ label {
 
 @media(max-width:2560px) {
     .forms-cat {
-        padding: 7.2rem 65rem;
-        text-align: center;
+        
     }
 }
 
 
 @media(max-width:1440px) {
     .forms-cat {
-        padding: 7.2rem 29.5rem;
-        text-align: center;
+        
     }
 }
 
 @media(max-width:1300px) {
     .forms-cat {
-        padding: 7.2rem 25rem;
-        text-align: center;
+        
     }
 }
 
 @media(max-width:1024px) {
     .forms-cat {
-        padding: 7.2rem 20rem;
-        text-align: center;
+       
     }
 }
 
 @media(max-width:800px) {
     .forms-cat {
-        padding: 7.2rem 10rem;
-        text-align: center;
+        
     }
 }
 
 @media(max-width:500px) {
     .forms-cat {
-        padding: 7.2rem 2rem;
-        text-align: center;
+       
     }
 }
 
 @media(max-width:320px) {
     .forms-cat {
-        padding: 5.2rem 1rem;
-        text-align: center;
+        
     }
 }
 
@@ -589,16 +582,6 @@ label {
 
     #cke_id_body {
         max-width: 730px;
-    }
-}
-
-@media(max-width:1024px) {
-    .forms {
-        padding: 1rem 10rem;
-    }
-
-    #cke_id_body {
-        max-width: 655px;
     }
 }
 
@@ -780,29 +763,58 @@ label {
 
 /*Not allowed*/
 
-.not-allowed {
-    background: url('../img/login-bck.jpg');
-    background-size: cover;
-    background-position: center center;
-    padding: 2rem 15rem;
-    object-fit: contain;
+.not-img {
+    background-color: #947262;
+    height: 200vh;
 }
 
 .not-loggedin {
+    background-color: #AD9FA4;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2rem;
 }
 
 .not-loggedin p {
     text-align: center;
+    font-weight: 700;
 }
 
 /* Delete Post */
  
-.forms-2 {
+.forms-delete {
     padding: 4rem 25rem;
+    background-color: #AD9FA4;
+    height:120vh;
+}
+
+.page-delete {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: crimson!important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: opacity .3s ease;
+    outline: none;
+    width: 50%!important;
+    display: block;
+    padding: 10px;
+    border:none;
+    margin: 1em 0;
+    font-weight: 600!important;
 }
  
+.btn-delete:hover {
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
 .delete-post {
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -815,25 +827,25 @@ label {
 }
  
 @media(max-width:1024px) {
-    .forms-2 {
+    .forms-delete {
         padding: 4rem 15rem;
     }
 }
  
 @media(max-width:800px) {
-    .forms-2 {
+    .forms-delete {
         padding: 4rem 10rem;
     }
 }
  
 @media(max-width:500px) {
-    .forms-2 {
+    .forms-delete {
         padding: 2rem;
     }
 }
  
 @media(max-width:400px) {
-    .forms-2 {
+    .forms-delete {
         padding: 2rem 1rem;
     }
  

@@ -6,9 +6,9 @@
 {% if user.is_authenticated %}
 <!--Function to give access to the correct user -->
 {% if user.id == post.author.id %}
-<div class="forms-2">
+<div class="forms-delete">
     <div class="form-box">
-        <h1 class="page-title"> Delete Post</h1>
+        <h1 class="page-delete"> Delete Post</h1>
  
         <h3 class="delete-post text-center">Delete: {{ post.title }} </h3>
  
@@ -16,17 +16,20 @@
             <form method="POST">
                 {% csrf_token %}
                 <div class="text-center"><strong>Are you sure?</strong></div><br />
-                div class="form-btn">
-                <button class="btn btn-secondary">Delete</button>
-            </div>
+                <div class="form-btn">
+                 <button class="btn btn-delete">Delete</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-</div>
+   
 {% else %}
 
 <div class="not-allowed">
-<div class="not-loggedin">
-    <p>Please register now or Login</p>
+    <div class="not-loggedin">
+           <p>Please register now or Login</p>
+    </div>
+
 </div>
 
 </div>
