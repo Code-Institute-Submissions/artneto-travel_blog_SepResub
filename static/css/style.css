@@ -603,6 +603,13 @@ label {
 }
 
 @media(max-width:800px) {
+
+    .bact-img {
+        background-size: cover;
+        background-position: center center;
+        height: 216vh;
+        width: 182%;
+    }
     .container-post-box {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding: 1.5rem;
@@ -610,22 +617,22 @@ label {
         margin-left: -119px;
     }
 
-    #cke_id_body {
-        width: 30%;
-    }
-    
-
-    .bact-img {
-        background-size: cover;
-        background-position: center center;
-        height: 216vh;
-    }
-
+   
     .createpost {
-        margin: 20px;
-        margin-left: 10px;
+        margin: 19px;
+        margin-left: -24px;
+        width: 62%;
     }
    
+    .page-title {
+        margin-right: 43%;
+    }
+
+    footer {
+        font-size: 11px;
+        width: 802px;
+        font-weight: 700;
+    }
 
 }
 
@@ -645,7 +652,9 @@ label {
     .container-post-box {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding: 1.5rem;
-        margin: -24px;
+        margin: -15px;
+        margin-right: 34%;
+        margin-left: -58%;
     }
 
     .createpost{
