@@ -10,17 +10,9 @@
               <br /><br />
               <div class="mb-3">
                      <form method="POST">
-                            {% csrf_token %}
-                            <div class="control">
-                                   <label for="text"> Username</label>
-                                   <input type="text" class="form-control" id="text" aria-describedby="text" name="username">
-                            </div>
-                            <div class="control">
-                                   <label for="id_body">Body:</label>
-                            </div>
-                            <div class="control">
-                              <textarea name="body" cols="40" rows="10" class="form-control" required="" id="id_body" control-id="ControlID-2"></textarea>
-                            </div>
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                           
                             <div class="form-btn">
                                    <button class="btn secondary">Comment</button>
                             </div>

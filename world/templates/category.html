@@ -12,7 +12,7 @@
             {% for post in category_posts %}
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <div class="card-body">
+                    <div class="card-body md">
                         <div class="image-container">
                             {% if "placeholder" in post.header_img.url %}
 
@@ -24,14 +24,13 @@
                             <img class="card-img-top" src=" {{ post.header_img.url  }}">
 
                             {% endif %}
-                            <div class="image-flash">
+                            <div class="image-flash p-2">
                                 <br>
-                                <h5 class="card-title"><a
-                                        href="{% url 'details_article' post.pk %}">{{ post.title }}</a></h5>
+                                <a href="{% url 'details_article' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
                                 <p class="author">Author: {{ post.author }}</p>
                                 <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
                                 <hr />
-                                <p class="card-text text-muted h6">{{ post.publish_date}}</p>
+                                <p class="card-text text-muted h6">Created on {{ post.publish_date}}</p>
                                 
 
                             </div>
@@ -48,12 +47,12 @@
     </div>
 </div>
 {% else %}
-<div class="not-allowed">
+ <div class="not-allowed">
     <div class="not-loggedin">
-           <p>This category has no posts.</p>
-           <p><a href="{% url 'post' %}">Add one</a></p>
-    </div>
-
+        <p>This category has no posts.</p>
+        <p><a href="{% url 'post' %}">Add one</a></p>
+ </div>
+ </div>
 </div>
 {% endif %}
 {%endblock%}
