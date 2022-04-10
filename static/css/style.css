@@ -447,46 +447,17 @@ label {
     padding: 1.5rem;
 }
 
-@media(max-width:2560px) {
-    .forms-cat {
-        
-    }
-}
 
-
-@media(max-width:1440px) {
-    .forms-cat {
-        
-    }
-}
-
-@media(max-width:1300px) {
-    .forms-cat {
-        
-    }
-}
-
-@media(max-width:1024px) {
-    .forms-cat {
-       
-    }
-}
-
-@media(max-width:800px) {
-    .forms-cat {
-        
-    }
-}
-
-@media(max-width:500px) {
-    .forms-cat {
-       
-    }
-}
 
 @media(max-width:320px) {
-    .forms-cat {
-        
+
+    .backgr-ct {
+        height: 216vh;
+        width: 182%;
+    }
+
+    .forms-cat{
+        margin-left: 30%;
     }
 }
 
@@ -731,35 +702,7 @@ label {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media(max-width:1024px) {
-    .forms-1 {
-        padding: 1rem 20rem;
-    }
-}
 
-@media(max-width:800px) {
-    .forms-1 {
-        padding: 1rem 10rem;
-    }
-}
-
-@media(max-width:500px) {
-    .forms-1 {
-        padding: 1rem 5rem;
-    }
-}
-
-@media(max-width:400px) {
-    .forms-1 {
-        padding: 1rem 2rem;
-    }
-}
-
-@media(max-width:320px) {
-    .forms-1 {
-        padding: 1rem;
-    }
-}
 
 /*Not allowed*/
 
@@ -873,6 +816,10 @@ label {
     color: white;
 }
 
+@media(max-width:320px) {
+   
+}
+
 
 .comment-bgd{
     position:relative;
@@ -925,7 +872,7 @@ label {
 
 .profile-section {
     position:relative;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background: url('../img/mountain.jpg');
     background-size: cover;
@@ -1012,81 +959,8 @@ label {
     font-weight: 400;
 }
 
-@media(max-width:2560px) {
-    .form-box {
-        padding: 1rem 52rem;
-    }
 
-    #cke_id_body {
-        max-width: 1595px;
-    }
-}
 
-@media(max-width:1440px) {
-    .form-box {
-        padding: 1rem 16rem;
-    }
-
-    #cke_id_body {
-        max-width: 1595px;
-    }
-}
-
-@media(max-width:1300px) {
-    .form-box {
-        padding: 1rem 15rem;
-    }
-
-    #cke_id_body {
-        max-width: 730px;
-    }
-}
-
-@media(max-width:1024px) {
-    .form-box {
-        padding: 1rem 10rem;
-    }
-
-    #cke_id_body {
-        max-width: 655px;
-    }
-}
-
-@media(max-width:800px) {
-    .form-box {
-        padding: 1rem 3rem;
-    }
-
-    #cke_id_body {
-        max-width: 625px;
-    }
-}
-
-@media(max-width:500px) {
-    .form-box {
-        padding: 2rem;
-    }
-
-    #cke_id_body {
-        max-width: 305px;
-    }
-}
-
-@media(max-width:400px) {
-    .form-box {
-        padding: 1rem;
-    }
-
-    #cke_id_body {
-        max-width: 295px;
-    }
-
-    footer {
-        width: 500px;
-        color: #6170ac;
-    }
-
-}
 
 /*Edit Post*/
 
