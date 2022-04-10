@@ -17,7 +17,7 @@ a {
     text-decoration: none;
     text-transform:uppercase;
     color: #563329;
-    font: Montserrat;
+    font: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
@@ -89,7 +89,7 @@ a {
 .card-title {
     font-size:1.4rem;
     text-decoration: none;
-    font-style: Montaga;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card-text, p {
