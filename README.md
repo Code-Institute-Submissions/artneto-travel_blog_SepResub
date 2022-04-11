@@ -142,4 +142,7 @@ Deployment instructions assume that you have already set up your repository and 
 12. Go back to the deployment tab and enable automatic deployment.
 13. Finally, press deploys branch and preview your website.
 
-
+Issues Encountered
+- I had some difficulties in finding the correct media query resolutions for my page, but in the end I managed to make the content adapt to each different screen.
+Outcome
+- I was able to construct my first website using all of the material supplied during the course and with the aid of my mentor. I am pleased with the outcome.
