@@ -465,13 +465,17 @@ label {
 
 .bact-img {
     position: relative;
-    height: 139vh;
+    height: 132vh;
     width: 100%;
     background: url('../img/Brazil.jpg');
     background-size: cover;
     background-position: center center;
 }
 
+.form-post {
+  padding-top:1rem;
+  padding-bottom:3.5rem;
+}
 .page-title {
     text-transform: uppercase;
     font-size: 2em;
@@ -488,11 +492,17 @@ label {
     padding: 1rem 16rem;
 }
 
+
 .container-post-box {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.5rem;
+    width: 55%;
+    margin:32px 230px;
+    padding: 20px;
 }
 
+#cke_id_body {
+    margin:auto;
+}
 #id_header_img {
    font-weight: 700;
 }
@@ -591,24 +601,21 @@ label {
 }
 
 
-
-
 @media(max-width:320px) {
 
     
     .bact-img {
-        background-size: cover;
-        background-position: center center;
-        height: 216vh;
-        width: 182%;
+       padding: 56px;
     }
 
     .container-post-box {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding: 1.5rem;
         margin: -15px;
-        margin-right: 34%;
-        margin-left: -58%;
+        width: 162%;
+        
+    }
+    #cke_id_body {
+        margin:auto;
     }
 
     .createpost{
@@ -709,23 +716,7 @@ label {
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-@media(max-width:1024px) {
-    .forms-delete {
-        padding: 4rem 15rem;
-    }
-}
- 
-@media(max-width:800px) {
-    .forms-delete {
-        padding: 4rem 10rem;
-    }
-}
- 
-@media(max-width:500px) {
-    .forms-delete {
-        padding: 2rem;
-    }
-}
+
  
 @media(max-width:400px) {
     .forms-1  {
