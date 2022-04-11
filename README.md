@@ -85,7 +85,6 @@ Login Page – Login form to input username and Password, however, register now 
 
 Not allowed to login due to incorrect username/password.
 
-Not allowed to login due to incorrect username/password.
 
 
 ## Register Page
