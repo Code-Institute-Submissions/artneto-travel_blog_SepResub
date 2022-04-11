@@ -38,10 +38,106 @@ As a user, I want:
 
  This blog is informative and well-communicated with the user, with excellent UX and accessibility turning into a great blog for navigation.
 
-#### Wireframe:
+## Colour Scheme
 
-![WireFrame](https://github.com/artneto/travel_blog/blob/main/phone.PNG)
+To produce distinct brilliant hues, I chose to just utilize a unique and eye-catching key color palette. The color scheme is as follows:
 
-![WireFrame](https://github.com/artneto/travel_blog/blob/main/Browser.PNG)
+### Features
 
-![WireFrame](https://github.com/artneto/travel_blog/blob/main/tablet.PNG)
+#	Navbar:
+The navigation bar is at the top, with a logo that functions as a button and takes the user to the homepage.Navabar provides an option to register for new users, as well as the ability to login for those who already have an account. This blog's accessible social networks are listed on the right side of the navbar.
+
+The navbar will display the functionality to create a post and add a category after the access has been created (if the user still doesn't have an account) and logged in.
+
+The user will have accessibility to a dropdown menu that contains Account preferences, Profile Page, Edit Profile, and Logout.
+
+For a good user experience, a dropdown button will keep all menu options open and easily accessible for browsing when the blog is viewed on a smaller device such as a tablet or smartphone.
+
+## Footer
+The footer I selected was a sticky footer, and I kept it simple by presenting copyright details.
+
+## Main Page Element
+
+Below the contents of the container there is a photo, the user will find the category section with each new category created, this list will grow and appear below the main image. Each selected category will display cards with the chosen subject blog.  
+Category will display cards with the chosen subject blog. 
+
+* Post Section- by default the large containers will be displayed with the title/author name /snippet of the content from each blog post and the date published. For more than three box sections the button next will be available below the cards for user access to older content.
+
+On each individual post page, the user will have access to the full article. 
+
+* In each article, the post owner's profile bio will appear with their details and social networks.
+
+## Features
+At the bottom of each article blog the like/dislike option will be available for registered users.
+
+The option to edit and delete post will only be available to those who created the post.
+
+
+#Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
+
+## User Profile –
+
+Users can view the bio profile of other users on their social networks if available. If a profile photo is not uploaded when creating the profile, a default image will appear.
+
+Login Page – Login form to input username and Password, however, register now link is also available below the form.
+
+Not allowed to login due to incorrect username/password.
+
+Not allowed to login due to incorrect username/password.
+
+
+## Register Page
+
+Register form required personal details in order to create a new account. In case user has already created an account there is a login link below the submit button.
+
+## Account setting – 
+
+* User can edit personal details such as username, first name, last name and email address. 
+
+* Change Password page- User can also change their password. 
+
+
+ ## Features left to Implement
+Add comment section for user not registered and be able for they can reply to the other comments. 
+
+
+## Tools/Technologies
+*	GitPod
+*	GitPodw hosted my Workspace for this project
+*	Git
+*	used to push and commit any and all changes to my repository on GitHub
+*	Bootstrap
+*	Installed as a dependency Provided my buttons, modals, Navbar, footer, table and basic grid structure.
+*	Also used django-bootstrap-forms
+*	JQuery
+*	The project uses JQuery for DOM manipulation (Ex: Modal)
+SQLite
+*	used as my local database until I engaged Database Url for Postgres
+*	Heroku
+*	Deployment of my Blog
+*	Postgres
+*	Database used in Heroku after deployment
+Testing
+Automated Testing
+*	Validation Services
+*	W3C Markup Validator was used to validate my HTML code.
+*	W3C CSS Validator was used to validate my CSS code.
+
+Deployment
+The website can be accessed here [here](https://blogtravel-django.herokuapp.com/)
+Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
+1. Create the necessary files for deployment
+2. Create a requirements file using pip3 freeze > requirements.txt which will contain the required dependencies.
+3. Create Procfile using echo web: python app.py > Procfile.
+4. Push both files to GitHub
+5. log in to Heroku and create a new app
+6. Connect the app to your project
+7. Go to the deployment method section and choose the method. If using GitHub, select that option, otherwise use the Heroku CLI method.
+8. Following the GitHub method, search for the desired repository and connect to it
+9. Enter configuration variables
+10. Go to the settings tab and select Reveal Config Vars. Enter the variables defined in the env.py file (IP, PORT and SECRET_KEY).
+11. Deploy and preview
+12. Go back to the deployment tab and enable automatic deployment.
+13. Finally, press deploys branch and preview your website.
+
+
