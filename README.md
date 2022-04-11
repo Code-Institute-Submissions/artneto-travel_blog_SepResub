@@ -5,6 +5,8 @@ What a Trip is a contemporary vision of a user who has decided to travel  all ov
 ## Objective
 My 4th Milestone project is an E-commerce Django project. This project shows the knowledge I acquired during the course. The skills learned in the modules that led to this project, include HTML Fundamentals, CSS Fundamentals, JavaScript, Interactive Frontend Development, Python, Data-Centric Development, User-Centric Development, and Django. Adding Django to my skill set; I developed a blog that allows the user to interact with an efficient website.
 
+Check out App Deployed on Heroku[here](https://blogtravel-django.herokuapp.com/)
+
 
 ## UI/UX
 ## Project goals
