@@ -653,7 +653,7 @@ label {
     width: 100%;
     display: block;
     padding: 10px;
-    border:none;
+    border:none!important;
     margin: 1em 0;
     font-weight: 600!important;
 }
@@ -693,6 +693,14 @@ label {
 
 /*Change password*/
 
+.password-bck {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/login-bck.jpg');
+    background-size: cover;
+    background-position: center center;
+}
 .forms-1 {
     padding: 1rem 25rem;
 }
@@ -701,7 +709,33 @@ label {
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+@media(max-width:1024px) {
+    .forms-delete {
+        padding: 4rem 15rem;
+    }
+}
+ 
+@media(max-width:800px) {
+    .forms-delete {
+        padding: 4rem 10rem;
+    }
+}
+ 
+@media(max-width:500px) {
+    .forms-delete {
+        padding: 2rem;
+    }
+}
+ 
+@media(max-width:400px) {
+    .forms-1  {
+        padding: 2rem 1rem;
+    }
+ 
+    .text-center {
+        font-size: 1rem;
+    }
+}
 
 
 /*Not allowed*/
@@ -840,6 +874,7 @@ label {
     transition: opacity .3s ease;
     font-weight: 600;
     margin: 8px;
+    outline: none;
 }
 
 .form-btn .secondary:hover{
@@ -989,6 +1024,7 @@ label {
     border:none;
     margin: 1em 0;
     font-weight: 600!important;
+    border: none!important;
 }
 
 .btn-secondary:hover {
