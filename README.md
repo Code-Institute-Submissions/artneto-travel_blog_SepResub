@@ -1,4 +1,4 @@
-#What a Trip|Blog  Milestone Django Project. 
+## What a Trip|Blog  Milestone Django Project. 
 
 What a Trip is a contemporary vision of a user who has decided to travel  all over the world and is interested in sharing tips and experiences with some other travellers.
 
