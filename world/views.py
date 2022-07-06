@@ -96,12 +96,6 @@ class CategoryView(CreateView):
     template_name = 'create_category.html'
     fields = '__all__'
 
-    def get_context_data(self, *args, **kwargs):
-        caty_menu = Category.objects.all()
-        context = super(CategoryView, self).get_context_data(*args, **kwargs)
-        context["caty_menu"] = caty_menu
-        return context
-
 class DeleteViewPost(DeleteView):
     model = Post
     template_name = 'post_delete.html'
