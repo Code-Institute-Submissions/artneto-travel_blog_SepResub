@@ -37,7 +37,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['blogtravel-django.herokuapp.com', 'localhost']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -94,12 +93,12 @@ DATABASES = {
     }
 
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #      'NAME': BASE_DIR / 'db.sqlite3',
- #   }
-#}
+#   }
+# }
 
 
 # Password validation

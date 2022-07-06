@@ -1,5 +1,7 @@
+""" Libraries View """
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView,\
+     CreateView, UpdateView, DeleteView
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, EditComment
 from django import forms
@@ -10,9 +12,10 @@ from django.http import HttpResponseRedirect
 # Function django views ListView will list the posts from the blog
 # DetailView will give the details for the post
 
+
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    liked= False
+    liked = False
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
         liked = False
@@ -22,10 +25,12 @@ def LikeView(request, pk):
 
     return HttpResponseRedirect(reverse('details_article', args=[str(pk)]))
 
-def CreateCategoryView(request, caty):
-    category_posts =  Post.objects.filter(category=caty.replace('-',' '))
-    return render(request,'category.html', {'caty':caty.title().replace('-',' '), 'category_posts':category_posts})
 
+def CreateCategoryView(request, caty):
+    category_posts = Post.objects.filter(category=caty.replace('-', ' '))
+    return render(request, 'category.html', {
+                           'caty': caty.title().replace('-', ' '),
+                           'category_posts': category_posts})
 
 
 class IndexView(ListView):
@@ -34,7 +39,6 @@ class IndexView(ListView):
     ordering = ['-publish_date']
     caty = Category.objects.all()
     paginate_by = 3
-
 
     def get_context_data(self, *args, **kwargs):
         caty_menu = Category.objects.all()
@@ -68,22 +72,23 @@ class PostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'post.html'
-    
+
     def get_context_data(self, *args, **kwargs):
         caty_menu = Category.objects.all()
         context = super(PostView, self).get_context_data(*args, **kwargs)
         context["caty_menu"] = caty_menu
         return context
 
+
 class AddPostCommentView(CreateView):
     model = Comment
     form_class = EditComment
     template_name = 'comments_box.html'
-    def form_valid(self, form):
+
+
+def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
-
-    success_url = reverse_lazy('index')
 
 
 class UpdateViewPost(UpdateView):
@@ -91,10 +96,12 @@ class UpdateViewPost(UpdateView):
     form_class = EditForm
     template_name = 'post_update.html'
 
+
 class CategoryView(CreateView):
     model = Category
     template_name = 'create_category.html'
     fields = '__all__'
+
 
 class DeleteViewPost(DeleteView):
     model = Post
