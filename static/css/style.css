@@ -313,9 +313,6 @@ transition:0.3s;
     padding-bottom: 1rem;
 }
 
-/*Login Page*/
-
-
 /*Add Category*/
 .forms-cat {
     padding: 7.2rem 25rem;
@@ -548,12 +545,7 @@ transition:0.3s;
     color: #fff;
 }
 
-.register-page {
-    background: url('../img/login-bck.jpg');
-    background-size: cover;
-    background-position: center center;
-    padding: 2rem 20rem;
-}
+
 
 .form-register form label {
     padding-bottom: 0.5rem;
@@ -589,33 +581,31 @@ transition:0.3s;
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75)!important;
 }
 
-.register {
-    padding: 50px 30px;
+.main-register {
+    margin:auto;
+    padding-bottom: 9rem;
+    padding-left: 1rem;
+    padding-right: 0rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.main-form label {
+.main-register label {
     color: rgb(245, 234, 234);
 }
 
-@media(max-width:1024px) {
-    .register-page {
-        padding: 2rem 13rem;
-    }
+.mb-0 {
+    color:rgb(245, 234, 234)!important;
 }
 
-@media(max-width:800px) {
-    .register-page {
-        padding: 2rem 7rem;
-    }
+/*Login*/
+
+.login-register {
+    background: url('../img/ireland.jpg');
 }
 
-@media(max-width:500px) {
-    .register-page {
-        padding: 1rem;
-    }
+.card-login {
+    padding: 21px 30px!important;
 }
-
 /*Change password*/
 
 .password-bck {

@@ -3,39 +3,42 @@
 
 {% block content %}
 
-<div class="login-register-banner">
-  <!-- If the user inputs something wrong, he/she will be notified -->
-  {% if form.errors %}
-  <br>
-  <div class="alert alert-danger" role="alert">
-    Incorrect details please review your Form!
-  </div>
-  {% endif %}
-
-  <div class="main-form">
-    
-    <section class="vh-100 gradient-custom">
-      <div class="container-login py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bg-dark text-white" style="border-radius: 1rem;">
-              <div class="card-login p-5 text-center">
-                <h3 class="register-title">Register User</h3>
-                <form method="POST" action="">
-                  {% csrf_token %}
-                  {{ form.as_p }}
-                  <div class="btn-register">
-                    <button class="btn btn-secondary btn-submit">Submit</button>
-                  </div>
-                  <p class="mb-0">Don't have an account? <a href="{% url 'login' %}" class="text-white-50 fw-bold">Login</a>
-                  </p>
-                </form>
+<div class="login-register-main">
+  <div class="login-register">
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        There was an error with your form...Please try again
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+  
+    <div class="main-register">
+      <section class="vh-100 gradient-custom">
+        <div class="container-form py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white">
+                <div class="card-login p-3 text-center">
+                  <h3 class="register-title">Register User</h3>
+                  <form method="POST" action="">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="btn-register">
+                      <button class="btn btn-secondary btn-submit">Submit</button>
+                    </div>
+                    <div>
+                      <p class="mb-0">Already an user? <a href="{% url 'login' %}" class="text-white-50 fw-bold">Sign in</a>
+                      </p>
+                    </p>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+   </div>
+ </div>
 </div>
+<br>
 {% endblock %}

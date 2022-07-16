@@ -4,15 +4,24 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-        <h1> Create Profile</h1>
-        <br/><br/>
-        <div class="mb-3">
-              <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-secondary">Create Profile</button>
+<section class="vh-100 gradient-custom">
+       <div class="container-form py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100"
+                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                            <div class="card bg-dark text-white">
+                                   <h3> Create Profile</h3>
+                                   <div class="mb-3">
+                                          <form method="POST" enctype="multipart/form-data">
+                                          {% csrf_token %}
+                                          {{ form.as_p }}
+                                          <button class="btn btn-secondary">Create Profile</button>
+                                          </form>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
        </div>
-
+</section>
 {% else %}
 <div class="not-allowed">
        <div class="not-loggedin">
