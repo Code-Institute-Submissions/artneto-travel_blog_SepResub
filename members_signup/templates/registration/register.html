@@ -3,22 +3,37 @@
 
 {% block content %}
 
-<div class="register-page">
-  
-  <div class="register">
-    <h1 class="register-txt"> Register Now </h1>
-    <form method="POST" action="">
-      {% csrf_token %}
-      {{ form.as_p }}
+<div class="login-register-banner">
+  <!-- If the user inputs something wrong, he/she will be notified -->
+  {% if form.errors %}
+  <br>
+  <div class="alert alert-danger" role="alert">
+    Incorrect details please review your Form!
+  </div>
+  {% endif %}
 
-      <div class="form-btn">
-        <br>
-        <button class="btn submit-btn">Submit</button>
+  <div class="register">
+    <section class="vh-100 gradient-custom">
+      <div class="container-login py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-login p-5 text-center">
+                <form method="POST" action="">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <div class="btn-register">
+                    <button class="btn btn-secondary btn-submit">Submit</button>
+                  </div>
+                  <p class="mb-0">Don't have an account? <a href="{% url 'login' %}" class="text-white-50 fw-bold">Login</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </form>
-    <div class="link">
-      Already have an account? <a href="{% url 'login' %}">Login Now</a>
-    </div>
+    </section>
   </div>
 </div>
 {% endblock %}

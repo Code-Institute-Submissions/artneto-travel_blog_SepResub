@@ -316,97 +316,6 @@ transition:0.3s;
 /*Login Page*/
 
 
-.login-page {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: url('../img/login-bck.jpg');
-    background-size: cover;
-    background-position: center center;
-}
-.form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
-    width: 380px;
-    padding: 50px 30px;
-    box-shadow: 7px 7px 60px #000;
-}
-
-.login-txt {
-    text-transform: uppercase;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 2em;
-    color: #fff;
-}
-
-.control input {
-    width: 100%;
-    display: block;
-    padding: 10px;
-    color:#222;
-    border:none;
-    outline: none;
-    margin: 1em 0;
-}
-
-label {
-    color: #fff;
-    font-weight: 500;
-    padding-bottom: 0.3rem;
-    text-transform: uppercase;
-}
-
-
-.control input[type="submit"]{
-    background-color: crimson;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    transition: opacity .3s ease;
-    font-weight: 600;
-}
-
-.control input[type="submit"]:hover{
-    transition: all .4s ease-in-out;
-    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
-}
-
-.link {
-    color: #fff;
-    font-weight: 400;
-}
-
-.link a{
-    text-decoration: none;
-    color:#fff;
-    opacity: .6;
-    
-}
-
-.link a:hover{
-    opacity: 1;
-}
-
-.login-msg-banner {
-    padding-top: 0rem;
-    padding-bottom: 0px;
-}
-
-.login-user-banner {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.login-msg-banner {
-    position:absolute;
-    z-index: 999;
-    margin: 149px;
-}
 /*Add Category*/
 .forms-cat {
     padding: 7.2rem 25rem;
@@ -646,6 +555,15 @@ label {
     padding: 2rem 20rem;
 }
 
+.form-register form label {
+    padding-bottom: 0.5rem;
+    color: #C5C6C7;
+}
+
+.form-register ul li {
+    font-size: 0.8rem;
+}
+
 .register {
     box-shadow: 7px 7px 60px #000!important;
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
@@ -822,28 +740,7 @@ label {
     }
 }
 
-/* Error message - Login*/
-.error-msg {
-    text-align: center;
-    background-color: #bf7070;
-    padding-left: 26rem;
-    padding-right: 26rem;
-}
 
-.error-not-log {
-    background-color: #bf7070;
-    padding: 0.3rem 0.5rem 0.1rem 0.5rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.msg {
-    color: white;
-}
-
-@media(max-width:320px) {
-   
-}
 
 
 .comment-bgd{
@@ -946,7 +843,7 @@ label {
 
 .helptext {
     color:#efefef;
-    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .btn-edit{
@@ -1023,6 +920,23 @@ label {
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19)!important;
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75)!important;
 }
+
+/*alert*/
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    max-width: 480px;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    background-color: #bf7070;
+    color: #c71d2b;
+}
+
 
 
 @media(max-width:2560px) {
