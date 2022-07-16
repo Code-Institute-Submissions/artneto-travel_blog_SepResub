@@ -12,13 +12,15 @@
   </div>
   {% endif %}
 
-  <div class="register">
+  <div class="main-form">
+    
     <section class="vh-100 gradient-custom">
       <div class="container-login py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card bg-dark text-white" style="border-radius: 1rem;">
               <div class="card-login p-5 text-center">
+                <h3 class="register-title">Register User</h3>
                 <form method="POST" action="">
                   {% csrf_token %}
                   {{ form.as_p }}
