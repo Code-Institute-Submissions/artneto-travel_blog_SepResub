@@ -51,29 +51,40 @@ This site was built using ideas from preliminary wireframes created in Figma, an
  - Tablet
   ![](static/img/tablet.PNG)
 
- - Desktop
+
   ![](static/img/Browser.PNG)
 
- - Phone
+
   ![](static/img/phone.PNG)
 
 ## Colour Scheme
 
 To produce distinct brilliant hues, I chose to just utilize a unique and eye-catching key color palette. The color scheme is as follows:
 
+![](static/img/colors.PNG)
 ### Features
 
 #	Navbar:
 The navigation bar is at the top, with a logo that functions as a button and takes the user to the homepage.Navabar provides an option to register for new users, as well as the ability to login for those who already have an account. This blog's accessible social networks are listed on the right side of the navbar.
 
+![](static/img/navbar.PNG)
+
 The navbar will display the functionality to create a post and add a category after the access has been created (if the user still doesn't have an account) and logged in.
+
+![](static/img/navbar2.PNG)
 
 The user will have accessibility to a dropdown menu that contains Account preferences, Profile Page, Edit Profile, and Logout.
 
+![](static/img/navbar3.PNG)
+
 For a good user experience, a dropdown button will keep all menu options open and easily accessible for browsing when the blog is viewed on a smaller device such as a tablet or smartphone.
+
+![](static/img/navbar4.PNG)
 
 ## Footer
 The footer I selected was a sticky footer, and I kept it simple by presenting copyright details.
+
+![](static/img/footer.PNG)
 
 ## Main Page Element
 
