@@ -49,14 +49,13 @@ As a user, I want:
 This site was built using ideas from preliminary wireframes created in Figma, and the image files exported from these are shown below. This website allows users to browse using a tablet, desktop, or mobile phone.
 
  - Tablet
-  ![](static/docs/img/tablet.PNG)
+  ![](static/img/tablet.PNG)
 
-  
  - Desktop
-  ![](static/docs/img/Browser.PNG)
+  ![](static/img/Browser.PNG)
 
-   - Phone
-  ![](static/docs/img/phone.PNG)
+ - Phone
+  ![](static/img/phone.PNG)
 
 ## Colour Scheme
 
