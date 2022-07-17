@@ -317,6 +317,8 @@ transition:0.3s;
 .forms-cat {
     padding: 7.2rem 25rem;
     text-align: center;
+    width: 127%;
+
 }
 
 .backgr-ct {
@@ -362,6 +364,7 @@ transition:0.3s;
 @media(max-width:800px) {
     .forms-cat{
         padding: 1rem;
+        margin-top: 6rem;
     }
 }
 
@@ -892,10 +895,18 @@ transition:0.3s;
 .update-box {
     height: fit-content;
 }
+
+.update-box label {
+    color:#C5C6C7;
+    margin-left: 1rem;
+}
+
+
 .update-bct {
     position:relative;
     height: 40vh;
-    width: 100%;
+    width: 60%;
+    padding-top: 2rem;
     background: url('../img/mountain.jpg');
     background-size: cover;
     background-position: center center;
@@ -942,13 +953,8 @@ transition:0.3s;
 
 
 @media(max-width:2560px) {
-    .update-bct {
-        background-size: cover;
-        background-position: center center;
-        height: 120vh;
-        margin: auto;
-        width: 100%;
-    }
+
+
 
     .formupdate {
         width:70%;
@@ -982,20 +988,17 @@ transition:0.3s;
 
     #id_title_tag {
         width: 86%;
+        margin-right: 1rem;
     }
 
-    #article_snippet {
-            width: 92%!important;
-            height: 91px!important;
-        }
-    }
+   
 
     footer {
         font-size: 12px;
         color: #bf7070;
         font-weight: 700;
     }
-}
+} 
 
 
 
@@ -1005,13 +1008,7 @@ transition:0.3s;
     .social-media-links {
         padding-right: 124px;
     }
-    .update-bct {
-        background-size: cover;
-        background-position: center center;
-        height: 120vh;
-        margin: auto;
-        width: 100%;
-    }
+    
     .page-title {
         padding: 50px;
         width: 98%;
@@ -1042,18 +1039,14 @@ transition:0.3s;
 }
 
 @media(max-width:800px) {
-    .update-bct {
-        background-size: cover;
-        background-position: center center;
-        height: 158vh;
-        margin: auto;
-    }
+   
     #id_title {
         width: 92%;
     }
 
     #id_title_tag {
         width: 92%;
+        margin-left: 1rem;
     }
 
     .page-title {
@@ -1070,12 +1063,7 @@ transition:0.3s;
 }
 
 @media(max-width:500px) {
-    .update-bct {
-        background-size: cover;
-        background-position: center center;
-        height: 193vh;
-        margin: auto;
-    }
+    
     .page-title {
         padding-top: 10px;
     }
@@ -1115,12 +1103,7 @@ transition:0.3s;
 }
 
 @media(max-width:320px) {
-    .update-bct {
-        background-size: cover;
-        background-position: center center;
-        height: 193vh;
-        
-    }
+    
 
     .page-title {
         padding-top: 10px;
@@ -1136,10 +1119,6 @@ transition:0.3s;
 
     #id_title_tag {
         width: 100%;
-    }
-
-    .article_snippet{
-        margin: 30px;
     }
 
     .formupdate {
