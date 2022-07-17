@@ -335,11 +335,12 @@ transition:0.3s;
     font-size: 1.2em;
     transition: opacity .3s ease;
     outline: none;
-    width: 100%;
+    width: 88%;
     display: block;
     padding: 10px;
     border:none;
     margin: 1em 0;
+    margin-left: 1rem;
     font-weight: 600;
 }
 
@@ -348,22 +349,28 @@ transition:0.3s;
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
-.form-box-1 {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 1.5rem;
+
+.forms-cat label {
+    color: #C5C6C7;
+    margin-left: 25px;
 }
 
+.forms-cat input {
+    margin: 1rem;
+}
 
+@media(max-width:800px) {
+    .forms-cat{
+        padding: 1rem;
+    }
+}
 
 @media(max-width:320px) {
 
-    .backgr-ct {
-        height: 216vh;
-        width: 182%;
-    }
+   
 
     .forms-cat{
-        margin-left: 30%;
+        padding: 1rem;
     }
 }
 
@@ -378,10 +385,6 @@ transition:0.3s;
     background-position: center center;
 }
 
-.form-post {
-  padding-top:1rem;
-  padding-bottom:3.5rem;
-}
 .page-title {
     text-transform: uppercase;
     font-size: 2em;
@@ -399,19 +402,36 @@ transition:0.3s;
 }
 
 
-.container-post-box {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 55%;
-    margin:32px 230px;
-    padding: 20px;
+.form-post text {
+    margin-left: 0px;
+}
+.form-post {
+  width: 60%;
+  margin-left: 10rem;
+  padding-top: 4rem;
+  
 }
 
-#cke_id_body {
-    margin:auto;
+.form-post label {
+    color: #C5C6C7;
+    margin-left: 1.5rem;
 }
+
+.post-title {
+    margin: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
 #id_header_img {
    font-weight: 700;
 }
+
+#cke_id_body {
+    width: 83%!important;
+    margin-left: 2rem!important;
+}
+
 
 
 .form-btn {
@@ -442,99 +462,34 @@ transition:0.3s;
     padding: 0.3rem 2rem;
 }
 
-@media(max-width:2560px) {
-    .forms {
-        padding: 1rem 52rem;
-    }
 
-    #cke_id_body {
-        max-width: 1595px;
-    }
-}
-
-@media(max-width:1440px) {
-    .forms {
-        padding: 1rem 16rem;
-    }
-
-    #cke_id_body {
-        max-width: 1595px;
-    }
-}
-
-@media(max-width:1300px) {
-    .forms {
-        padding: 1rem 15rem;
-    }
-
-    #cke_id_body {
-        max-width: 730px;
-    }
-}
-
-@media(max-width:800px) {
-
-    .bact-img {
-        background-size: cover;
-        background-position: center center;
-        height: 216vh;
-        width: 182%;
-    }
-    .container-post-box {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding: 1.5rem;
-        margin-right: 38px;
-        margin-left: -119px;
-    }
-
-   
-    .createpost {
-        margin: 19px;
-        margin-left: -24px;
-        width: 62%;
-    }
-   
-    .page-title {
-        margin-right: 43%;
-    }
-
-    footer {
-        font-size: 11px;
-        width: 802px;
-        font-weight: 700;
-    }
-
-}
 
 
 @media(max-width:320px) {
 
+ .bact-img{
+    height: 326vh;
+    width: 100%;
+ }
+  
+ .form-post {
+    width: 73%;
+    margin-left: 3rem;
+    padding-top: 5rem;
+ }
+
+ #cke_id_body {
+    width: 70%!important;
     
-    .bact-img {
-       padding: 56px;
-    }
+ }
 
-    .container-post-box {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        margin: -15px;
-        width: 162%;
-        
-    }
-    #cke_id_body {
-        margin:auto;
-    }
-
-    .createpost{
-        margin:-22px;
-    }
-    footer {
-        font-size: 11px;
-        width: 342px;
-        color: rgba(126, 89, 112, 0);
-        font-weight: 700;
-    }
+ #id_title {
+    width: 84%!important;
+}
 
 }
+
+
 
 /*Register*/
 .register-txt {
@@ -597,11 +552,40 @@ transition:0.3s;
     color:rgb(245, 234, 234)!important;
 }
 
-/*Login*/
+/*Login and Register Form*/
+
+.login-register-main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
 
 .login-register {
     background: url('../img/ireland.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
 }
+
+.reg-form {
+    background: url('../img/ireland.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 129vh;
+    width: 100%;
+}
+
+@media(max-width:400px) {
+    .reg-form {
+        height: 140vh;
+        padding-right: 20px;
+    }
+ 
+}
+
 
 .card-login {
     padding: 21px 30px!important;
@@ -654,6 +638,21 @@ transition:0.3s;
     text-align: center;
     font-weight: 700;
 }
+
+.not-allowed-box {
+    background-color: #947262;
+    height: 200vh;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    padding: -1rem;
+}
+
+.not-allowed-box p {
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
 
 /* Delete Post */
  
@@ -783,7 +782,7 @@ transition:0.3s;
 
 /*User Profile*/
 
-.profile-section {
+.main-profile {
     position:relative;
     height: 120vh;
     width: 100%;
@@ -792,12 +791,21 @@ transition:0.3s;
     background-position: center center;
     
 }
-.user-card {
-    width: 350px;
-    background-color: #efefef;
-    border: none;
-    cursor: pointer;
-    transition: all 0.5s
+
+.profile-form {
+    padding-left: 5rem;
+    padding-right: 20rem;
+    padding-top: 2rem;
+}
+
+.main-profile form label  {
+    color: #efefef;
+   
+}
+
+.text-profile {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .image img {
@@ -829,6 +837,10 @@ transition:0.3s;
     background: url('../img/ireland.jpg');
     background-size: cover;
     background-position: center center;
+}
+
+.form-edit-acc form label {
+    color: #C5C6C7;
 }
 
 .helptext {
@@ -945,7 +957,7 @@ transition:0.3s;
     }
 
     #cke_id_body {
-        width: 50%;
+        width: 92%;
     }
 
     textarea {
@@ -955,6 +967,17 @@ transition:0.3s;
 
     #id_title {
         width: 86%;
+        margin-left: 21px;
+    }
+
+    #cke_1_contents {
+        height: 256px;
+    }
+
+
+    #id_category {
+        width: 86%;
+        margin-left: 21px;
     }
 
     #id_title_tag {
@@ -1070,6 +1093,25 @@ transition:0.3s;
         color: #bf7070;
         font-weight: 700;
     }
+
+    .main-profile {
+        height: 224vh;
+        width: 111%;
+    }
+    .profile-form{
+        width: 39rem;
+    }
+
+    .profile-form label {
+        padding-bottom: 0.5rem;
+    }
+
+    
+
+    .profile-form .align-items-center{
+        margin-top: 39px!important;
+        margin-right: 7px!important;
+    }
 }
 
 @media(max-width:320px) {
@@ -1122,4 +1164,6 @@ transition:0.3s;
         color: #bf7070;
         font-weight: 700;
     }
+
+    
 }
