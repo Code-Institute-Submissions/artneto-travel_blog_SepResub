@@ -1,13 +1,15 @@
 
 # What a Trip|Blog  Milestone Django Project. 
 
-## What a Trip|Blog  Milestone Django Project. 
+
 
 
 What a Trip is a contemporary vision of a user who has decided to travel  all over the world and is interested in sharing tips and experiences with some other travellers.
 
 ## Objective
 My 4th Milestone project is an E-commerce Django project. This project shows the knowledge I acquired during the course. The skills learned in the modules that led to this project, include HTML Fundamentals, CSS Fundamentals, JavaScript, Interactive Frontend Development, Python, Data-Centric Development, User-Centric Development, and Django. Adding Django to my skill set; I developed a blog that allows the user to interact with an efficient website.
+
+Check out App Deployed on Heroku[here](https://blogtravel-django.herokuapp.com/)
 
 
 
@@ -124,6 +126,21 @@ The option to edit and delete post will only be available to those who created t
 
 #Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
 
+
+## Error message
+
+Error message in case user is not logged in and try to add a post. 
+
+![](static/img/errorlogin.PNG)
+
+
+Error message in case unregistered user try to add comment.
+
+![](static/img/register02.PNG)
+
+
+
+![](static/img/dislike.PNG)
 ## User Profile 
 
 Users can view the bio profile of other users on their social networks if available. If a profile photo is not uploaded when creating the profile, a default image will appear.
@@ -131,8 +148,10 @@ Users can view the bio profile of other users on their social networks if availa
 Login Page – Login form to input username and Password, however, register now link is also available below the form.
 
 Not allowed to login due to incorrect username/password.
+
+![](static/img/erroraccess.PNG)
 =======
-Check out App Deployed on Heroku[here](https://blogtravel-django.herokuapp.com/)
+
 
 
 

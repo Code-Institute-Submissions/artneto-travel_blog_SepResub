@@ -68,6 +68,7 @@ class ArticleView(DetailView):
         return context
 
 
+
 class PostView(CreateView):
     model = Post
     form_class = PostForm
