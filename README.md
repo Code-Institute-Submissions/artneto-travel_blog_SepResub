@@ -127,7 +127,7 @@ The option to edit and delete post will only be available to those who created t
 #Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
 
 
-## Error message
+# Error message
 
 Error message in case user is not logged in and try to add a post. 
 
@@ -141,7 +141,8 @@ Error message in case unregistered user try to add comment.
 
 
 ![](static/img/dislike.PNG)
-## User Profile 
+
+# User Profile 
 
 Users can view the bio profile of other users on their social networks if available. If a profile photo is not uploaded when creating the profile, a default image will appear.
 
@@ -150,6 +151,27 @@ Login Page – Login form to input username and Password, however, register now 
 Not allowed to login due to incorrect username/password.
 
 ![](static/img/erroraccess.PNG)
+
+
+
+# Edit/Delete Post
+
+
+User can only edit /delete your own post. 
+
+![](static/img/editpost.PNG)
+
+
+![](static/img/deletepst.PNG)
+
+
+# User Profile
+
+The user can view the author of the post's profile as well as their social networks.
+
+![](static/img/usernet.PNG)
+
+
 =======
 
 
@@ -162,7 +184,7 @@ Not allowed to login due to incorrect username/password.
 
 Register form required personal details in order to create a new account. In case user has already created an account there is a login link below the submit button.
 
-## Account setting – 
+## Account setting 
 
 * User can edit personal details such as username, first name, last name and email address. 
 
