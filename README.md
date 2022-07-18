@@ -88,14 +88,25 @@ The footer I selected was a sticky footer, and I kept it simple by presenting co
 
 ## Main Page Element
 
-Below the contents of the container there is a photo, the user will find the category section with each new category created, this list will grow and appear below the main image. Each selected category will display cards with the chosen subject blog.  
+Below the contents of the container there is a photo, the user will find the category section with each new category created, this list will grow and appear below the main image. Each selected 
 Category will display cards with the chosen subject blog. 
+
+![](static/img/category.PNG)
+
 
 * Post Section- by default the large containers will be displayed with the title/author name /snippet of the content from each blog post and the date published. For more than three box sections the button next will be available below the cards for user access to older content.
 
 On each individual post page, the user will have access to the full article. 
 
+![](static/img/posts.PNG)
+
+
+
+![](static/img/fullpost.PNG)
+
 * In each article, the post owner's profile bio will appear with their details and social networks.
+
+![](static/img/user01.PNG)
 
 ## Features
 At the bottom of each article blog the like/dislike option will be available for registered users.
