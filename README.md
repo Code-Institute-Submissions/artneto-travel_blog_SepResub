@@ -111,12 +111,20 @@ On each individual post page, the user will have access to the full article.
 ## Features
 At the bottom of each article blog the like/dislike option will be available for registered users.
 
+![](static/img/dislike.PNG)
+
+
+
+![](static/img/liked.PNG)
+
+
+
 The option to edit and delete post will only be available to those who created the post.
 
 
 #Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
 
-## User Profile –
+## User Profile 
 
 Users can view the bio profile of other users on their social networks if available. If a profile photo is not uploaded when creating the profile, a default image will appear.
 
