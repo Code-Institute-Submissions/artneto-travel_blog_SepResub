@@ -172,11 +172,17 @@ The user can view the author of the post's profile as well as their social netwo
 ![](static/img/usernet.PNG)
 
 
+# Create Profile
+
+After the user creates your account, the option to create a profile will be available for user logged in.
+
+![](static/img/createacc.PNG)
+
+
+![](static/img/creatcc2.PNG)
+
+
 =======
-
-
-
-
 
 
 
@@ -184,12 +190,17 @@ The user can view the author of the post's profile as well as their social netwo
 
 Register form required personal details in order to create a new account. In case user has already created an account there is a login link below the submit button.
 
+![](static/img/registerform.PNG)
+
 ## Account setting 
 
 * User can edit personal details such as username, first name, last name and email address. 
 
+![](static/img/editcc.PNG)
+
 * Change Password page- User can also change their password. 
 
+![](static/img/passwordchange.PNG)
 
  ## Features left to Implement
 Add comment section for user not registered and be able for they can reply to the other comments. 
