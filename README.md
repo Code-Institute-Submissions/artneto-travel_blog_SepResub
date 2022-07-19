@@ -97,6 +97,9 @@ Category will display cards with the chosen subject blog.
 
 ![](static/img/newcaty.PNG)
 
+![](static/img/groupcaty.PNG)
+
+
 
 * Post Section- by default the large containers will be displayed with the title/author name /snippet of the content from each blog post and the date published. For more than three box sections the button next will be available below the cards for user access to older content.
 
@@ -126,7 +129,14 @@ At the bottom of each article blog the like/dislike option will be available for
 The option to edit and delete post will only be available to those who created the post.
 
 
-#Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
+Unregistered users can read the comments, but only registered users are allowed to make comments on the posts.
+
+![](static/img/seccoment.PNG)
+
+![](static/img/comment10.PNG)
+
+
+
 
 
 # Error message
@@ -272,8 +282,23 @@ Register form required personal details in order to create a new account. In cas
 * Change Password page- User can also change their password. 
 
 
- ## Features left to Implement
-Add comment section for user not registered and be able for they can reply to the other comments. 
+
+## Features left to Implement
+
+* Add comment section for user not registered and be able for they can reply to the other comments.
+* Explore by destination option with a 2D map integrated.
+* Newsletter for users to sign up. 
+
+
+## Testing 
+
+# Members_signup app
+
+
+
+
+
+
 
 
 ## Tools/Technologies

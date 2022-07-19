@@ -21,7 +21,7 @@ class PostForm(forms.ModelForm):
                                              'value': '', 'id': 'identifier',
                                              'type': 'hidden'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-            
+
         }
 
 
@@ -33,7 +33,6 @@ class EditForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-            
         }
 
 
