@@ -68,11 +68,10 @@ class ArticleView(DetailView):
         return context
 
 
-
 class PostView(CreateView):
     model = Post
-    form_class = PostForm
     template_name = 'post.html'
+    form_class = PostForm
 
     def get_context_data(self, *args, **kwargs):
         caty_menu = Category.objects.all()
