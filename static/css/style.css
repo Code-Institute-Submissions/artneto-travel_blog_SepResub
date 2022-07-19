@@ -465,8 +465,18 @@ transition:0.3s;
     padding: 0.3rem 2rem;
 }
 
+@media(max-width:800px) {
 
+    .bact-img {
+    height: 144vh;
+    width: 100%;
+    }
 
+    .form-post {
+        width: 67%;
+    }
+
+}
 
 @media(max-width:320px) {
 
@@ -487,7 +497,7 @@ transition:0.3s;
  }
 
  #id_title {
-    width: 84%!important;
+    width: 86%!important;
 }
 
 }
@@ -987,7 +997,7 @@ transition:0.3s;
     }
 
     #id_title_tag {
-        width: 86%;
+        width: 82%;
         margin-right: 1rem;
     }
 
@@ -1030,22 +1040,22 @@ transition:0.3s;
     }
 
     #id_title {
-        width: 92%;
+        width: 86%;
     }
 
     #id_title_tag {
-        width: 92%;
+        width: 82%;
     }
 }
 
 @media(max-width:800px) {
    
     #id_title {
-        width: 92%;
+        width: 86%;
     }
 
     #id_title_tag {
-        width: 92%;
+        width: 82%;
         margin-left: 1rem;
     }
 

@@ -9,24 +9,24 @@
 
 
 <main class="flex-shrink-0 main-bg base">
-    <div class="bact-img">
-           <div class="form-post">
-                  <div class="card bg-dark text-white">
-                         <h1 class="post-title">Update your Post</h1>
-                         <div class="createpost">
-                                <div class="mb-3">
-                                       <form method="POST" enctype="multipart/form-data">
-                                              {% csrf_token %}
-                                              {{ form.media }}
-                                              {{ form.as_p }}
-                                              <div class="form-btn">
-                                                     <button class="btn btn-create-post">Update Post</button>
-                                              </div>
-                                       </form>
-                                </div>
-                         </div>
-                  </div>
-           </div>
+       <div class="bact-img">
+              <div class="form-post">
+                     <div class="card bg-dark text-white">
+                            <h1 class="post-title">Update your Post</h1>
+                            <div class="createpost">
+                                   <div class="mb-3">
+                                          <form method="POST" enctype="multipart/form-data">
+                                                 {% csrf_token %}
+                                                 {{ form.media }}
+                                                 {{ form.as_p }}
+                                                 <div class="form-btn">
+                                                        <button class="btn btn-create-post">Update Post</button>
+                                                 </div>
+                                          </form>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
            <!---Function script to display restriction to Post Author-->
         <script>
            var name = "{{ user.id }}";

@@ -95,6 +95,8 @@ Category will display cards with the chosen subject blog.
 
 ![](static/img/category.PNG)
 
+![](static/img/newcaty.PNG)
+
 
 * Post Section- by default the large containers will be displayed with the title/author name /snippet of the content from each blog post and the date published. For more than three box sections the button next will be available below the cards for user access to older content.
 
@@ -153,6 +155,17 @@ Not allowed to login due to incorrect username/password.
 ![](static/img/erroraccess.PNG)
 
 
+# Create a Post 
+
+User logged in will be able to create a post. 
+
+![](static/img/createps.PNG)
+
+
+A default picture will be available in case user skip this form. 
+
+
+![](static/img/post3.PNG)
 
 # Edit/Delete Post
 
@@ -165,7 +178,7 @@ User can only edit /delete your own post.
 ![](static/img/deletepst.PNG)
 
 
-# User Profile
+# Author Profile
 
 The user can view the author of the post's profile as well as their social networks.
 
