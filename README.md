@@ -46,6 +46,12 @@ As a user, I want:
  This blog is informative and well-communicated with the user, with excellent UX and accessibility turning into a great blog for navigation.
 
 
+## Agile Development
+
+Agile can be found under projects tab in the github. 
+
+ ![](static/img/agile.PNG)
+
 ## Wireframe
 
 This site was built using ideas from preliminary wireframes created in Figma, and the image files exported from these are shown below. This website allows users to browse using a tablet, desktop, or mobile phone.
