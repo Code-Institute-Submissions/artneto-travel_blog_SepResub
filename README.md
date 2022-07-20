@@ -292,7 +292,52 @@ Register form required personal details in order to create a new account. In cas
 
 ## Testing 
 
-# Members_signup app
+ # Creating an Account
+  I've made my own personal account in addition to the master Admin account. In addition to these two primary accounts, I tested with about ten additional accounts to ensure that authentication and validation worked as expected.
+
+
+ #  Add  Post | Edit | Delete 
+  In addition to my personal posts, I created 11 test posts, primarily to test the pagination option at the bottom of the page. My Admin account and the testing accounts were used.
+  Once the post has been created, the responsible user of this post will be able to edit or delete it.
+  However, for authentication and security reasons, the logged in user will be unable to delete or edit other users' posts.
+  As part of a test, I deleted some posts, and everything worked perfectly.
+
+
+ #  Profile
+  - New user, you will view three options on their account dropdown.
+
+  ![](static/img/createcc.PNG)
+ 
+ -  User with created profile can view your own Bio and can have access to your social media. 
+
+  ![](static/img/profilepage.PNG)
+
+ # Account Settings:
+  User can edit your user details such as – Username, First Name, Last Name, email and change your own password. 
+  1.	I was able to edit all the information detailed above and  able to login in. 
+  
+  # Create Profile:
+  I was able to create my account and add a profile picture, however, iv profile picture is not added a default picture will be displayed. 
+  
+  # Logout:
+  I was able to logout without creating a profile.
+  
+
+  # Create a Category
+
+  I was able to create a new category. 
+
+  ![](static/img/newcatego.PNG)
+
+  ![](static/img/new-caty.PNG)
+  
+
+ 
+
+
+   
+
+
 
 
 
