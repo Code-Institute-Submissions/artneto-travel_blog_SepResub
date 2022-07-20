@@ -213,13 +213,13 @@ After the user creates your account, the option to create a profile will be avai
 
 Register form required personal details in order to create a new account. In case user has already created an account there is a login link below the submit button.
 
-![](static/img/registerform.PNG)
+ ![](static/img/registerform.PNG)
 
 ## Account setting 
 
 * User can edit personal details such as username, first name, last name and email address. 
 
-![](static/img/editcc.PNG)
+  ![](static/img/editcc.PNG)
 
 * Change Password page- User can also change their password. 
 
@@ -351,23 +351,11 @@ Register form required personal details in order to create a new account. In cas
   memebers_signup and world app all the .py files passed the validation.
   
 
- 
-
-
-   
-
-
-
-
-
-
-
-
 
 
 ## Tools/Technologies
 *	GitPod
-*	GitPodw hosted my Workspace for this project
+*	GitPod hosted my Workspace for this project
 *	Git
 *	used to push and commit any and all changes to my repository on GitHub
 *	Bootstrap
@@ -407,5 +395,8 @@ Deployment instructions assume that you have already set up your repository and 
 Issues Encountered
 - I had some difficulties in finding the correct media query resolutions for my page, but in the end I managed to make the content adapt to each different screen.
 Outcome
+
+- I have found a bug:" migrate says a column that does not exist does not exist and recommends renaming it", for solution, I have updated the database schema outside a migration.
+
 - I was able to construct my first website using all of the material supplied during the course and with the aid of my mentor. I am pleased with the outcome.
 >>>>>>> 4daa1e70a5a3bd5f74cf92c47a58a4de539ad2a5
