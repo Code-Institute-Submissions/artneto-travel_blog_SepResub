@@ -330,6 +330,25 @@ Register form required personal details in order to create a new account. In cas
   ![](static/img/newcatego.PNG)
 
   ![](static/img/new-caty.PNG)
+
+## Validators
+
+  # HTML
+
+  W3C HTML Validator - Unfortunately, the W3C Validator for HTML does not understand the syntax of Jinja templates, so it generates numerous errors regarding {{ variables }}, {% for %} {% endfor %}, and so on. Apart from the Jinja warnings and errors, all of the remaining code validates flawlessly.
+
+  # CSS
+
+  W3C CSS Validator - I am using :root{} variables in my CSS, which isn't validated by the validator This is causing a large number of parsing errors, which are not errors and work perfectly fine.
+
+  # Javascript
+
+  Javascript was used for pagination and about warning forms. No errors were found on the Javascript code.
+
+
+  # PEP8 Online
+
+  memebers_signup and world app all the .py files passed the validation.
   
 
  
