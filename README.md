@@ -9,7 +9,7 @@ What a Trip is a contemporary vision of a user who has decided to travel  all ov
 ## Objective
 My 4th Milestone project is an E-commerce Django project. This project shows the knowledge I acquired during the course. The skills learned in the modules that led to this project, include HTML Fundamentals, CSS Fundamentals, JavaScript, Interactive Frontend Development, Python, Data-Centric Development, User-Centric Development, and Django. Adding Django to my skill set; I developed a blog that allows the user to interact with an efficient website.
 
-Check out App Deployed on Heroku[here](https://blogtravel-django.herokuapp.com/)
+Check out App Deployed on Heroku [here](https://blogtravel-django.herokuapp.com/)
 
 
 
@@ -251,7 +251,20 @@ Automated Testing
 *	W3C Markup Validator was used to validate my HTML code.
 *	W3C CSS Validator was used to validate my CSS code.
 
-Deployment
+
+# Back-End Technologies
+
+  * Python 3.6.7 - Used as the back-end programming language.
+  * Django 2.2.16 - Used as my Python web framework.
+  * Heroku - Used for "Platform as a Service" (PaaS) for app hosting.
+  * PostgreSQL 11.4 - Used as a relational SQL database plugin via Heroku.
+
+# Frameworks, Libraries, & Programs Used
+  Many Django libraries were used, including Django. shortcuts, Django. views.generic, Django.URLs, and Django. HTTP, among others.
+  CKEditor was used to create the textarea.
+  The requirements.txt file contains additional information on all Python packages used on this project.
+
+## Deployment
 
 Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
 1. Create the necessary files for deployment
@@ -271,15 +284,6 @@ Deployment instructions assume that you have already set up your repository and 
 
 =======
 
-## Register Page
-
-Register form required personal details in order to create a new account. In case user has already created an account there is a login link below the submit button.
-
-## Account setting – 
-
-* User can edit personal details such as username, first name, last name and email address. 
-
-* Change Password page- User can also change their password. 
 
 
 
@@ -289,6 +293,40 @@ Register form required personal details in order to create a new account. In cas
 * Explore by destination option with a 2D map integrated.
 * Newsletter for users to sign up. 
 
+## Models
+  The Postgres database has been used in conjunction with a variety of collections or data models. The models are linked to each other to some extent, as well as being used to store various calculations and all general information on the page.
+
+  Profile model
+
+  * User: Stores the chosen username added by the user.
+  * Bio: Stores the bio added by the user to the profile.
+  * Profile_pic: Stores the profile picture uploaded by the user. If none is uploaded by the user,  a default image will be added instead.
+  * Instagram_url: Store the URL of the user's Instagram account.
+  * Facebook_url: Store the URL of the user's Facebook account.
+  * Twitter_url: Store the URL of the user's Twitter account
+  * Website_url: Store the URL of the user's Blog website account
+
+
+  Post model
+
+  * Post_title: Stores the title of the blog post.
+  * Author: Stores the name of the user who created a post.
+  * Publish_date : Stores when a post was created.
+  * Header_img: Storage uploaded picture.
+  * Content: Stores the actual content of the blog post.
+  * Category: Stores which category the post belongs to.
+  * Likes: Stores the likes  and dislike a post received.
+  
+  Categories model
+
+  * name: It is the category name. Example: Travel.
+
+  Comment model
+
+  * Post: Stores which is the post to which the comment should be added.
+  * Name: Stores the name of the user who commented.
+  * Body: Stores the user comment.
+  * Date_added: Stores when the comment seaction was created.
 
 ## Testing 
 
@@ -375,7 +413,7 @@ Automated Testing
 *	W3C Markup Validator was used to validate my HTML code.
 *	W3C CSS Validator was used to validate my CSS code.
 
-Deployment
+# Deployment
 
 Deployment instructions assume that you have already set up your repository and basic flask application. The website is deployed on the Heroku cloud platform using the following steps:
 1. Create the necessary files for deployment
@@ -392,7 +430,8 @@ Deployment instructions assume that you have already set up your repository and 
 12. Go back to the deployment tab and enable automatic deployment.
 13. Finally, press deploys branch and preview your website.
 
-Issues Encountered
+# Issues Encountered
+
 - I had some difficulties in finding the correct media query resolutions for my page, but in the end I managed to make the content adapt to each different screen.
 Outcome
 
