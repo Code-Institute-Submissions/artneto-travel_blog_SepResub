@@ -1,8 +1,8 @@
 """Libraries"""
 from django.urls import path
 from .views import IndexView, ArticleView, PostView, UpdateViewPost,\
-                   DeleteViewPost, CategoryView, CreateCategoryView, LikeView,\
-                   AddPostCommentView
+     DeleteViewPost, CategoryView, CreateCategoryView, LikeView,\
+     AddCommentView
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
@@ -15,6 +15,6 @@ urlpatterns = [
          name='post_delete'),
     path('category/<str:caty>/', CreateCategoryView, name='category'),
     path('like/<int:pk>/', LikeView, name='post_like'),
-    path('article/<int:pk>/comment/', AddPostCommentView.as_view(),
+    path('article/<int:pk>/comment/', AddCommentView.as_view(),
          name='add_your_comments'),
 ]

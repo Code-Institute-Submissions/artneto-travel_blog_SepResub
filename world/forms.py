@@ -36,11 +36,12 @@ class EditForm(forms.ModelForm):
         }
 
 
-class EditComment(forms.ModelForm):
+class CommentForm(forms.ModelForm):
+
     class Meta:
         model = Comment
         fields = ('name', 'body')
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-        }
+            }
