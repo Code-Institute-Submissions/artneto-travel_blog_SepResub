@@ -492,7 +492,7 @@ transition:0.3s;
  }
 
  #cke_id_body {
-    width: 70%!important;
+    width: 40%!important;
     
  }
 
@@ -591,13 +591,7 @@ transition:0.3s;
     width: 100%;
 }
 
-@media(max-width:400px) {
-    .reg-form {
-        height: 140vh;
-        padding-right: 20px;
-    }
- 
-}
+
 
 
 .card-login {
@@ -740,6 +734,10 @@ transition:0.3s;
     .text-center {
         font-size: 1rem;
     }
+
+    .comment-bgd{
+        height:136vh;
+    }
 }
 
 
@@ -774,7 +772,7 @@ transition:0.3s;
 
 }
 
-.form-box {
+.form-box-section {
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     box-shadow: 7px 7px 60px #000;
     position: absolute;
@@ -1083,6 +1081,10 @@ transition:0.3s;
     .btn-secondary {
         width: 80%;
     }
+
+    .logo-bttm {
+        margin-right: 58px;
+    }
     
     
     footer {
@@ -1112,6 +1114,14 @@ transition:0.3s;
     }
 }
 
+@media(max-width:400px) {
+    .reg-form {
+        height: 189vh;
+        margin-top: -8px;
+    }
+ 
+}
+
 @media(max-width:320px) {
     
 
@@ -1134,7 +1144,8 @@ transition:0.3s;
     .formupdate {
         margin: 10px;
     }
-    textarea{
+    
+    .textarea{
         height: 120px!important;
         width:132%!important;
     }
@@ -1145,6 +1156,10 @@ transition:0.3s;
 
     .btn-secondary {
         width: 80%;
+    }
+
+    .logo-bttm {
+        margin-right: 19px;
     }
     
     footer {
