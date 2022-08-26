@@ -1194,13 +1194,12 @@ transition:0.3s;
     }
 
     .form-comment {
-        padding: 4rem;
-        width: 86%;
+        
         margin-right: auto;
     }
 
     .comment-bgd {
-        height: 142vh;
+        height: 159vh;
     }
 
     .btn-secondary {
