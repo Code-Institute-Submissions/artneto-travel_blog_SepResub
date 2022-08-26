@@ -1,32 +1,32 @@
 {% extends 'base.html' %}
-{% block title%} Comment Section {% endblock%}
-
+{% block title %} Comment {% endblock%}
 {% block content %}
-<div class="comment-bgd">
-{% if user.is_authenticated %}
- <div class="forms">
-       <div class="form-box-section">
-              <h1 class="comment-title"> Comment section </h1>
-              <br /><br />
-              <div class="mb-3">
-                     <form method="POST">
-                      {% csrf_token %}
-                      {{ form.as_p }}
-                           
-                            <div class="form-btn">
-                                   <button class="btn secondary">Comment</button>
-                            </div>
-                     </form>
-              </div>
-       </div>
- </div>
 
-{% else %}
-<div class="not-allowed">
-       <div class="not-loggedin">
-              <p>Please register now or Login</p>
+{% if user.is_authenticated %}
+<div class="comment-bgd">
+       <div class="form-comment">
+             <div class="comment-box">
+                    <h1 class="comment-title"> Comment section </h1>
+                    <br /><br />
+                    <div class="mb-3">
+                           <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                                 
+                                  <div class="form-btn">
+                                         <button class="btn secondary">Comment</button>
+                                  </div>
+                           </form>
+                    </div>
+             </div>
        </div>
-</div>
+    {% else %}
+    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+    <div class="not-allow">
+        <div class="not-allow-box">
+            <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
+        </div>
+    </div>
 </div>
 {% endif %}
 {% endblock %}

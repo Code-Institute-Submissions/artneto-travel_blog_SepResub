@@ -171,6 +171,8 @@ a {
     font-size: 20px;
 }
 
+
+
 .list-category li:hover{
     font-weight: 600;
 }
@@ -323,7 +325,7 @@ transition:0.3s;
 
 .backgr-ct {
     position: relative;
-    height: 100vh;
+    height: 118vh;
     width: 100%;
     background: url('../img/login-bck.jpg');
     background-size: cover;
@@ -363,8 +365,8 @@ transition:0.3s;
 
 @media(max-width:800px) {
     .forms-cat{
-        padding: 1rem;
-        margin-top: 6rem;
+        margin: auto;
+        width: 103vh;
     }
 }
 
@@ -374,6 +376,8 @@ transition:0.3s;
 
     .forms-cat{
         padding: 1rem;
+        margin: auto;
+        width: 315px;
     }
 }
 
@@ -483,6 +487,10 @@ transition:0.3s;
  .bact-img{
     height: 326vh;
     width: 100%;
+ }
+
+ .bact-post{
+    height:132vh;
  }
   
  .form-post {
@@ -718,6 +726,10 @@ transition:0.3s;
     .forms-delete {
         padding: 4rem 10rem;
     }
+
+    .comment-bgd {
+        height: 133vh;
+    }
 }
  
 @media(max-width:500px) {
@@ -754,6 +766,10 @@ transition:0.3s;
   
 }
 
+.form-box {
+    padding: 21px 30px!important;
+}
+
 .form-btn .secondary{
     background-color: crimson;
     color: #fff;
@@ -772,7 +788,7 @@ transition:0.3s;
 
 }
 
-.form-box-section {
+.form-box {
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     box-shadow: 7px 7px 60px #000;
     position: absolute;
@@ -1028,6 +1044,7 @@ transition:0.3s;
         margin-top:0rem;
     }
 
+   
     #cke_id_body {
         width: 50%;
     }
@@ -1065,6 +1082,21 @@ transition:0.3s;
         margin: 57px;
     }
 
+    .form-comment {
+        padding: 4rem;
+        width: 70%;
+        margin: auto;
+    }
+
+    .comment-bgd {
+        height: 114vh;
+    }
+
+    .form-box {
+        width: 362px;
+        height: 81vh;
+    }
+
     textarea {
         width: 92%!important;
     }
@@ -1085,6 +1117,7 @@ transition:0.3s;
     .logo-bttm {
         margin-right: 58px;
     }
+    
     
     
     footer {
@@ -1144,14 +1177,30 @@ transition:0.3s;
     .formupdate {
         margin: 10px;
     }
-    
-    .textarea{
-        height: 120px!important;
-        width:132%!important;
+
+    textarea{
+        resize: horizontal;
     }
 
+    
     label {
         margin: 10px;
+    }
+
+
+    .comment-box {
+        height: 137vh;
+        width:100%;
+    }
+
+    .form-comment {
+        padding: 4rem;
+        width: 86%;
+        margin-right: auto;
+    }
+
+    .comment-bgd {
+        height: 142vh;
     }
 
     .btn-secondary {
@@ -1171,3 +1220,13 @@ transition:0.3s;
 
     
 }
+
+
+/*------Comment---*/
+
+.form-comment {
+    padding: 4rem;
+    width: 50%;
+    margin: auto;
+}
+
