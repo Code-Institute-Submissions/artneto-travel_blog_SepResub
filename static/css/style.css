@@ -488,6 +488,8 @@ transition:0.3s;
 
     .form-post {
         width: 67%;
+        margin: auto;
+
     }
 
 }
