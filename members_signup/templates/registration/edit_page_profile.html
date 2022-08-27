@@ -6,17 +6,19 @@
 {% if user.is_authenticated %}
         {% if user.id == profile.user.id %}
         <div class="edit-section">
-            <div class="form-box">
-                <h1 class="page-title"> Edit Profile</h1>
-                <br /><br />
-                <div class="mb-3">
-                    <form method="POST" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <div class="form-btn">
-                            <button class="btn btn-edit">Update Profile</button>
-                        </div>
-                    </form>
+            <div class="form-edit">
+                <div class="card bg-dark text-white">
+                    <h1 class="page-title"> Edit Profile</h1>
+                    <br /><br />
+                    <div class="mb-3">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <div class="form-btn">
+                                <button class="btn btn-edit">Update Profile</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

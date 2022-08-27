@@ -177,6 +177,12 @@ a {
     font-size: 20px;
 }
 
+.category-add {
+    background: black;
+    width: 156%;
+    padding: 22px;
+}
+
 .form-control{
     width: 91%!important;
 }
@@ -889,6 +895,9 @@ transition:0.3s;
     background-position: center center;
 }
 
+
+
+
 .form-edit-acc form label {
     color: #C5C6C7;
 }
@@ -920,13 +929,16 @@ transition:0.3s;
 }
 
 /*Edit Page Profile*/
-
-.edit-section {
-    padding: 35rem 16rem;
+.edit-section{
+    height:100%;
+    width:100%;
+    margin:0;
 }
 
-.form-box{
- padding: 21px 30px!important;
+.form-edit{
+ padding: 13px;
+ width: 362px;
+ margin-left: 338px;
 }
 
 #id_profile_picture {
@@ -1150,6 +1162,11 @@ and (orientation : portrait) {
         padding: 285px;
     }
 
+    .form-edit {
+        padding: 13px;
+        margin-left: 255px;
+    }
+
     .category-add {
         margin-left: -102px;
         width: 13em;
@@ -1214,6 +1231,12 @@ and (orientation : portrait) {
 
     .page-title {
         padding-top: 10px;
+    }
+
+    .edit-section{
+        height:100%;
+        width:100%;
+        margin:0;
     }
 
 
