@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montaga', serif;
     font-family: 'Montserrat', sans-serif;
@@ -171,6 +177,10 @@ a {
     font-size: 20px;
 }
 
+.form-control{
+    width: 91%!important;
+}
+
 
 
 .list-category li:hover{
@@ -325,11 +335,15 @@ transition:0.3s;
 
 .backgr-ct {
     position: relative;
-    height: 118vh;
+    height: 139vh;
     width: 100%;
     background: url('../img/login-bck.jpg');
     background-size: cover;
     background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
 }
 
 .btn-category {
@@ -363,12 +377,6 @@ transition:0.3s;
     margin: 1rem;
 }
 
-@media(max-width:800px) {
-    .forms-cat{
-        margin: auto;
-        width: 103vh;
-    }
-}
 
 @media(max-width:320px) {
 
@@ -434,11 +442,13 @@ transition:0.3s;
    font-weight: 700;
 }
 
-#cke_id_body {
-    width: 83%!important;
-    margin-left: 2rem!important;
+.django-ckeditor-widget{
+    display: inline !important;
 }
 
+#cke_id_body {
+    width: inherit !important;
+}
 
 
 .form-btn {
@@ -500,7 +510,7 @@ transition:0.3s;
  }
 
  #cke_id_body {
-    width: 40%!important;
+    
     
  }
 
@@ -766,6 +776,16 @@ transition:0.3s;
   
 }
 
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .form-box {
     padding: 21px 30px!important;
 }
@@ -804,7 +824,8 @@ transition:0.3s;
     font-size: 2em;
     text-align: center;
     margin-bottom: 2em;
-    color: #fff;
+    color: #563329;
+    padding:23%;
 }
 
 /*User Profile*/
@@ -987,7 +1008,7 @@ transition:0.3s;
     }
 
     #cke_id_body {
-        width: 92%;
+       
     }
 
     textarea {
@@ -1027,7 +1048,10 @@ transition:0.3s;
 
 
 
-@media(max-width:1024px) {
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+
 
     .social-media-links {
         padding-right: 124px;
@@ -1044,9 +1068,18 @@ transition:0.3s;
         margin-top:0rem;
     }
 
+    .form-comment {
+        width: 50%;
+        margin: auto;
+    }
+
+    #cke_inner{
+        width: 71%!important;
+    }
    
     #cke_id_body {
-        width: 50%;
+        width: 100%!important;
+        padding: 20px!important;
     }
 
     textarea {
@@ -1061,6 +1094,7 @@ transition:0.3s;
     #id_title_tag {
         width: 82%;
     }
+
 }
 
 @media(max-width:800px) {
@@ -1092,8 +1126,31 @@ transition:0.3s;
         height: 81vh;
     }
 
+    
+
     textarea {
         width: 92%!important;
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .form-comment {
+        margin: auto;
+        width: 50%;
+    }
+
+    .forms-cat {
+        margin: auto;
+        padding: 285px;
+    }
+
+    .category-add {
+        margin-left: -102px;
+        width: 13em;
     }
 }
 
@@ -1157,9 +1214,6 @@ transition:0.3s;
         padding-top: 10px;
     }
 
-    #cke_id_body{
-        margin:auto;
-    }
 
     #id_title {
         width: 100%;
@@ -1177,6 +1231,9 @@ transition:0.3s;
         resize: horizontal;
     }
 
+    #cke_id_body {
+        width: 50%;
+    }
     
     label {
         margin: 10px;
