@@ -1082,11 +1082,6 @@ transition:0.3s;
         margin: 57px;
     }
 
-    .form-comment {
-        padding: 4rem;
-        width: 70%;
-        margin: auto;
-    }
 
     .comment-bgd {
         height: 114vh;
@@ -1193,11 +1188,6 @@ transition:0.3s;
         width:100%;
     }
 
-    .form-comment {
-        width: 110%;
-        margin-right: auto;
-    }
-
     .comment-bgd {
         height: 159vh;
     }
@@ -1218,14 +1208,5 @@ transition:0.3s;
     }
 
     
-}
-
-
-/*------Comment---*/
-
-.form-comment {
-    padding: 4rem;
-    width: 50%;
-    margin: auto;
 }
 
