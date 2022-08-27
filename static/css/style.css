@@ -1186,10 +1186,15 @@ transition:0.3s;
     .comment-box {
         height: 137vh;
         width:100%;
+        margin-left: 17px;
     }
 
     .comment-bgd {
         height: 159vh;
+    }
+
+    .form-comment {
+        width: 88%;
     }
 
     .btn-secondary {
@@ -1198,6 +1203,7 @@ transition:0.3s;
 
     .logo-bttm {
         margin-right: 19px;
+        width: 290px;
     }
     
     footer {
