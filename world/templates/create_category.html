@@ -1,32 +1,33 @@
 {% extends 'base.html' %}
-
-{% block title %} Create a New Blog Category {% endblock %}
+{% load static %}
+{% block title %} Add category{% endblock%}
 {% block content %}
+
 
 {% if user.is_authenticated %}
 <div class="backgr-ct">
-       <div class="forms-cat">
-           <div class="category-add">
-               <h2 class="page-title">New Category</h2>
-               <div class="form-group form-categories">
-                   <form method="POST">
-                       {% csrf_token %}
-                       {{ form.as_p }}
-                       <div class="btn-cat">
-                           <button type="submit" class="btn-category">Submit</button>
-                       </div>
-                   </form>
-               </div>
-           </div>
-               {% else %}
-               <!-- If the user ends up on this page without being logged in, a message will be displayed -->
-               <div class="not-allowed">
-                   <div class="not-loggedin">
-                       <p>You need to login to be able to add a category</p>
-                       <p><a href="{% url 'login' %}">Login Here</a></p>
-                   </div>
-               </div>
-               {% endif %}
-       </div>
+    <div class="forms-cat">
+        <div class="category-add">
+            <h2 class="category-title">Add Category</h2>
+            <div class="form-group form-categories">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="btn-cat">
+                        <button type="submit" class="btn-category">Submit</button>
+                    </div>
+                </form>
+            </div>
+            {% else %}
+            <!-- If the user ends up on this page without being logged in, a message will be displayed -->
+            <div class="not-allowed">
+                <div class="not-loggedin">
+                    <p>You need to login to be able to add a category</p>
+                    <p><a href="{% url 'login' %}">Login Here</a></p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endblock %}

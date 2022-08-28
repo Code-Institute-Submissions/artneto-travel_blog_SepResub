@@ -177,11 +177,7 @@ a {
     font-size: 20px;
 }
 
-.category-add {
-    background: black;
-    width: 156%;
-    padding: 22px;
-}
+
 
 .form-control{
     width: 91%!important;
@@ -333,23 +329,29 @@ transition:0.3s;
 
 /*Add Category*/
 .forms-cat {
-    padding: 7.2rem 25rem;
-    text-align: center;
-    width: 127%;
+   
 
 }
 
 .backgr-ct {
-    position: relative;
     height: 139vh;
     width: 100%;
     background: url('../img/login-bck.jpg');
     background-size: cover;
     background-position: center center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -2;
+}
+
+.category-add {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: #212529;
+    box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
+}
+
+.category-title{
+    color:#fff;
+    text-transform: uppercase;
 }
 
 .btn-category {
@@ -1191,8 +1193,7 @@ and (orientation : portrait) {
     }
 
     .category-add {
-        margin-left: -102px;
-        width: 13em;
+        width: 20em;
     }
 }
 
