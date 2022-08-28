@@ -488,14 +488,15 @@ transition:0.3s;
 @media(max-width:800px) {
 
     .bact-img {
-    height: 144vh;
+    height: 174vh;
     width: 100%;
     }
 
     .form-post {
         width: 67%;
         margin: auto;
-
+        padding: 3px;
+        padding-top: 16px;
     }
 
 }
@@ -505,6 +506,11 @@ transition:0.3s;
  .bact-img{
     height: 326vh;
     width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: sticky;
+    overflow-y: scroll;
  }
 
  .bact-post{
