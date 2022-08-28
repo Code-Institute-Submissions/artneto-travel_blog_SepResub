@@ -433,6 +433,23 @@ transition:0.3s;
   
 }
 
+.add-edit-post-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.add-dit-post{
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: #212529;
+    box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
+}
+
 .form-post label {
     color: #C5C6C7;
     margin-left: 1.5rem;
