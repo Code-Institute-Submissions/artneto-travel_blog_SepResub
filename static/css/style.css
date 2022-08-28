@@ -328,10 +328,7 @@ transition:0.3s;
 }
 
 /*Add Category*/
-.forms-cat {
-   
 
-}
 
 .backgr-ct {
     height: 139vh;
@@ -917,8 +914,6 @@ transition:0.3s;
 }
 
 
-
-
 .form-edit-acc form label {
     color: #C5C6C7;
 }
@@ -1042,9 +1037,6 @@ transition:0.3s;
         margin-top:0rem;
     }
 
-    #cke_id_body {
-       
-    }
 
     textarea {
         width: 92%!important;
