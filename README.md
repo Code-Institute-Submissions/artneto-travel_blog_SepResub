@@ -22,7 +22,7 @@ The website's user interface (UX) was designed with simplicity in mind. The app 
 The goal of this assignment is to create a web interface that allows users to simply store and access and performance the CRUD (Create, Read, Update, and Delete) actions. This project's goal is to allow users to create, store, modify, and remove posts (CRUD). People that are interested in topics such as travel or planning to live abroad are the target audience for this initiative. Users can create new categories, which greatly expands the reach of the blog's conversation topics.
 
 
-#### User Stories:
+### User Stories:
 As a user, I want:
 *	Be able to launch the site on my preferred device (mobile, tablet, desktop).
 *	Be able to view posts and comments created by other users without creating an account.
