@@ -180,7 +180,7 @@ a {
 
 
 .form-control{
-    width: 91%!important;
+    /* width: 91%!important; */
 }
 
 
@@ -398,7 +398,6 @@ transition:0.3s;
 
 .bact-img {
     position: relative;
-    height: 132vh;
     width: 100%;
     background: url('../img/Brazil.jpg');
     background-size: cover;
@@ -427,8 +426,9 @@ transition:0.3s;
 }
 .form-post {
   width: 60%;
-  margin-left: 10rem;
   padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin: 0 auto;
   
 }
 
@@ -504,7 +504,6 @@ transition:0.3s;
 @media(max-width:800px) {
 
     .bact-img {
-    height: 174vh;
     width: 100%;
     }
 
@@ -520,7 +519,6 @@ transition:0.3s;
 @media(max-width:320px) {
 
  .bact-img{
-    height: 326vh;
     width: 100%;
     margin: auto;
     left: 0;
@@ -622,7 +620,6 @@ transition:0.3s;
     background-size: cover;
     background-position: center center;
     position: relative;
-    height: 100vh;
     width: 100%;
 }
 
@@ -631,7 +628,6 @@ transition:0.3s;
     background-size: cover;
     background-position: center center;
     position: relative;
-    height: 129vh;
     width: 100%;
 }
 
@@ -867,9 +863,12 @@ transition:0.3s;
 }
 
 .profile-form {
-    padding-left: 5rem;
-    padding-right: 20rem;
+
     padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
 }
 
 .main-profile form label  {
@@ -948,13 +947,8 @@ transition:0.3s;
 .edit-section{
     height:100%;
     width:100%;
-    margin:0;
-}
-
-.form-edit{
- padding: 13px;
- width: 362px;
- margin-left: 338px;
+    margin: 0 auto;
+    background-color: #212529!important;
 }
 
 #id_profile_picture {
@@ -1105,7 +1099,7 @@ and (min-width : 1224px) {
     }
    
     #cke_id_body {
-        width: 100%!important;
+        width: calc(100% - 40px)!important;
         padding: 20px!important;
     }
 
@@ -1310,3 +1304,56 @@ and (orientation : portrait) {
     
 }
 
+
+
+
+/* Added styles */
+
+.container-fluid .mb-4{
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.container-fluid .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-fluid .col-12 > .row{
+    margin-bottom: 1rem;
+}
+
+.card-img-top{
+    max-height: 157px;
+    object-fit: cover;
+    object-position: center;
+}
+
+input[type="file"]{
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    overflow: auto;
+}
+
+.login-register-main .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.profile-form{
+
+}
+
+.edit-section .form-edit{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+.edit-section .form-edit .card{
+    width: 350px;
+    padding: 1rem;
+}
