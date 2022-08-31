@@ -384,9 +384,6 @@ transition:0.3s;
     margin-left: 25px;
 }
 
-.forms-cat input {
-    margin: 1rem;
-}
 
 
 @media(max-width:320px) {
@@ -1244,7 +1241,9 @@ and (orientation : portrait) {
 
 @media(max-width:320px) {
 
-   
+    .forms-cat input {
+        width: 93%;
+    }
 
     .page-title {
         padding-top: 10px;
