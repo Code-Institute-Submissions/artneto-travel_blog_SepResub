@@ -1262,6 +1262,10 @@ and (orientation : portrait) {
         margin:0;
     }
 
+    .forms-cat {
+        width: 85%;
+    }
+
 
     #id_title {
         width: 100%;
