@@ -1187,6 +1187,15 @@ and (orientation : portrait) {
     }
 }
 
+@media(max-width:768px){
+    .forms-cat {
+        width: 50%;
+        margin: auto;
+        margin-top: 69px;
+    }
+
+}
+
 @media(max-width:500px) {
     
     .page-title {
