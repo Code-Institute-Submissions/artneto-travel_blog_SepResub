@@ -943,7 +943,7 @@ transition:0.3s;
 /*Edit Page Profile*/
 .edit-background{
     position:relative;
-    height: 100vh;
+    height: auto;
     width: 100%;
     background: url('../img/ireland.jpg');
     background-size: cover;
@@ -1176,6 +1176,12 @@ and (orientation : portrait) {
     .category-add {
         width: 20em;
     }
+
+    .edit-background {
+        position: relative;
+        height: 113vh;
+    
+    }
 }
 
 @media(max-width:500px) {
@@ -1341,8 +1347,8 @@ input[type="file"]{
     margin-right: 0;
 }
 
-.profile-form{
-
+.form-edit-acc {
+    margin-top: 17px;
 }
 
 .edit-section .form-edit{
