@@ -1,7 +1,9 @@
+""" Libraries """
 from django import forms
 from .models import Post, Category, Comment
 
 choices = Category.objects.all().values_list('name', 'name')
+
 choices_list = []
 
 for item in choices:
@@ -9,13 +11,14 @@ for item in choices:
 
 
 class PostForm(forms.ModelForm):
+    """ add post form """
     class Meta:
         model = Post
         fields = ('title', 'author', 'category', 'body', 'header_img')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=choices, attrs={
+            'category': forms.Select(choices=choices_list, attrs={
                         'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control',
                                              'value': '', 'id': 'identifier',
@@ -26,6 +29,7 @@ class PostForm(forms.ModelForm):
 
 
 class EditForm(forms.ModelForm):
+    """  edit post form """
     class Meta:
         model = Post
         fields = ('title', 'title_tag', 'body')
