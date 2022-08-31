@@ -1164,9 +1164,12 @@ and (orientation : portrait) {
     }
 
     .forms-cat {
+        width: 50%;
         margin: auto;
-        padding: 285px;
+        margin-top: 69px;
     }
+    
+    
 
     .form-edit {
         padding: 13px;
