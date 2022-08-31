@@ -638,6 +638,8 @@ transition:0.3s;
     background-position: center center;
     position: relative;
     width: 100%;
+    height: 118%;
+    top: 19%;
 }
 
 .reg-form {
@@ -656,14 +658,8 @@ transition:0.3s;
 }
 /*Change password*/
 
-.password-bck {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: url('../img/login-bck.jpg');
-    background-size: cover;
-    background-position: center center;
-}
+
+
 .forms-1 {
     padding: 1rem 25rem;
 }
@@ -1247,7 +1243,8 @@ and (orientation : portrait) {
 }
 
 @media(max-width:320px) {
-    
+
+   
 
     .page-title {
         padding-top: 10px;
