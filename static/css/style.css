@@ -24,7 +24,7 @@ a {
     text-transform:uppercase;
     color: #563329;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .navbar-logo:hover{
@@ -344,6 +344,12 @@ transition:0.3s;
     color: rgb(0, 0, 0);
     background-color: #212529;
     box-shadow: 12px 12px 2px 1px rgba(116, 115, 113, 0.2);
+    width: 50%;
+    margin: auto;
+}
+
+.forms-cat {
+    padding-top: 43px;
 }
 
 .category-title{
@@ -385,13 +391,22 @@ transition:0.3s;
 
 @media(max-width:320px) {
 
-   
-
-    .forms-cat{
+    .category-add {
         padding: 1rem;
+        color: rgb(0, 0, 0);
+        background-color: #212529;
+        box-shadow: 12px 12px 2px 1px rgb(116 115 113 / 20%);
+        width: 98%;
         margin: auto;
-        width: 315px;
     }
+
+    .forms-cat {
+        width: 111%;
+        margin-left: -3rem;
+        padding-top: 5rem;
+    }
+    
+
 }
 
 /*Add a Post*/
@@ -500,6 +515,8 @@ transition:0.3s;
 .form-btn button {
     padding: 0.3rem 2rem;
 }
+
+
 
 @media(max-width:800px) {
 
@@ -759,9 +776,6 @@ transition:0.3s;
         padding: 4rem 10rem;
     }
 
-    .comment-bgd {
-        height: 133vh;
-    }
 }
  
 @media(max-width:500px) {
@@ -779,24 +793,9 @@ transition:0.3s;
         font-size: 1rem;
     }
 
-    .comment-bgd{
-        height:136vh;
-    }
 }
 
 
-
-
-.comment-bgd{
-    position:relative;
-    height: 100vh;
-    width: 100%;
-    background: url('../img/mountain.jpg');
-    background-size: cover;
-    background-position: center center;
-   
-  
-}
 
 .form-control {
     width: 100%;
@@ -902,11 +901,11 @@ transition:0.3s;
 
 .edit-section{
     position:relative;
-    height: 100vh;
     width: 100%;
     background: url('../img/ireland.jpg');
     background-size: cover;
     background-position: center center;
+    padding-bottom: 30px;
 }
 
 
@@ -1088,10 +1087,7 @@ and (min-width : 1224px) {
         margin-top:0rem;
     }
 
-    .form-comment {
-        width: 50%;
-        margin: auto;
-    }
+    
 
     #cke_inner{
         width: 71%!important;
@@ -1137,10 +1133,6 @@ and (min-width : 1224px) {
     }
 
 
-    .comment-bgd {
-        height: 114vh;
-    }
-
     .form-box {
         width: 362px;
         height: 81vh;
@@ -1158,10 +1150,7 @@ and (min-width : 1224px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-    .form-comment {
-        margin: auto;
-        width: 50%;
-    }
+    
 
     .forms-cat {
         width: 50%;
@@ -1187,11 +1176,19 @@ and (orientation : portrait) {
     }
 }
 
+
+
+
 @media(max-width:768px){
     .forms-cat {
-        width: 50%;
+        width: 94%;
         margin: auto;
         margin-top: 69px;
+    }
+
+    .category-add {
+        width: 64%;
+        margin: auto;
     }
 
 }
@@ -1262,10 +1259,6 @@ and (orientation : portrait) {
         margin:0;
     }
 
-    .forms-cat {
-        width: 85%;
-    }
-
 
     #id_title {
         width: 100%;
@@ -1289,21 +1282,6 @@ and (orientation : portrait) {
     
     label {
         margin: 10px;
-    }
-
-
-    .comment-box {
-        height: 137vh;
-        width:100%;
-        margin-left: 17px;
-    }
-
-    .comment-bgd {
-        height: 159vh;
-    }
-
-    .form-comment {
-        width: 88%;
     }
 
     .btn-secondary {
@@ -1365,6 +1343,7 @@ input[type="file"]{
 
 .form-edit-acc {
     margin-top: 17px;
+    padding-bottom: 43px;
 }
 
 .edit-section .form-edit{

@@ -3,23 +3,22 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="comment-bgd">
-       <div class="form-comment">
-             <div class="comment-box">
-                    <h1 class="comment-title"> Comment section </h1>
-                    <br /><br />
-                    <div class="mb-3">
-                           <form method="POST">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                                 
-                                  <div class="form-btn">
-                                         <button class="btn secondary">Comment</button>
-                                  </div>
-                           </form>
-                    </div>
-             </div>
+<div class ="edit-background">
+       <div class="form-edit-acc">
+           <div class="form-box-edit bg-dark text-white">
+               <h1 class="page-title"> Comment Section</h1>
+               <div class="mb-3">
+                   <form method="POST">
+                       {% csrf_token %}
+                       {{ form.as_p }}
+                       <div class="form-btn">
+                           <button class="btn btn-edit">Post</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
        </div>
+   
     {% else %}
     <!-- If the user ended up in this page without being logged in, a message will be displayed -->
     <div class="not-allowed">
