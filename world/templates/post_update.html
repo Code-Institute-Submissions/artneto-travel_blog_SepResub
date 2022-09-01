@@ -1,62 +1,54 @@
 {% extends 'base.html' %}
-{% block title%} Edit Blog Post{% endblock%}
 
+{% block title %} Update Post {% endblock%}
 {% block content %}
 
 {% if user.is_authenticated %}
-<!--Function to give access to the correct user -->
-{% if user.id == post.author.id %}
-
-
-<main class="flex-shrink-0 main-bg base">
-       <div class="bact-upt">
-              <div class="form-upt">
-                     <div class="card bg-dark text-white">
-                            <h1 class="post-title">Update your Post</h1>
-                            <div class="createpost">
-                                   <div class="mb-3">
-                                          <form method="POST" enctype="multipart/form-data">
-                                                 {% csrf_token %}
-                                                 {{ form.media }}
-                                                 {{ form.as_p }}
-                                                 <div class="form-btn">
-                                                        <button class="btn btn-create-post">Update Post</button>
-                                                 </div>
-                                          </form>
-                                   </div>
-                            </div>
-                     </div>
-              </div>
-           <!---Function script to display restriction to Post Author-->
-        <script>
-           var name = "{{ user.id }}";
-           document.getElementById("identifier").value = name;
-         </script>
-              {% else %}
-              <div class="not-allowed">
-                  <div class="not-allowed-box">
-                    <div class="not-loggedin">
-                      <p>Please, create a profile first.</p>
-                      <p><a href="{% url 'create_profile_page' %}">Create profile</a></p>
+{% if user.profile.user %}
+<div class="bact-img">
+    <div class="form-post">
+        <div class="add-dit-post">
+            <h2 class="add-edit-post-title">Update Post</h2>
+            <div class="form-group add-edit-post-form">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.media}}
+                    {{ form.as_p }}
+                    <div class="btn-login">
+                        <button type="submit" class="btn btn-create-post">Update Post</button>
                     </div>
-                  </div>
-              </div>
-              {% endif %}
-              {% else %}
-          
-              <!-- If the user ended up in this page without being logged in, a message will be displayed -->
-              <div class="not-allowed">
-                  <div class="not-allowed-box">
-                         <div class="not-loggedin">
-                                <p>Login first to be able to add a post</p>
-                                <p><a href="{% url 'login' %}">Login Here</a></p>
-                         </div>
-                  </div>
-              </div>
+                </form>
+            </div>
+        </div>
     </div>
-</main>
-
+    <script>
+        var name = "{{ user.id }}";
+        document.getElementById("identifier").value = name;
+      </script>
+           {% else %}
+           <div class="not-allowed">
+               <div class="not-allowed-box">
+                 <div class="not-loggedin">
+                   <p>Please, create a profile first.</p>
+                   <p><a href="{% url 'create_profile_page' %}">Create profile</a></p>
+                 </div>
+               </div>
+           </div>
+           {% endif %}
+           {% else %}
+       
+           <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+           <div class="not-allowed">
+               <div class="not-allowed-box">
+                      <div class="not-loggedin">
+                             <p>Login first to be able to add a post</p>
+                             <p><a href="{% url 'login' %}">Login Here</a></p>
+                      </div>
+               </div>
+           </div>
+   </div>
+</div>
 {% endif %}
-          
-          
+
+
 {% endblock %}

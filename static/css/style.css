@@ -91,6 +91,11 @@ a {
 
 }
 
+.label {
+    display: inline-block;
+    color: white!important;
+}
+
 
 .card-title {
     font-size:1.4rem;
@@ -444,13 +449,6 @@ transition:0.3s;
   
 }
 
-.bact-upt {
-    width: 60%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    margin: 0 auto;
-    background: url('../img/Brazil.jpg');
-}
 
 .add-edit-post-title {
     text-transform: uppercase;
@@ -678,12 +676,6 @@ transition:0.3s;
 @media(max-width:400px) {
     .forms-1  {
         padding: 2rem 1rem;
-    }
-
-    .form-upt {
-        width: 125%;
-        margin-left: 0rem;
-        padding-top: 5rem;
     }
  
     .text-center {
