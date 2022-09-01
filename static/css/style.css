@@ -444,6 +444,14 @@ transition:0.3s;
   
 }
 
+.bact-upt {
+    width: 60%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: 0 auto;
+    background: url('../img/Brazil.jpg');
+}
+
 .add-edit-post-title {
     text-transform: uppercase;
     text-align: center;
@@ -670,6 +678,12 @@ transition:0.3s;
 @media(max-width:400px) {
     .forms-1  {
         padding: 2rem 1rem;
+    }
+
+    .form-upt {
+        width: 125%;
+        margin-left: 0rem;
+        padding-top: 5rem;
     }
  
     .text-center {
@@ -1151,6 +1165,10 @@ and (orientation : portrait) {
         margin-top: 69px;
     }
     
+    .reg-form {
+        width: 100%;
+        height: 153vh;
+    }
     
 
     .form-edit {
@@ -1183,6 +1201,7 @@ and (orientation : portrait) {
         width: 64%;
         margin: auto;
     }
+
 
 }
 
@@ -1233,8 +1252,13 @@ and (orientation : portrait) {
 
 @media(max-width:400px) {
     .reg-form {
-        height: 189vh;
+        height: 226vh;
         margin-top: -8px;
+    }
+
+    .login-register {
+        height: 121vh;
+        top: -6%;
     }
  
 }
@@ -1278,6 +1302,7 @@ and (orientation : portrait) {
     
     label {
         margin: 10px;
+        color:#efefef;
     }
 
     .btn-secondary {
