@@ -22,14 +22,14 @@
 
                             {% else %}
 
-                            <img class="card-img-top" src=" {{ post.header_img.url  }}">
+                            <img class="card-img-top" src=" {{ post.header_img.url  }}" alt="cover-pic">
 
                             {% endif %}
                             <div class="image-flash p-2">
                                 <br>
                                 <a href="{% url 'details_article' post.pk %}"><h2 class="card-title">{{ post.title }}</h2></a>
                                 <p class="author">Author: {{ post.author }}</p>
-                                <p class="card-text">{{ post.body|slice:":200"|safe }}</p>
+                                <div class="card-text">{{ post.body|slice:":200"|safe }}</div>
                                 <hr />
                                 <p class="card-text text-muted h6">Created on {{ post.publish_date}}</p>
                                 

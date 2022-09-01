@@ -20,7 +20,7 @@
               <div class="card bg-dark text-white">
                 <div class="card-login p-3 text-center">
                   <h3 class="register-title">Register User</h3>
-                  <form method="POST" action="">
+                  <form method="POST" action="{% url 'register' %}">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <div class="btn-register">
@@ -38,8 +38,6 @@
         </div>
       </section>
    </div>
-   <br/>
-   <br/>
  </div>
 </div>
 
