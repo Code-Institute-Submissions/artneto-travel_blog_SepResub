@@ -18,8 +18,9 @@
                     </div>
                 </form>
             </div>
+
             {% else %}
-            <!-- If the user ends up on this page without being logged in, a message will be displayed -->
+            <!-- If the user try to use this page without being logged in, below message will be displayed -->
             <div class="not-allowed">
                 <div class="not-loggedin">
                     <p>You need to login to be able to add a category</p>
@@ -28,6 +29,10 @@
             </div>
             {% endif %}
         </div>
+        
     </div>
+   
 </div>
+
+
 {% endblock %}

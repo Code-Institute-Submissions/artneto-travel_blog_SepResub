@@ -2,8 +2,9 @@
 {% block title %} Comment {% endblock%}
 {% block content %}
 
-{% if user.is_authenticated %}
+
 <div class ="edit-background">
+{% if user.is_authenticated %}
        <div class="form-edit-acc">
            <div class="form-box-edit bg-dark text-white">
                <h1 class="page-title"> Comment Section</h1>
@@ -20,12 +21,16 @@
        </div>
    
     {% else %}
-    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+    <!-- If the user try to use this page without being logged in, below message will be displayed -->
     <div class="not-allowed">
         <div class="not-loggedin">
-            <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
+            <p>You need to login to be able to add a category</p>
+            <p><a href="{% url 'login' %}">Login Here</a></p>
         </div>
     </div>
 </div>
+
 {% endif %}
+
+
 {% endblock %}

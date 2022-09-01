@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title%} {{ post.title_tag }}{% endblock%}
-{% block content %}
+{% block title%} {{ post.title_tag }}{% endblock %}
 
-  <!----Body Section-->
+{% block content %}
+<!--Body Section-->
   <div class="container my-3 my-sm-5">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-8">
             <h2 class="text-setion">{{ post.title }}</h2>
             
-            <article class="mb-3">
+            <div class ="mb-3">
                 {% if "placeholder" in post.header_img.url %}
                             <a href="{% url 'details_article' post.pk  %}" class="post-link"><img class="card-img-top"
                              src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="default profile image"></a>
                             {% else %}
                              <img src="{{ post.header_img.url }}" alt="picture" class="img-fluid mb30">
                             {% endif %}
-                <header class="mb-2">
-                    <a href="#"class="badge badge-pill badge-cate">Category</a>
+                <div class="mb-2">
+                    <a href="#" class="badge badge-pill badge-cate">Category</a>
                     <div>
                         <div class="sub-title">Author Name: {{ post.author.first_name }}  {{ post.author.last_name}}</div>
                         <div class="small">Posted on: {{ post.publish_date }}</div>
                     </div>
-                </header>
-                <p class="lead">{{ post.body|safe }}</p>
+                </div>
+                <div class="lead">{{ post.body|safe }}</div>
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
                     <ul class="post-tag list-inline">
@@ -45,46 +45,47 @@
                        </form>
                     </div>
                 {% endif %}
-            </article>
+                </div>
             <br/><br/>
             <hr class="mb40">
             <br/><br/>
           
         </div>
-        <!-----End of the main body-->
+        <!---End of the main body-->
         <!--Asides Section-->
 <div class="col-12 col-md-6 p-5 col-lg-4">
 <aside>
   <!---Side Column-->
   <div class="list-group mb-3 p-2">
-    <div class="card" style="width: 400px p-2">
-        {% if post.author.profile.profile_picture %}
-         <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
-        {% else %}
-         <img src="{% static 'profilepicture.jpg' %}" alt="profile pic">
-        {% endif %}
-        <div class="card-body">
-            <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name}}</h5>
-            <p class="card-text">{{post.author.profile.bio}}</p>
-            <p class="small text-muted">
-                {% if post.author.profile %}
-                <a href="{% url 'show_profile_page' post.author.profile.id %}"<i class="fa fa-user" aria-hidden="true"></i></a> |
+        <div class="p-2">
+            <div class="card">
+                {% if post.author.profile.profile_picture %}
+                <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
+                {% else %}
+                <img src="{% static 'profilepicture.jpg' %}" alt="profile pic">
                 {% endif %}
-                {%if post.author.profile.facebook_url %}
-                <a href="{{post.author.profile.facebook_url}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> |
-                {% endif %}
-                {%if post.author.profile.instagram_url %}
-                <a href="{{post.author.profile.instagram_url}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> | 
-                {% endif %}
-                {%if post.author.profile.twitter_url %}
-                <a href="{{post.author.profile.twitter_url}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> |
-                {% endif %}     
-                {%if post.author.profile.website_url %}
-                <a href="{{post.author.profile.website_url}}" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a> |
-              {% endif %}
-             
-            </p>  
-          
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name}}</h5>
+                    <p class="card-text">{{post.author.profile.bio}}</p>
+                    <p class="small text-muted">
+                        {% if post.author.profile %}
+                        <a href="{% url 'show_profile_page' post.author.profile.id %}"><i class="fa fa-user" aria-hidden="true"></i></a> |
+                        {% endif %}
+                        {%if post.author.profile.facebook_url %}
+                        <a href="{{post.author.profile.facebook_url}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> |
+                        {% endif %}
+                        {%if post.author.profile.instagram_url %}
+                        <a href="{{post.author.profile.instagram_url}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> | 
+                        {% endif %}
+                        {%if post.author.profile.twitter_url %}
+                        <a href="{{post.author.profile.twitter_url}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a> |
+                        {% endif %}     
+                        {%if post.author.profile.website_url %}
+                        <a href="{{post.author.profile.website_url}}" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a> |
+                    {% endif %} 
+                    </p>  
+                </div>
+            </div>
         </div>
       
     </div>
@@ -120,7 +121,8 @@
         <h2 class="comment-header p-3">Comments</h2>
         <hr class="mb40"><br/>
     {% if not post.comments.all %}
-    <div class="mt-2 text-center">No Comment Yet <a href ="{% url 'add_your_comments' post.pk %}"><button class="btn submit-comment" type="button">Add a comment</button></a></div>
+    <p class="mt-2 text-center">No Comment Yet <a href="{% url 'add_your_comments' post.pk  %}" class="btn submit-comment btn-submit">Add
+        comment</a></p>
     {% else %}
         <div class="d-flex justify-content-center row">
             <div class="col-md-8">
@@ -136,7 +138,8 @@
                     </div>
                     {% endfor %}
                     <br>
-                    <div class="mt-2 text-center"><a href ="{% url 'add_your_comments' post.pk %}"><button class="btn submit-comment" type="button">Comment</button></a></div>
+                    <p class="mt-2 text-center"><a href="{% url 'add_your_comments' post.pk  %}" class="btn submit-comment btn-submit">Add
+                        comment</a></p>
                     
                 </div>
             </div>

@@ -4,8 +4,8 @@
 {% block content %}
 
 <div class="bact-img">
- {% if user.is_authenticated %}
- {% if user.profile.user %}
+{% if user.is_authenticated %}
+{% if user.profile.user %}
     <div class="form-post">
         <div class="add-dit-post">
             <h2 class="add-edit-post-title">Create Post</h2>
@@ -24,29 +24,29 @@
     <script>
         var name = "{{ user.id }}";
         document.getElementById("identifier").value = name;
-      </script>
-           {% else %}
-           <div class="not-allowed">
-               <div class="not-allowed-box">
-                 <div class="not-loggedin">
-                   <p>Please, create a profile first.</p>
-                   <p><a href="{% url 'create_profile_page' %}">Create profile</a></p>
-                 </div>
-               </div>
-           </div>
-           {% endif %}
-           {% else %}
+    </script>
+    {% else %}
+    <div class="not-allowed">
+        <div class="not-allowed-box">
+            <div class="not-loggedin">
+                <p>Please, create a profile first.</p>
+                <p><a href="{% url 'create_profile_page' %}">Create profile</a></p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% else %}
        
-           <!-- If the user ended up in this page without being logged in, a message will be displayed -->
-           <div class="not-allowed">
-               <div class="not-allowed-box">
-                      <div class="not-loggedin">
-                             <p>Login first to be able to add a post</p>
-                             <p><a href="{% url 'login' %}">Login Here</a></p>
-                      </div>
-               </div>
-           </div>
-   </div>
+    <!-- If the user ended up in this page without being logged in, a message will be displayed -->
+    <div class="not-allowed">
+        <div class="not-allowed-box">
+                <div class="not-loggedin">
+                        <p>Login first to be able to add a post</p>
+                        <p><a href="{% url 'login' %}">Login Here</a></p>
+                </div>
+        </div>
+    </div>
+   
 </div>
 {% endif %}
 
