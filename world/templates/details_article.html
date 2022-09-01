@@ -93,8 +93,10 @@
   <div class="list-group mb-3">
       <div class="list-category">
       {% for item in caty_menu %}
-      <a href="{% url 'category' item %}"class="list-group-item list-group-item-action text-black bg-light">
-          <li class="list-content">{{ item }}</li>
+      <a href="{% url 'category' item %}" class="list-group-item list-group-item-action text-black bg-light">
+         <ul>
+           <li class="list-content">{{ item }}</li>
+         </ul>
       </a>
       {% endfor %}
     </div>

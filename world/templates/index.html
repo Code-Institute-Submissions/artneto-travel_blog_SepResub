@@ -7,18 +7,20 @@
 <div class="main-base">
 
   <div class="banner">
-
     <div class="image-banner">
-
     </div>
   </div>
+</div>
+
    <div class="caty-menu">
     <h5 class="card-category">Categories</h5>
     <div class="list-group mb-3">
         <div class="list-category">
           {% for item in caty_menu %}
-          <a href="{% url 'category' item %}"class="list-group-item list-group-item-action text-black bg-light">
+          <a href="{% url 'category' item %}" class="list-group-item list-group-item-action text-black bg-light">
+            <ul>
               <li class="list-content">{{ item }}</li>
+            </ul>
           </a>
           {% endfor %}
       </div>
@@ -46,7 +48,7 @@
 
                     {% if "placeholder" in post.header_img.url %}
 
-                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="picture header">
 
                     {% else %}
 
@@ -64,7 +66,7 @@
 
                       <p class="author">Author: {{ post.author }}</p>
 
-                      <p class="card-text  h6">{{ post.body|slice:":200"|safe }}</p>
+                      <div class="card-text  h6">{{ post.body|slice:":200"|safe }}</div>
 
                     </div>
 
@@ -127,9 +129,6 @@
 
     </div>
 
- 
-  
 
-</div>
 
 {%endblock%}

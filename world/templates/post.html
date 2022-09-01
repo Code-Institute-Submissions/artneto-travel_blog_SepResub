@@ -3,9 +3,9 @@
 {% block title %} Add Post {% endblock%}
 {% block content %}
 
-{% if user.is_authenticated %}
-{% if user.profile.user %}
 <div class="bact-img">
+ {% if user.is_authenticated %}
+ {% if user.profile.user %}
     <div class="form-post">
         <div class="add-dit-post">
             <h2 class="add-edit-post-title">Create Post</h2>
