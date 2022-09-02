@@ -30,7 +30,9 @@
         <div class="not-allowed-box">
             <div class="not-loggedin">
                 <p>Please, create a profile first.</p>
-                <p><a href="{% url 'create_profile_page' %}">Create profile</a></p>
+                <p><a href="{% url 'create_profile_page' %}" class="btn submit-comment btn-submit">Create profile
+                </a></p>
+                
             </div>
         </div>
     </div>
@@ -42,7 +44,8 @@
         <div class="not-allowed-box">
                 <div class="not-loggedin">
                         <p>Login first to be able to add a post</p>
-                        <p><a href="{% url 'login' %}">Login Here</a></p>
+                        <p><a href="{% url 'login' %}" class="btn submit-comment btn-submit">Login
+                            Page</a></p>
                 </div>
         </div>
     </div>

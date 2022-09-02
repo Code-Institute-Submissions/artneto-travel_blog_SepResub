@@ -21,12 +21,15 @@
        </div>
    
     {% else %}
-    <!-- If the user try to use this page without being logged in, below message will be displayed -->
+    <!-- The below message will be displayed if user is not logged-->
+<div class="not-img">
     <div class="not-allowed">
         <div class="not-loggedin">
-            <p>You need to login to be able to add a category</p>
-            <p><a href="{% url 'login' %}">Login Here</a></p>
+            <p>You need to login to be able to add a comment</p>
+            <p><a href="{% url 'post' %}" class="btn submit-comment btn-submit">Login
+            </a></p>
         </div>
+    </div>
     </div>
 </div>
 

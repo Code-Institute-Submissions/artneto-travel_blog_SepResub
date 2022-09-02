@@ -1190,6 +1190,10 @@ and (orientation : portrait) {
         height: 113vh;
     
     }
+
+    .main-register {
+        height: 158vh;
+    }
 }
 
 
