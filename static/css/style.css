@@ -617,6 +617,7 @@ transition:0.3s;
     padding-left: 1rem;
     padding-right: 0rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 158vh;
 }
 
 .main-register label {
