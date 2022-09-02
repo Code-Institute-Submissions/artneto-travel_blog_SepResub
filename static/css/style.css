@@ -967,7 +967,12 @@ transition:0.3s;
     font-weight: 400;
 }
 
-
+img.img-default {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 44px;
+}
 
 
 /*Edit Post*/
@@ -1176,6 +1181,9 @@ and (orientation : portrait) {
         height: 153vh;
     }
     
+    img.img-default {
+        margin: 15px;
+    }
 
     .form-edit {
         padding: 13px;
@@ -1210,6 +1218,10 @@ and (orientation : portrait) {
     .category-add {
         width: 64%;
         margin: auto;
+    }
+
+    img.img-default {
+        margin: 18px;
     }
 
 
@@ -1287,6 +1299,10 @@ and (orientation : portrait) {
         height:100%;
         width:100%;
         margin:0;
+    }
+
+    img.img-default {
+        margin: -1px;
     }
 
 

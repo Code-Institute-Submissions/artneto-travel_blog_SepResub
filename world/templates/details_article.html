@@ -58,13 +58,14 @@
   <!---Side Column-->
   <div class="list-group mb-3 p-2">
         <div class="p-2">
-            <div class="card">
+            <div class="card border-0">
                 {% if "placeholder" in post.author.profile.profile_picture.url %}
-                
-                <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
-                {% else %}
-                <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
-                {% endif %}
+                <a href="{% url 'show_profile_page' post.author.profile.id %}">
+                <img src="https://www.odeliver.net/images/members/default.png" class="img-default"
+                width="250px" height="auto" alt="profile pic">
+                 {% else %}
+                <img src="{{post.author.profile.profile_picture.url}}" class="img-default" alt="profile pic">
+                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name}}</h5>
                     <p class="card-text">{{post.author.profile.bio}}</p>

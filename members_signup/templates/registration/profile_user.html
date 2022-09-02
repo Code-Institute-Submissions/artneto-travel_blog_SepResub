@@ -8,12 +8,14 @@
 
 <div class="container mt-4 mb-4 d-flex justify-content-center">
     <div class="user-card p-4">
-        {% if user_page.profile_picture.url %}
-        <div class=" image d-flex flex-column justify-content-center align-items-center"><img src="{{user_page.profile_picture.url}}"  alt="profile pic"/>
-        {% else %} 
-        <div class=" image d-flex flex-column justify-content-center align-items-center"><img src="{{user_page.profile_picture.url}}" alt="profile pic"/>
-        {% endif %}        
-                <span class="name mt-3">{{ user_page.user.first_name }}</span> <span class="idd">{{ user_page.user.last_name}}</span>
+        <div class=" image d-flex flex-column justify-content-center align-items-center">
+            {% if "placeholder" in page_user.profile_pic.url %}
+            <img src="https://www.odeliver.net/images/members/default.png" class="img-default"
+            width="250px" height="auto">
+             {% else %} 
+            <img src="{{user_page.profile_picture.url}}" alt="profile pic"/>
+            {% endif %}        
+            <span class="name mt-3">{{ user_page.user.first_name }}</span> <span class="idd">{{ user_page.user.last_name}}</span>
             
             <div class="text mt-3"> <span>{{user_page.bio}}</span> </div>
             <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
@@ -38,5 +40,5 @@
 </div>
 </div>
     
-    {% endblock %}
+{% endblock %}
     
