@@ -677,6 +677,11 @@ transition:0.3s;
 .success-box{
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: wheat;
+}
+
+.success-password {
+    margin-left: 30%;
 }
 
  
