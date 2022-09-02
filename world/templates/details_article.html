@@ -59,10 +59,11 @@
   <div class="list-group mb-3 p-2">
         <div class="p-2">
             <div class="card">
-                {% if post.author.profile.profile_picture %}
+                {% if "placeholder" in post.author.profile.profile_picture.url %}
+                
                 <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
                 {% else %}
-                <img src="{% static 'profilepicture.jpg' %}" alt="profile pic">
+                <img src="{{post.author.profile.profile_picture.url}}" alt="profile pic">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name}}</h5>
