@@ -33,6 +33,13 @@ def CreateCategoryView(request, caty):
                            'category_posts': category_posts})
 
 
+class AddCategoryView(CreateView):
+
+    model = Category
+    template_name = 'create_category.html'
+    fields = '__all__'
+
+
 class IndexView(ListView):
     model = Post
     template_name = 'index.html'
