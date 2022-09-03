@@ -1238,6 +1238,11 @@ and (orientation : portrait) {
         margin: 18px;
     }
 
+    .edit-section {
+        height: 153vh;
+     
+    }
+
 
 }
 
@@ -1332,7 +1337,7 @@ and (orientation : portrait) {
     }
 
     #id_title_tag {
-        width: 100%;
+        width: 93%;
     }
 
     .formupdate {

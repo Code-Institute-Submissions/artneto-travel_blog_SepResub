@@ -18,8 +18,8 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=choices_list, attrs={
-                        'class': 'form-control'}),
+            'category': forms.Select(choices=choices_list, 
+                                     attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control',
                                              'value': '', 'id': 'identifier',
                                              'type': 'hidden'}),
@@ -32,10 +32,9 @@ class EditForm(forms.ModelForm):
     """  edit post form """
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'body')
+        fields = ('title', 'header_img', 'body')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
