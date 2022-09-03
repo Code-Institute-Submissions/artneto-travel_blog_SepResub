@@ -4,8 +4,8 @@
 {% block content %}
 
 
-{% if user.is_authenticated %}
 <div class="backgr-ct">
+ {% if user.is_authenticated %}
     <div class="forms-cat">
         <div class="category-add">
             <h2 class="category-title">Add Category</h2>
@@ -29,12 +29,12 @@
                 </div>
             
             </div>
-         {% endif %}
+         
         </div>
         
     </div>
 
 </div>
-
+{% endif %}
 
 {% endblock %}

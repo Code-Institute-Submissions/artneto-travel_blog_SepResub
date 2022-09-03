@@ -88,7 +88,7 @@ class PostView(CreateView):
 
 
 class AddCommentView(CreateView):
-    
+
     model = Comment
     form_class = CommentForm
     template_name = 'comments_box.html'
