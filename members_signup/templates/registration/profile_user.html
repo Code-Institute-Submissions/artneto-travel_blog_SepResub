@@ -10,8 +10,7 @@
     <div class="user-card p-4">
         <div class=" image d-flex flex-column justify-content-center align-items-center">
             {% if "placeholder" in user_page.profile_picture.url %}
-            <img src="https://www.odeliver.net/images/members/default.png" class="img-default"
-            width="250px" height="auto">
+            <img src="https://www.odeliver.net/images/members/default.png" class="img-default" alt="default-pic">
              {% else %} 
             <img src="{{user_page.profile_picture.url}}" alt="profile pic"/>
             {% endif %}        

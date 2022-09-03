@@ -61,8 +61,8 @@
             <div class="card border-0">
                 {% if "placeholder" in post.author.profile.profile_picture.url %}
                 <a href="{% url 'show_profile_page' post.author.profile.id %}">
-                <img src="https://www.odeliver.net/images/members/default.png" class="img-default"
-                width="250px" height="auto" alt="profile pic">
+                <img src="https://www.odeliver.net/images/members/default.png" class="img-default" alt="default-pic">
+                
                  {% else %}
                 <img src="{{post.author.profile.profile_picture.url}}" class="img-default" alt="profile pic">
                  {% endif %}
