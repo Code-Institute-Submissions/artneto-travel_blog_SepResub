@@ -469,5 +469,5 @@ Solution: Create a comment section there was an error in the python logic and it
 - Env.py file is present on Github.
 
 Solution: This file was mistaken with that even when DEBUG only in false it was presented.
-With the help of the tutors it was possible to identify the error and the solution was to create a new repo bifurcating the project and reset all its keys that were in the env.py file.
+With the help of the tutors, it was possible to identify the error and the solution was to create a new repo environment for my project and reset all the keys that were in the env.py.
 >>>>>>> 4daa1e70a5a3bd5f74cf92c47a58a4de539ad2a5
