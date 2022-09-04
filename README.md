@@ -444,4 +444,30 @@ Outcome
 - I have found a bug:" migrate says a column that does not exist does not exist and recommends renaming it", for solution, I have updated the database schema outside a migration.
 
 - I was able to construct my first website using all of the material supplied during the course and with the aid of my mentor. I am pleased with the outcome.
+
+- Thanks again to the entire support team and a big hug to Christina, Oisin and Sean who have always been patient and showing a great people skills.
+
+
+# Resubmission Remarks 
+After review by the evaluation team, below is a list of what was fixed in this project.
+
+- Missing UX and/or navigation issues
+- Template code results in various HTML errors.
+
+Solution with the suggestion of the assets team I made sure to use the URL validator for each page and form on my site, being possible to: fix errors of classes that were open and it was also possible to fix the layout and background that was making some forms disheveled.
+
+
+- No indication of sub-optimal implementation of user acceptance criteria in user stories.
+- No indication or sub-optimal implementation of prioritized user stories within the agile tool.
+
+Solution: I revised the module for Agile and the importance of this tool and as a result the implementation is visible in the Travel Blog dashboard under Projects as "done".
+
+- Does not allow users to initiate actions based on their choice or allows broken functionality.
+
+Solution: Create a comment section there was an error in the python logic and it was fixed, now the user can create a comment.
+
+- Env.py file is present on Github.
+
+Solution: This file was mistaken with that even when DEBUG only in false it was presented.
+With the help of the tutors it was possible to identify the error and the solution was to create a new repo bifurcating the project and reset all its keys that were in the env.py file.
 >>>>>>> 4daa1e70a5a3bd5f74cf92c47a58a4de539ad2a5
